@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: lightgray;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: lightgray;
+            padding: 20px;
+        }
+        .faq-item {
+            margin-bottom: 5px;
+            background-color: white;
+            overflow: hidden;
+        }
+        .question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-size: 20px;
+        }
+        .question:hover {
+            background-color: rgb(70, 70, 255);
+            color: white;
+        }
+        .qbold {
+            font-weight: bold;
+        }
+        .answer {
+            margin-left: 20px;
+            display: none;
+            background-color: white;
+            padding-bottom: 20px;
+        }
+        .mark {
+            margin-left: 10px;
+            font-size: 40px;
+            line-height: 1;
+            user-select: none;
+            font-weight: normal; 
+        }
+
+        @media (max-width: 768px) {
+            .question {
+                padding: 12px;
+                font-size: 16px;
+            }
+            .answer {
+                padding: 12px;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            .question {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .qbold {
+                line-height: 1.4;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.question');
+                const answer = item.querySelector('.answer');
+                answer.style.display = 'none';
+                question.addEventListener('click', () => {
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                        question.style.backgroundColor = 'rgb(70, 70, 255)';
+                        question.style.color = 'white';
+                    } else {
+                        answer.style.display = 'none';
+                        question.style.backgroundColor = 'white';
+                        question.style.color = 'black';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>FAQs on Design & Development</h1>
+    <div class="container">
+        <div class="faq-item">
+            <div class="question"><span class="qbold">1. How much does a new website cost?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question"><span class="qbold">2. Do you only create Wordpress websites?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question"><span class="qbold">3. Will you maintain my website for me?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question"><span class="qbold">4. Will my website be mobile-friendly?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question"><span class="qbold">5. How long does it take to build a website?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+        </div>
+    </div>
+</body>
+</html>
