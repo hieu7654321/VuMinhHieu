@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Popup</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-container">
+            <div class="popup-image"></div>
+            <div class="popup-content">
+                <h1>Stay updated.</h1>
+                <p>Enter your email below to join our awesome mailing list.</p>
+                <input 
+                    type="email" 
+                    class="email-input" 
+                    id="emailInput" 
+                    placeholder="Your email"
+                >
+                <div class="error-message" id="errorMessage">Please enter a valid email address</div>
+                <div class="popup-buttons">
+                    <button class="btn btn-submit" id="submitBtn">Submit</button>
+                    <button class="btn btn-no-thanks" id="noThanksBtn">No thanks</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const COOKIE_NAME = 'popup_closed';
+        const COOKIE_EXPIRY = 7;
+
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                cookie = cookie.trim();
+                if (cookie.indexOf(nameEQ) === 0) {
+                    return cookie.substring(nameEQ.length);
+                }
+            }
+            return null;
+        }
+
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('popupOverlay');
+            popup.classList.remove('show');
+            setCookie(COOKIE_NAME, 'true', COOKIE_EXPIRY);
+        }
+
+        function showPopup() {
+            if (!getCookie(COOKIE_NAME)) {
+                const popup = document.getElementById('popupOverlay');
+                popup.classList.add('show');
+            }
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            const email = document.getElementById('emailInput').value;
+            const errorMsg = document.getElementById('errorMessage');
+
+            if (!validateEmail(email)) {
+                errorMsg.classList.add('show');
+                return;
+            }
+
+            errorMsg.classList.remove('show');
+            closePopup();
+        });
+
+        document.getElementById('noThanksBtn').addEventListener('click', closePopup);
+
+        document.getElementById('emailInput').addEventListener('input', () => {
+            document.getElementById('errorMessage').classList.remove('show');
+        });
+
+        window.addEventListener('load', showPopup);
+    </script>
+</body>
+</html>
