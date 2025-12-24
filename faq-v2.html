@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="faq-v2-styling.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            let openItem = null;
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.question');
+                const answer = item.querySelector('.answer');
+                const mark = question.querySelector('.mark');
+                answer.style.display = 'none';
+                
+                question.addEventListener('click', () => {
+                    if (openItem === item) {
+                        answer.style.display = 'none';
+                        question.style.backgroundColor = 'white';
+                        question.style.color = 'black';
+                        mark.textContent = '+';
+                        openItem = null;
+                        answer.style.maxHeight = '0';
+                    } else {
+                        if (openItem) {
+                            const prevAnswer = openItem.querySelector('.answer');
+                            const prevQuestion = openItem.querySelector('.question');
+                            const prevMark = prevQuestion.querySelector('.mark');
+                            prevAnswer.style.display = 'none';
+                            prevQuestion.style.backgroundColor = 'white';
+                            prevQuestion.style.color = 'black';
+                            prevMark.textContent = '+';
+                            answer.style.maxHeight = '0';
+                        }
+                        
+                        answer.style.display = 'block';
+                        question.style.backgroundColor = 'rgb(70, 70, 255)';
+                        question.style.color = 'white';
+                        mark.textContent = '−';
+                        openItem = item;
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>FAQs on Design & Development</h1>
+    <div class="container">
+        <div class="faq-item">
+            <div class="question"><span class="qbold">1. How much does a new website cost?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question"><span class="qbold">2. Do you only create Wordpress websites?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question"><span class="qbold">3. Will you maintain my website for me?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question"><span class="qbold">4. Will my website be mobile-friendly?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question"><span class="qbold">5. How long does it take to build a website?</span><span class="mark">+</span></div>
+            <div class="answer">
+                <h4><strong>Interdum velit euismod in pellentesque massa placerat duis. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nibh nisi condimentum.</strong></h4>
+                <p>- Mattis nunc sed blandit libero volutpat.</p>
+                <p>- Tortor at risus viverra adipiscing at in tellus.</p>
+                <p>- Purus ut faucibus pulvinar elementum.</p>
+                <p>- Blandit turpis cursus in hac habitasse.</p>
+        </div>
+    </div>
+</body>
+</html>
