@@ -383,13 +383,13 @@ html {
 .sale-block-container {
     display: flex;
     justify-content: center;
-    gap: 75px; /* Gap between blocks */
+    gap: 75px;
     flex-wrap: wrap;
 }
 
 .sale-block {
-    width: 420px; /* Default width of each block */
-    height: 560px; /* Default height of each block */
+    width: 420px;
+    height: 560px;
 }
 
 .sale-block-image {
@@ -440,6 +440,69 @@ html {
 .carousel-content span {
     padding: 0 20px;
 }
+
+/* inspiration */
+.inspiration {
+    width: 100%;
+    max-width: 1490px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inspiration-container {
+    display: flex;
+    justify-content: center;
+    gap: 54px;
+    flex-wrap: wrap;
+    margin-top: 94px;
+    align-items: center;
+}
+
+.inspiration-heading-first {
+    font-size: 36px;
+    width: 550px;
+    text-align: center;
+}
+
+.inspiration-heading {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+div.inspiration-heading ,div.inspiration-info-content {
+    text-align: left;
+}
+
+.inspiration-info-content {
+    font-size: 16px;
+    letter-spacing: 0.06px;
+    margin-top: 10px;
+}
+
+.inspiration-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 82px;
+    width: 100%;
+    text-align: left;
+}
+
+.inspiration-block {
+    width: 291px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.inspiration-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 
 @media (max-width: 1600px) {
     .product-box.wide .product img,
@@ -838,5 +901,60 @@ html {
         font-size: 46px;
         padding: 0 70px;
         height: 160px;
+    }
+
+    .inspiration-container {
+        margin: 0;
+        padding: 0 16px;
+    }
+
+    .inspiration-heading-first {
+        font-size: 28px;
+        width: 312px;
+        margin-top: 46px;
+        line-height: 38.4px;
+        text-align: center;
+    }
+
+    .inspiration-heading {
+        font-size: 20px;
+        margin-top: 21px;
+    }
+
+    .inspiration-info-content {
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 5px;
+    }
+
+    .inspiration-content {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 24px;
+        padding: 0px 0 30px 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch
+    }
+
+    .inspiration-block {
+        width: 265px;
+        flex: 0 0 265px;
+        scroll-snap-align: start;
+    }
+
+    .inspiration-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+
+    .inspiration-block:nth-child(odd) .inspiration-image img {
+        height: 384px;
+    }
+
+    .inspiration-block:nth-child(even) .inspiration-image img {
+        height: 197px;
     }
 }
