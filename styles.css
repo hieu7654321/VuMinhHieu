@@ -84,7 +84,6 @@ html {
 }
 
 .hero_banner {
-    height: 100vh;
     max-height: 1080px;
     overflow: hidden;
     position: relative;
@@ -275,7 +274,8 @@ html {
 
 .info .type {
     font-size: 14px;
-    letter-spacing: 0.5;    
+    letter-spacing: 0.5;
+    color: #00000099;
 }
 
 .info h3 {
@@ -599,7 +599,7 @@ html {
     }
 
     div.info.harbour {
-        padding-top: 10px;
+        padding-top: 12px;
         padding-bottom: 15px;
     }
 }

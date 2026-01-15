@@ -14,10 +14,159 @@
         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <style>
-    </style>
-    <script>
-    </script>
+<style>
+/* ── Product Slider ─────────────────────────────────────────────── */
+
+.product_slider {
+    width: 100%;
+    max-width: 1490px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Make sure the splide container follows the same constraints */
+
+.heading-container h2 {
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 48px;
+    letter-spacing: -0.4px;
+}
+
+.product-slider-splide {
+    --slide-max-width: 345px;
+    --slide-ratio: 345 / 460;
+}
+
+.product_slider-item {
+    width: 100%;
+    max-width: var(--slide-max-width);
+    margin: 0 auto;
+}
+
+.product-slider-image {
+    width: 100%;
+    aspect-ratio: var(--slide-ratio);
+    overflow: hidden;
+}
+
+.product-slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.splide__list {
+    padding-left: 0;
+}
+
+.splide__arrows {
+    display: none !important;
+}
+
+
+@media (max-width: 1600px) {
+    /* Removed buggy 20px; let it scale naturally from 345px */
+}
+
+@media (max-width: 1500px) {
+    /* Slight shrink for 3 items to fit better */
+    .product_slider {
+        --slide-max-width: 300px;
+    }
+    .heading-container h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product_slider {
+        padding: 60px 25px;
+        --slide-max-width: 240px;
+    }
+    .heading-container h2 {
+        font-size: 30px;
+        margin-bottom: 36px;
+    }
+}
+
+/* ── Mobile 390px ── 1.5 items visible, ~265px width ───────────── */
+@media (max-width: 391px) {
+    .product_slider {
+        padding: 0;
+        margin-top: 28px;
+        --slide-max-width: 265px;
+    }
+
+    .heading-container h2 {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    .splide__slide {
+        width: 265px; /* Make the slide width adjust to its content */
+        padding: 0; /* Remove any extra padding that might affect the slide size */
+        width: 75% !important; /* Ensure it takes the same width as its image */
+        margin: 0; /* Remove any unwanted margins */
+    }
+
+    .splide__list {
+        padding-left: 15px !important; /* Align first item left, no starting space */
+        padding-right: 20px !important; /* Allow half-second item to peek */
+    }
+
+    .product-slider-splide {
+        --slide-max-width: 265px;
+        --slide-ratio: 265 / 353; /* Exact ratio as requested */
+    }
+
+    .product_slider-item.product-slider-image {
+        width: 100%;
+        aspect-ratio: 265 / 353;
+        overflow: hidden;
+    }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('#product-slider', {
+        type       : 'slide',
+        perPage    : 4,
+        perMove    : 1,
+        gap        : '10px',
+        focus      : 'center',
+        trimSpace  : true,
+        arrows     : false,
+        pagination : false,
+        speed      : 600,
+
+        breakpoints: {
+            1600: {
+                perPage: 4,
+                gap: '10px',
+            },
+            1500: {
+                perPage: 3,
+                gap: '10px',
+            },
+            768: {
+                perPage: 2,
+                gap: '8px',
+            },
+            391: {
+                perPage    : 1.2,     // ← magic number for ~1.5 items feeling
+                gap        : '8px',
+                focus      : 0,       // ← Align first item left
+                trimSpace  : false,
+            }
+        }
+    });
+
+    splide.mount();
+});
+</script>
 </head>
 <body>
     <div class="container">
@@ -140,7 +289,75 @@
                 </div>
             </div>
         </section>
-        <section class="product_slider"></section>
+        <section class="product_slider">
+    <div class="product-grid-container">
+        <div class="heading-container headings">
+            <h2>Discover unique items</h2>
+        </div>
+
+        <div class="splide product-slider-splide" id="product-slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="product_slider-item">
+                            <div class="product-slider-image">
+                                <img src="Assets/Releve platter.png" alt="Releve platter">
+                            </div>
+                            <div class="info">
+                                <span class="type">DINING TABLE</span>
+                                <h3>Releve platter</h3>
+                                <p>$699.00</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="product_slider-item">
+                            <div class="product-slider-image">
+                                <img src="Assets/Spire tapered candle.png" alt="Spire tapered candle">
+                            </div>
+                            <div class="info">
+                                <span class="type">CANDLE</span>
+                                <h3>Spire tapered candle</h3>
+                                <p>$699.00</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="product_slider-item">
+                            <span class="tag selling">Selling fast!</span>
+                            <span class="tag new">New</span>
+                            <div class="product-slider-image">
+                                <img src="Assets/Umanoff platter.png" alt="Umanoff planter">
+                            </div>
+                            <div class="info">
+                                <span class="type">STORAGE</span>
+                                <h3>Umanoff planter</h3>
+                                <p>$699.00</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="product_slider-item">
+                            <div class="product-slider-image">
+                                <img src="Assets/Hashira pendant lamp cluster.png" alt="Hashira pendant lamp cluster">
+                            </div>
+                            <div class="info">
+                                <span class="type">LANTERN</span>
+                                <h3>Hashira pendant lamp cluster</h3>
+                                <p>$1,199.00</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- You can add more items here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
         <section class="text-carousel"></section>
         <section class="sale_block"></section>
         <section class="inspiration"></section>
