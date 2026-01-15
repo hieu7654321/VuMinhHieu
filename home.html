@@ -17,30 +17,129 @@
     <style>
     </style>
     <script>
-        </script>
+    </script>
 </head>
 <body>
     <div class="container">
         <section class="header">
             <div class="top_header" id="topHeader">
-                <button class="slider-btn prev" aria-label="Previous">&#10094;</button>
+                <button class="slider-btn prev" aria-label="Previous"></button>
                 <div class="slider-viewport">
                     <div class="slider-track">
-                        <div class="slide">(+84) 12 34 5678</div>
-                        <div class="slide">78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi</div>
+                        <div class="slide"><div class="number">(+84) 12 34 5678</div></div>
+                        <div class="slide"><div class="address">78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi</div></div>
                     </div>
                 </div>
-
-                <button class="slider-btn next" aria-label="Next">&#10095;</button>
+                <button class="slider-btn next" aria-label="Next"></button>
             </div>
             <div class="main_header">
                 <div class="logo headings">
-                    <h1><a href="#">Orangy</a></h1>
+                    <h1><a href="#">ORANGY</a></h1>
                 </div>
             </div>
         </section>
-        <section class="hero_banner"></section>
-        <section class="product_grid_tabs"></section>
+        <section class="hero_banner" id="hero">
+            <img src="Assets/hero.png" alt="" class="hero-img">
+            <div class="hero-content">
+                <div class="hero-slogan headings">EMBRACE VISION</div>
+                <p class="hero-description">Clever products for every corner</p>
+                <a href="#products" class="hero_btn">EXPLORE NOW</a>
+            </div>
+        </section>
+        <section class="product_grid_tabs" id="products">
+            <div class="product-grid-container">
+                <div class="product-grid-header">
+                    <h2 class="section-title headings">Our picks for you</h2>
+
+                    <div class="tabs">
+                        <button class="tab active" data-category="seating">SEATING</button>
+                        <button class="tab" data-category="table">TABLE</button>
+                        <button class="tab" data-category="storage">STORAGE</button>
+                        <button class="tab" data-category="lighting">LIGHTING</button>
+                        <button class="tab" data-category="decor">DECOR</button>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-box wide">
+                        <div class="product seating">
+                            <div class="product-image">
+                                <img src="Assets/Oda Ottoman.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <span class="type">SOFA</span>
+                                <h3>Oda ottoman</h3>
+                                <p>$699.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-box tall">
+                        <div class="product seating">
+                            <span class="tag selling">Selling fast!</span>
+                            <span class="tag new">New</span>
+                            <div class="product-image">
+                                <img src="Assets/Ready Dining Chair.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <span class="type">DINING CHAIR</span>
+                                <h3>Ready dining chair</h3>
+                                <p>$699.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product tall seating">
+                            <div class="product-image">
+                                <img src="Assets/Harbour side dining chair.jpg" alt="">
+                            </div>
+                            <div class="info harbour">
+                                <span class="type">DINING CHAIR</span>
+                                <h3>Harbour side dining chair</h3>
+                                <p>$999.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROW 2 -->
+                    <div class="product-box tall">
+                        <div class="product seating">
+                            <span class="tag sale">-30%</span>
+                            <div class="product-image">
+                                <img src="Assets/Tearoom club chair.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <span class="type">SOFA</span>
+                                <h3>Tearoom club chair</h3>
+                                <p><span style="color: red;">$699.00</span> <span style="text-decoration: line-through;">$999.00</span></p>
+                            </div>
+                        </div>
+                        <div class="product tall seating">
+                            <div class="product-image">
+                                <img src="Assets/Co dining chair.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <span class="type">DINING CHAIR</span>
+                                <h3>Co dining chair</h3>
+                                <p>$1,199.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-box wide">
+                        <div class="product seating">
+                            <div class="product-image">
+                                <img src="Assets/Knitting louge chair.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <span class="type">SOFA</span>
+                                <h3>Knitting lounge chair</h3>
+                                <p>$999.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="product_slider"></section>
         <section class="text-carousel"></section>
         <section class="sale_block"></section>

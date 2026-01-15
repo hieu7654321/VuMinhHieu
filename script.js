@@ -32,4 +32,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', updateSlider);
+
+    // hero
+    const tabs = document.querySelectorAll(".tab");
+    const items = document.querySelectorAll(".product_item");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            const category = tab.dataset.category;
+
+            items.forEach(item => {
+                item.classList.add("hidden");
+                if (item.classList.contains(category)) {
+                    item.classList.remove("hidden");
+                }
+            });
+        });
+    });
 });
