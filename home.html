@@ -15,118 +15,11 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <style>
-/* ── Product Slider ─────────────────────────────────────────────── */
-
-.product_slider {
-    width: 100%;
-    max-width: 1490px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Make sure the splide container follows the same constraints */
-
-.heading-container h2 {
-    font-size: 36px;
-    font-weight: normal;
-    text-align: center;
-    margin-bottom: 48px;
-    letter-spacing: -0.4px;
-}
-
-.product-slider-splide {
-    --slide-max-width: 345px;
-    --slide-ratio: 345 / 460;
-}
-
-.product_slider-item {
-    width: 100%;
-    max-width: var(--slide-max-width);
-    margin: 0 auto;
-}
-
-.product-slider-image {
-    width: 100%;
-    aspect-ratio: var(--slide-ratio);
-    overflow: hidden;
-}
-
-.product-slider-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.splide__list {
-    padding-left: 0;
-}
-
-.splide__arrows {
-    display: none !important;
-}
-
-
-@media (max-width: 1600px) {
-    /* Removed buggy 20px; let it scale naturally from 345px */
-}
-
-@media (max-width: 1500px) {
-    /* Slight shrink for 3 items to fit better */
-    .product_slider {
-        --slide-max-width: 300px;
-    }
-    .heading-container h2 {
-        font-size: 32px;
-    }
-}
-
-@media (max-width: 768px) {
-    .product_slider {
-        padding: 60px 25px;
-        --slide-max-width: 240px;
-    }
-    .heading-container h2 {
-        font-size: 30px;
-        margin-bottom: 36px;
-    }
-}
-
-/* ── Mobile 390px ── 1.5 items visible, ~265px width ───────────── */
-@media (max-width: 391px) {
-    .product_slider {
-        padding: 0;
-        margin-top: 28px;
-        --slide-max-width: 265px;
-    }
-
-    .heading-container h2 {
-        font-size: 28px;
-        margin-bottom: 32px;
-    }
-
-    .splide__slide {
-        width: 265px; /* Make the slide width adjust to its content */
-        padding: 0; /* Remove any extra padding that might affect the slide size */
-        width: 75% !important; /* Ensure it takes the same width as its image */
-        margin: 0; /* Remove any unwanted margins */
-    }
-
-    .splide__list {
-        padding-left: 15px !important; /* Align first item left, no starting space */
-        padding-right: 20px !important; /* Allow half-second item to peek */
-    }
-
-    .product-slider-splide {
-        --slide-max-width: 265px;
-        --slide-ratio: 265 / 353; /* Exact ratio as requested */
-    }
-
-    .product_slider-item.product-slider-image {
-        width: 100%;
-        aspect-ratio: 265 / 353;
-        overflow: hidden;
-    }
+.inspiration-container{
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    flex-wrap: wrap;
 }
 </style>
 <script>
@@ -156,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 gap: '8px',
             },
             391: {
-                perPage    : 1.2,     // ← magic number for ~1.5 items feeling
+                perPage    : 1.2,
                 gap        : '8px',
-                focus      : 0,       // ← Align first item left
+                focus      : 0,
                 trimSpace  : false,
             }
         }
@@ -249,7 +142,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </div>
 
-                    <!-- ROW 2 -->
                     <div class="product-box tall">
                         <div class="product seating">
                             <span class="tag sale">-30%</span>
@@ -290,78 +182,155 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </section>
         <section class="product_slider">
-    <div class="product-grid-container">
-        <div class="heading-container headings">
-            <h2>Discover unique items</h2>
-        </div>
+            <div class="product-grid-container">
+                <div class="heading-container headings">
+                    <h2>Discover unique items</h2>
+                </div>
 
-        <div class="splide product-slider-splide" id="product-slider">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <div class="product_slider-item">
-                            <div class="product-slider-image">
-                                <img src="Assets/Releve platter.png" alt="Releve platter">
+                <div class="splide product-slider-splide" id="product-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="product_slider-item">
+                                <div class="product-slider-image">
+                                    <img src="Assets/Releve platter.png" alt="Releve platter">
+                                </div>
+                                <div class="info">
+                                    <span class="type">DINING TABLE</span>
+                                    <h3>Releve platter</h3>
+                                    <p>$699.00</p>
+                                </div>
                             </div>
-                            <div class="info">
-                                <span class="type">DINING TABLE</span>
-                                <h3>Releve platter</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li class="splide__slide">
-                        <div class="product_slider-item">
-                            <div class="product-slider-image">
-                                <img src="Assets/Spire tapered candle.png" alt="Spire tapered candle">
+                        <li class="splide__slide">
+                            <div class="product_slider-item">
+                                <div class="product-slider-image">
+                                    <img src="Assets/Spire tapered candle.png" alt="Spire tapered candle">
+                                </div>
+                                <div class="info">
+                                    <span class="type">CANDLE</span>
+                                    <h3>Spire tapered candle</h3>
+                                    <p>$699.00</p>
+                                </div>
                             </div>
-                            <div class="info">
-                                <span class="type">CANDLE</span>
-                                <h3>Spire tapered candle</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li class="splide__slide">
-                        <div class="product_slider-item">
-                            <span class="tag selling">Selling fast!</span>
-                            <span class="tag new">New</span>
-                            <div class="product-slider-image">
-                                <img src="Assets/Umanoff platter.png" alt="Umanoff planter">
+                        <li class="splide__slide">
+                            <div class="product_slider-item">
+                                <span class="tag selling">Selling fast!</span>
+                                <span class="tag new">New</span>
+                                <div class="product-slider-image">
+                                    <img src="Assets/Umanoff platter.png" alt="Umanoff planter">
+                                </div>
+                                <div class="info">
+                                    <span class="type">STORAGE</span>
+                                    <h3>Umanoff planter</h3>
+                                    <p>$699.00</p>
+                                </div>
                             </div>
-                            <div class="info">
-                                <span class="type">STORAGE</span>
-                                <h3>Umanoff planter</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li class="splide__slide">
-                        <div class="product_slider-item">
-                            <div class="product-slider-image">
-                                <img src="Assets/Hashira pendant lamp cluster.png" alt="Hashira pendant lamp cluster">
+                        <li class="splide__slide">
+                            <div class="product_slider-item">
+                                <div class="product-slider-image">
+                                    <img src="Assets/Hashira pendant lamp cluster.png" alt="Hashira pendant lamp cluster">
+                                </div>
+                                <div class="info">
+                                    <span class="type">LANTERN</span>
+                                    <h3>Hashira pendant lamp cluster</h3>
+                                    <p>$1,199.00</p>
+                                </div>
                             </div>
-                            <div class="info">
-                                <span class="type">LANTERN</span>
-                                <h3>Hashira pendant lamp cluster</h3>
-                                <p>$1,199.00</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- You can add more items here -->
-                </ul>
+                        </li>
+                    </ul>
+                </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-        <section class="text-carousel"></section>
-        <section class="sale_block"></section>
-        <section class="inspiration"></section>
+        </section>
+        <section class="text-carousel">
+            <div class="carousel-container">
+                <div class="carousel-content headings">
+                    FIND INSPIRATION * DESIGN FOR LIVING * UNIQUE
+                </div>
+            </div>
+        </section>
+        <section class="sale_block">
+            <div class="product-grid-container">
+                <div class="sale-block-container">
+                    <div class="sale-block">
+                        <div class="sale-block-image">
+                            <img src="Assets/Bundle and save.jpg" alt="Sale Image 1">
+                        </div>
+                    </div>
+
+                    <div class="sale-block">
+                        <div class="sale-block-text">
+                            <div class="season-sale">SEASON SALE COLLECTIONS</div>
+                            <h3 class="headings">SALE 30% OFF</h3>
+                            <p>Save extra on our sale collection</p>
+                            <p>*Runs until 14:00pm PST</p>
+                        </div>
+                    </div>
+
+                    <div class="sale-block">
+                        <div class="sale-block-image">
+                            <img src="Assets/Renovate your home.png" alt="Sale Image 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="inspiration">
+            <div class="product-grid-container">
+                <div class="inspiration-container">
+                    <div class="inspiration-heading-container">
+                        <div class="inspiration-heading headings">Change the look of your house, change the perspective of others</div>
+                    </div>
+                    <div class="inspiration-content">
+                        <div class="inspiration-block">
+                            <div class="inspiration-image">
+                                <img src="Assets/Showroom.png" alt="">
+                            </div>
+                            <div class="inspiration-info">
+                                <div class="inspiration-heading">Showroom</div>
+                                <div class="inspiration-info-content">Experience design for living at our flagship showroom located in Boston’s South End.</div>
+                            </div>
+                        </div>
+                        <div class="inspiration-block">
+                            <div class="inspiration-image">
+                                <img src="Assets/Interior work.png" alt="">
+                            </div>
+                            <div class="inspiration-info">
+                                <div class="inspiration-heading">Interior work</div>
+                                <div class="inspiration-info-content">Crafting spaces through meticulous planning, material selection, and creative execution, enhancing aesthetics and functionality.</div>
+                            </div>
+                        </div>
+                        <div class="inspiration-block">
+                            <div class="inspiration-image">
+                                <img src="Assets/Authentic Design.jpg" alt="">
+                            </div>
+                            <div class="inspiration-info">
+                                <div class="inspiration-heading">Authentic design</div>
+                                <div class="inspiration-info-content">We only carry designs we believe inethically and aesthetically – original, authentic pieces that are made to last.</div>
+                            </div>
+                        </div>
+                        <div class="inspiration-block">
+                            <div class="inspiration-image">
+                                <img src="Assets/Custom additions.png" alt="">
+                            </div>
+                            <div class="inspiration-info">
+                                <div class="inspiration-heading">Custom additions</div>
+                                <div class="inspiration-info-content">Tailoring unique elements to spaces, elevating interiors with personalized craftsmanship and design solutions.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="single_banner"></section>
+        <section class="our-service"></section>
+        <section class="contact-shop"></section>
         <section class="footer"></section>
     </div>
 </body>
