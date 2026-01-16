@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <link
@@ -14,10 +15,165 @@
         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <style>
-    </style>
-    <script>
-    </script>
+<style>
+.footer {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 10px 10px 10px;
+    text-align: center;
+}
+
+.footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 465px;
+    align-items: center;
+}
+
+.email-container {
+    width: 100%;
+    text-align: center;
+}
+
+.email-info {
+    margin-bottom: 15px;
+}
+
+.email-title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.email-content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+.email-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.email-input input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.email-input button {
+    position: absolute;
+    right: 13px;
+    top: 19px;
+    background-image: url("Assets/Vector (1).svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 6.25px;
+    height: 12.5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.email-input button {
+    filter: invert(0) brightness(0) contrast(100%) grayscale(0) sepia(0);
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+    gap: 23px;
+    margin-top: 27px;
+}
+
+.media a img {
+    width: 17px;
+    height: 17px;
+    object-fit: cover;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.copyright span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+span.underline {
+    text-decoration: underline;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('#product-slider', {
+        type       : 'slide',
+        perPage    : 4,
+        perMove    : 1,
+        gap        : '10px',
+        focus      : 'center',
+        trimSpace  : true,
+        arrows     : false,
+        pagination : false,
+        speed      : 600,
+
+        breakpoints: {
+            1600: {
+                perPage: 4,
+                gap: '10px',
+            },
+            1500: {
+                perPage: 3,
+                gap: '10px',
+            },
+            768: {
+                perPage: 2,
+                gap: '8px',
+            },
+            391: {
+                perPage    : 1.2,
+                gap        : '8px',
+                focus      : 0,
+                trimSpace  : false,
+            }
+        }
+    });
+
+    splide.mount();
+
+    function updateBannerImage() {
+        const bannerImage = document.getElementById('banner-img-2');
+        
+        if (window.innerWidth <= 450) {
+            bannerImage.src = 'Assets/image 2.png';
+        } else {
+            bannerImage.src = 'Assets/Elevate your home.png';
+        }
+    }
+
+    updateBannerImage();
+    window.addEventListener('resize', updateBannerImage);
+});
+</script>
 </head>
 <body>
     <div class="container">
@@ -100,7 +256,6 @@
                         </div>
                     </div>
 
-                    <!-- ROW 2 -->
                     <div class="product-box tall">
                         <div class="product seating">
                             <span class="tag sale">-30%</span>
@@ -140,12 +295,274 @@
                 </div>
             </div>
         </section>
-        <section class="product_slider"></section>
-        <section class="text-carousel"></section>
-        <section class="sale_block"></section>
-        <section class="inspiration"></section>
-        <section class="single_banner"></section>
-        <section class="footer"></section>
+        <section class="product_slider">
+            <div class="product-grid-container">
+                <div class="heading-container headings">
+                    <h2>Discover unique items</h2>
+                </div>
+
+                <div class="splide product-slider-splide" id="product-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="product_slider-item">
+                                <div class="product-slider-image">
+                                    <img src="Assets/Releve platter.png" alt="Releve platter">
+                                </div>
+                                <div class="info">
+                                    <span class="type">DINING TABLE</span>
+                                    <h3>Releve platter</h3>
+                                    <p>$699.00</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="product_slider-item">
+                                <div class="product-slider-image">
+                                    <img src="Assets/Spire tapered candle.png" alt="Spire tapered candle">
+                                </div>
+                                <div class="info">
+                                    <span class="type">CANDLE</span>
+                                    <h3>Spire tapered candle</h3>
+                                    <p>$699.00</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="product_slider-item">
+                                <span class="tag selling">Selling fast!</span>
+                                <span class="tag new">New</span>
+                                <div class="product-slider-image">
+                                    <img src="Assets/Umanoff platter.png" alt="Umanoff planter">
+                                </div>
+                                <div class="info">
+                                    <span class="type">STORAGE</span>
+                                    <h3>Umanoff planter</h3>
+                                    <p>$699.00</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="product_slider-item">
+                                <div class="product-slider-image">
+                                    <img src="Assets/Hashira pendant lamp cluster.png" alt="Hashira pendant lamp cluster">
+                                </div>
+                                <div class="info">
+                                    <span class="type">LANTERN</span>
+                                    <h3>Hashira pendant lamp cluster</h3>
+                                    <p>$1,199.00</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-carousel">
+            <div class="carousel-container">
+                <div class="carousel-content headings">
+                    FIND INSPIRATION * DESIGN FOR LIVING * UNIQUE
+                </div>
+            </div>
+        </section>
+        <section class="sale_block">
+            <div class="product-grid-container">
+                <div class="sale-block-container">
+                    <div class="sale-block">
+                        <div class="sale-block-image">
+                            <img src="Assets/Bundle and save.jpg" alt="Sale Image 1">
+                        </div>
+                    </div>
+
+                    <div class="sale-block">
+                        <div class="sale-block-text">
+                            <div class="season-sale">SEASON SALE COLLECTIONS</div>
+                            <h3 class="headings">SALE 30% OFF</h3>
+                            <p>Save extra on our sale collection</p>
+                            <p>*Runs until 14:00pm PST</p>
+                        </div>
+                    </div>
+
+                    <div class="sale-block">
+                        <div class="sale-block-image">
+                            <img src="Assets/Renovate your home.png" alt="Sale Image 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="inspiration">
+            <div class="product-grid-container">
+                <div class="inspiration-container">
+                    <div class="inspiration-heading-container">
+                        <div class="inspiration-heading-first headings">
+                            Change the look of your house, change the perspective of others
+                        </div>
+                    </div>
+                    <div class="inspiration-content">
+                        <div class="inspiration-block">
+                            <div class="inspiration-image">
+                                <img src="Assets/Showroom.png" alt="Showroom">
+                            </div>
+                            <div class="inspiration-info">
+                                <div class="inspiration-heading headings">Showroom</div>
+                                <div class="inspiration-info-content">Experience design for living at our flagship showroom located in Boston’s South End.</div>
+                            </div>
+                        </div>
+                        <div class="inspiration-block">
+                            <div class="inspiration-image">
+                                <img src="Assets/Interior work.png" alt="Interior work">
+                            </div>
+                            <div class="inspiration-info">
+                                <div class="inspiration-heading headings">Interior work</div>
+                                <div class="inspiration-info-content">Crafting spaces through meticulous planning, material selection, and creative execution, enhancing aesthetics and functionality.</div>
+                            </div>
+                        </div>
+                        <div class="inspiration-block">
+                            <div class="inspiration-image">
+                                <img src="Assets/Authentic Design.jpg" alt="Authentic Design">
+                            </div>
+                            <div class="inspiration-info">
+                                <div class="inspiration-heading headings">Authentic design</div>
+                                <div class="inspiration-info-content">We only carry designs we believe in ethically and aesthetically – original, authentic pieces that are made to last.</div>
+                            </div>
+                        </div>
+                        <div class="inspiration-block">
+                            <div class="inspiration-image">
+                                <img src="Assets/Custom additions.png" alt="Custom additions">
+                            </div>
+                            <div class="inspiration-info">
+                                <div class="inspiration-heading headings">Custom additions</div>
+                                <div class="inspiration-info-content">Tailoring unique elements to spaces, elevating interiors with personalized craftsmanship and design solutions.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="single_banner">
+            <img src="Assets/Elevate your home.png" alt="Single-banner" class="banner-img" id="banner-img-2">
+            
+            <div class="banner-content">
+                <h2 class="banner-title headings">Elevate Your Home</h2>
+                <p class="banner-description">Clever products for every corner</p>
+            </div>
+        </section>
+        <section class="our-service">
+            <div class="product-grid-container">
+                <div class="our-service-container">
+                    <div class="our-service-box">
+                        <div class="service-image">
+                            <img src="Assets/Free and Fast delivery.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <div class="service_heading headings">Free & fast delivery</div>
+                            <div class="service_info_content">We offer free shipping with ground delivery to the lower 48 states.</div>
+                        </div>
+                    </div>
+                    <div class="our-service-box">
+                        <div class="service-image">
+                            <img src="Assets/Online Support.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <div class="service_heading headings">Online support</div>
+                            <div class="service_info_content">Online Support24 hours a day<br> 7 days a week</div>
+                        </div>
+                    </div>
+                    <div class="our-service-box">
+                        <div class="service-image">
+                            <img src="Assets/30 Days Return.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <div class="service_heading headings">30 Days return</div>
+                            <div class="service_info_content">Exchange or return items free of charge within 30 days.</div>
+                        </div>
+                    </div>
+                    <div class="our-service-box">
+                        <div class="service-image">
+                            <img src="Assets/Payment.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <div class="service_heading headings">Flexible payment</div>
+                            <div class="service_info_content">Pay conveniently using multiple credit cards for added flexibility.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-shop">
+            <div class="contact-all">
+                <div class="product-grid-container">
+                    <div class="contact-container">
+                        <div class="contact-content-container1">
+                            <div class="contact-content-container1-img-1">
+                                <img src="Assets/Layered Image table.png" alt="">
+                            </div>
+                            <div class="contact-content-container1-img-2">
+                                <img src="Assets/Layer Image Chair.png" alt="">
+                            </div>
+                            <div class="contact-content-container1-img-3">
+                                <img src="Assets/Layer Image Accessories.png" alt="">
+                            </div>
+                        </div>
+                        <div class="contact-content-container2">
+                            <div class="contact-content-container2-content">RENOVATE YOUR HOME AT</div>
+                            <h2 class="headings">78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi</h2>
+                            <div class="orangy-link">
+                                <a href="#">@ORANGY</a>
+                            </div>
+                        </div>
+                        <div class="contact-content-container3">
+                            <div class="contact-content-container3-img-1">
+                                <img src="Assets/Layer Image Sitting.png" alt="">
+                            </div>
+                            <div class="contact-content-container3-img-2">
+                                <img src="Assets/Layer Image Decor.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="footer-container">
+                <div class="email-container">
+                    <div class="email-info">
+                        <div class="email-title headings">Subscribe to get 10% OFF</div>
+                        <div class="email-content">Subscribe for store updates and discounts.</div>
+                    </div>
+                    <div class="email-input">
+                        <input name="Email" id="email" type="email" placeholder="Email" required autocomplete="email">
+                        <button class="send-email" aria-label="Send"></button>
+                    </div>
+                    <div class="media">
+                        <a href="#">
+                            <img src="Assets/fb.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/x.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/instagram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/tiktok.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/yt.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/vimeo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="copyright"><span>© 2024</span>&nbsp;<span class="underline">ORANGY</span></div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
