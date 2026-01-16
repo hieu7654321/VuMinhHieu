@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <link
@@ -15,6 +16,112 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <style>
+.footer {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 10px 10px 10px;
+    text-align: center;
+}
+
+.footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 465px;
+    align-items: center;
+}
+
+.email-container {
+    width: 100%;
+    text-align: center;
+}
+
+.email-info {
+    margin-bottom: 15px;
+}
+
+.email-title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.email-content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+.email-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.email-input input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.email-input button {
+    position: absolute;
+    right: 13px;
+    top: 19px;
+    background-image: url("Assets/Vector (1).svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 6.25px;
+    height: 12.5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.email-input button {
+    filter: invert(0) brightness(0) contrast(100%) grayscale(0) sepia(0);
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+    gap: 23px;
+    margin-top: 27px;
+}
+
+.media a img {
+    width: 17px;
+    height: 17px;
+    object-fit: cover;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.copyright span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+span.underline {
+    text-decoration: underline;
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -421,7 +528,41 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         </section>
-        <section class="footer"></section>
+        <section class="footer">
+            <div class="footer-container">
+                <div class="email-container">
+                    <div class="email-info">
+                        <div class="email-title headings">Subscribe to get 10% OFF</div>
+                        <div class="email-content">Subscribe for store updates and discounts.</div>
+                    </div>
+                    <div class="email-input">
+                        <input name="Email" id="email" type="email" placeholder="Email" required autocomplete="email">
+                        <button class="send-email" aria-label="Send"></button>
+                    </div>
+                    <div class="media">
+                        <a href="#">
+                            <img src="Assets/fb.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/x.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/instagram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/tiktok.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/yt.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="Assets/vimeo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="copyright"><span>© 2024</span>&nbsp;<span class="underline">ORANGY</span></div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
