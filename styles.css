@@ -569,6 +569,7 @@ div.inspiration-heading ,div.inspiration-info-content {
     justify-content: space-between;
     gap: 32px;
     margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .our-service-box {
@@ -605,6 +606,133 @@ div.inspiration-heading ,div.inspiration-info-content {
     line-height: 1.7;
 }
 
+/* contact */
+.contact-shop {
+    width: 100%;
+    display: flex;
+    background-color: #F6F2EE;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.contact-all {
+    width: 1410px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 246px 0px;
+}
+
+.contact-content-container1,
+.contact-content-container2,
+.contact-content-container3 {
+    position: relative;
+}
+
+.contact-content-container1 {
+    display: flex;
+    flex-direction: row;
+    width: 423px;
+    height: 100%;
+}
+
+.contact-content-container2 {
+    width: 564px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-content-container2-content {
+    width: 29.25%;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+}
+
+.contact-content-container2 h2 {
+    font-size: 32px;
+    line-height: 56px;
+    color: #000000;
+    font-weight: 400;
+    max-width: 67.38%;
+    margin: 20px 0px 8px 0px;
+}
+
+.orangy-link a {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    border: 1px solid #D1CECA;
+    text-decoration: none;
+    padding: 10px 41px;
+    align-items: center;
+    display: inline-block;
+    margin-top: 20px;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 0%;
+}
+
+.contact-content-container3 {
+    width: 423px;
+    height: 100%;
+}
+
+.contact-content-container1-img-1,
+.contact-content-container1-img-2,
+.contact-content-container1-img-3,
+.contact-content-container3-img-1,
+.contact-content-container3-img-2 {
+    position: absolute;
+    max-width: none;
+}
+
+.contact-content-container1-img-1 img {
+    width: 45%;
+    position: relative;
+    top: 45px;
+    left: -8.69%;
+    z-index: 3;
+}
+
+.contact-content-container1-img-2 img {
+    width: 77.5%;
+    position: relative;
+    top: -195px;
+    left: 7%;
+}
+
+.contact-content-container1-img-3 img {
+    width: 55%;
+    position: relative;
+    bottom: -209px;
+    left: 43.4%;
+}
+
+.contact-content-container3-img-1 img {
+    width: 82.5%;
+    position: relative;
+    top: -175px;
+    right: -31.7%;
+}
+
+.contact-content-container3-img-2 img {
+    width: 62.5%;
+    position: relative;
+    bottom: -160px;
+    right: -7%;
+}
+
 @media (max-width: 1600px) {
     .product-box.wide .product img,
     .product-box.tall .product img {
@@ -628,6 +756,50 @@ div.inspiration-heading ,div.inspiration-info-content {
     }
     .heading-container h2 {
         font-size: 32px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 0 100px;
+    }
+
+    .contact-content-container1,
+    .contact-content-container2,
+    .contact-content-container3 {
+        width: 605px;
+        position: relative;
+    }
+
+    .contact-content-container1-img-1 img {
+        width: 34%;
+        top: -141px;
+        left: 20%;
+    }
+
+    .contact-content-container1-img-2 img {
+        width: 49%;
+        top: -228px;
+        left: 50%;
+    }
+
+    .contact-content-container1-img-3 img {
+        width: 42%;
+        bottom: 170px;
+        left: 110%;
+    }
+
+    .contact-content-container3-img-1 img {
+        width: 52%;
+        top: 20px;
+        right: -20%;
+    }
+
+    .contact-content-container3-img-2 img {
+        width: 47%;
+        bottom: -20px;
+        right: -100%;
     }
 }
 
@@ -802,6 +974,46 @@ div.inspiration-heading ,div.inspiration-info-content {
     .service-info {
         margin-top: 0px;
         margin-left: 20px;
+    }
+
+    .contact-container {
+        padding: 0 30px;
+    }
+
+    .contact-content-container1,
+    .contact-content-container2,
+    .contact-content-container3 {
+        width: 405px;
+    }
+
+    .contact-content-container1-img-1 img {
+        width: 34%;
+        top: -141px;
+        left: 0%;
+    }
+
+    .contact-content-container1-img-2 img {
+        width: 34%;
+        top: -178px;
+        left: 30%;
+    }
+
+    .contact-content-container1-img-3 img {
+        width: 34%;
+        bottom: 150px;
+        left: 70%;
+    }
+
+    .contact-content-container3-img-1 img {
+        width: 34%;
+        top: 20px;
+        right: -10%;
+    }
+
+    .contact-content-container3-img-2 img {
+        width: 34%;
+        bottom: -10px;
+        right: -60%;
     }
 }
 
@@ -1118,6 +1330,7 @@ div.inspiration-heading ,div.inspiration-info-content {
     .our-service-container {
         gap: 0;
         margin-top: 0;
+        margin-bottom: 74px;
     }
 
     .our-service-box {
@@ -1142,5 +1355,59 @@ div.inspiration-heading ,div.inspiration-info-content {
         font-size: 14px;
         line-height: 24px;
         letter-spacing: 0px;
+    }
+
+    .contact-container {
+        margin-bottom: 165px;
+    }
+
+    .contact-content-container2{
+        width: 360px;
+        margin-top: -9px;
+    }
+
+    div.contact-content-container2-content {
+        width: 57%;
+        letter-spacing: 0.3px;
+    }
+
+    .contact-content-container2 h2{
+        max-width: 82.32%;
+        text-align: center; 
+        vertical-align: middle;
+        margin: 10px 0px 2px 0px;
+    }
+
+    .contact-content-container1-img-1 img,
+    .contact-content-container1-img-2 img,
+    .contact-content-container1-img-3 img,
+    .contact-content-container3-img-1 img,
+    .contact-content-container3-img-2 img {
+        width: 27.3%;
+    }
+
+    .contact-content-container1-img-1 img {
+        top: -152px;
+        left: 5.6%;
+    }
+
+    .contact-content-container1-img-2 img {
+        top: -217px;
+        left: 30%;
+    }
+
+    .contact-content-container1-img-3 img {
+        bottom: 143px;
+        left: 68%;
+    }
+
+    .contact-content-container3-img-1 img {
+        top: 35px;
+        right: -11.9%;
+    }
+
+    .contact-content-container3-img-2 img {
+        bottom: -24px;
+        right: -61%;
     }
 }
