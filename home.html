@@ -15,6 +15,32 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <style>
+.our-service {
+    width: 100%;
+    max-width: 1490px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.our-service-container {
+    display: flex;
+    gap: 60px;
+    margin-top: 80px;
+}
+
+
+.service-image img {
+    height: 72px;
+    width: 72px;
+}
+
+.service_heading {
+    font-size: 20px;
+}
+
+.service_info_content {
+    font-size: 16px;
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -52,6 +78,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     splide.mount();
+
+    function updateBannerImage() {
+        const bannerImage = document.getElementById('banner-img-2');
+        
+        if (window.innerWidth <= 450) {
+            bannerImage.src = 'Assets/image 2.png';
+        } else {
+            bannerImage.src = 'Assets/Elevate your home.png';
+        }
+    }
+
+    updateBannerImage();
+    window.addEventListener('resize', updateBannerImage);
 });
 </script>
 </head>
@@ -324,8 +363,56 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         </section>
-        <section class="single_banner"></section>
-        <section class="our-service"></section>
+        <section class="single_banner">
+            <img src="Assets/Elevate your home.png" alt="Single-banner" class="banner-img" id="banner-img-2">
+            
+            <div class="banner-content">
+                <h2 class="banner-title headings">Elevate Your Home</h2>
+                <p class="banner-description">Clever products for every corner</p>
+            </div>
+        </section>
+        <section class="our-service">
+            <div class="product-grid-container">
+                <div class="our-service-container">
+                    <div class="our-service-box">
+                        <div class="service-image">
+                            <img src="Assets/Free and Fast delivery.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <div class="service_heading headings">Free & fast delivery</div>
+                            <div class="service_info_content">We offer free shipping with ground delivery to the lower 48 states.</div>
+                        </div>
+                    </div>
+                    <div class="our-service-box">
+                        <div class="service-image">
+                            <img src="Assets/Online Support.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <div class="service_heading headings">Online support</div>
+                            <div class="service_info_content">Online Support24 hours a day, 7 days a week</div>
+                        </div>
+                    </div>
+                    <div class="our-service-box">
+                        <div class="service-image">
+                            <img src="Assets/30 Days Return.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <div class="service_heading headings">30 Days return</div>
+                            <div class="service_info_content">Exchange or return items free of charge within 30 days.</div>
+                        </div>
+                    </div>
+                    <div class="our-service-box">
+                        <div class="service-image">
+                            <img src="Assets/Payment.png" alt="">
+                        </div>
+                        <div class="service-info">
+                            <div class="service_heading headings">Flexible payment</div>
+                            <div class="service_info_content">Pay conveniently using multiple credit cards for added flexibility.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="contact-shop"></section>
         <section class="footer"></section>
     </div>
