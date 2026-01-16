@@ -1,9 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const track = document.querySelector('.slider-track');
     const slides = document.querySelectorAll('.slide');
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
-
     let index = 0;
 
     function updateSlider() {
@@ -33,7 +32,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', updateSlider);
 
-    // hero
+    var splide = new Splide('#product-slider', {
+        type       : 'slide',
+        perPage    : 4,
+        perMove    : 1,
+        gap        : '10px',
+        focus      : 'center',
+        trimSpace  : true,
+        arrows     : false,
+        pagination : false,
+        speed      : 600,
+        breakpoints: {
+            1600: {
+                perPage: 4,
+                gap: '10px',
+            },
+            1500: {
+                perPage: 3,
+                gap: '10px',
+            },
+            768: {
+                perPage: 2,
+                gap: '8px',
+            },
+            391: {
+                perPage    : 1.2,
+                gap        : '8px',
+                focus      : 0,
+                trimSpace  : false,
+            }
+        }
+    });
+
+    splide.mount();
+
+    function updateBannerImage() {
+        const bannerImage = document.getElementById('banner-img-2');
+        
+        if (window.innerWidth <= 450) {
+            bannerImage.src = 'Assets/image 2.png';
+        } else {
+            bannerImage.src = 'Assets/Elevate your home.png';
+        }
+    }
+
+    updateBannerImage();
+    window.addEventListener('resize', updateBannerImage);
+
     const tabs = document.querySelectorAll(".tab");
     const items = document.querySelectorAll(".product_item");
 
