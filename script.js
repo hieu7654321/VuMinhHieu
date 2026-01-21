@@ -1,37 +1,67 @@
-document.addEventListener('DOMContentLoaded', function () {
+let index = 0;
+function updateSlider() {
     const track = document.querySelector('.slider-track');
     const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let index = 0;
 
-    function updateSlider() {
-        if (window.innerWidth > 767) {
-            track.style.transform = 'translateX(0)';
-            index = 0;
-            return;
-        }
+    if (!track || slides.length === 0) return;
 
-        const slideWidth = slides[0].offsetWidth;
-        track.style.transform = `translateX(-${index * slideWidth}px)`;
+    if (window.innerWidth > 767) {
+        track.style.transform = 'translateX(0)';
+        index = 0;
+        return;
     }
 
-    nextBtn.addEventListener('click', () => {
-        if (window.innerWidth <= 767) {
-            index = (index + 1) % slides.length;
-            updateSlider();
-        }
-    });
+    const slideWidth = slides[0].offsetWidth;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+}
 
-    prevBtn.addEventListener('click', () => {
-        if (window.innerWidth <= 767) {
-            index = (index - 1 + slides.length) % slides.length;
-            updateSlider();
-        }
-    });
+function nextSlide() {
+    if (window.innerWidth <= 767) {
+        const slides = document.querySelectorAll('.slide');
+        index = (index + 1) % slides.length;
+        updateSlider();
+    }
+}
 
-    window.addEventListener('resize', updateSlider);
+function prevSlide() {
+    if (window.innerWidth <= 767) {
+        const slides = document.querySelectorAll('.slide');
+        index = (index - 1 + slides.length) % slides.length;
+        updateSlider();
+    }
+}
 
+function changeTab(tab, category) {
+    document.querySelectorAll('.tab').forEach(t =>
+        t.classList.remove('active')
+    );
+
+    document.querySelectorAll('.product-grid').forEach(grid =>
+        grid.classList.remove('active')
+    );
+
+    tab.classList.add('active');
+    document.querySelector(`.product-grid.${category}`).classList.add('active');
+}
+
+function submitEmail(event) {
+    event.preventDefault();
+
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value.trim();
+
+    const emailRegex =
+        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|edu|gov|co|io|me|us|info|biz)$/;
+
+    if (email && emailRegex.test(email)) {
+        alert(`Cảm ơn đã đăng ký. Email: ${email}`);
+        emailInput.value = '';
+    } else {
+        alert('Email không hợp lệ. Vui lòng kiểm tra lại.');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('#product-slider', {
         type       : 'slide',
         perPage    : 4,
@@ -82,20 +112,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateBannerImage();
     window.addEventListener('resize', updateBannerImage);
-
-    const emailInput = document.getElementById('email');
-    const emailButton = document.querySelector('.send-email');
-
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|edu|gov|co|io|me|us|info|biz)$/;
-
-    emailButton.addEventListener('click', function (e) {
-        e.preventDefault();
-        const email = emailInput.value.trim();
-
-        if (email && emailRegex.test(email)) {
-            alert(`Cảm ơn đã đăng ký. Email: ${email}`);
-        } else {
-            alert('Email không hợp lệ. Vui lòng kiểm tra lại.');
-        }
-    });
 });

@@ -16,37 +16,19 @@
         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll(".tab");
-            const productGrids = document.querySelectorAll(".product-grid");
-
-            tabs.forEach(tab => {
-                tab.addEventListener("click", () => {
-                    tabs.forEach(t => t.classList.remove("active"));
-                    productGrids.forEach(grid => grid.classList.remove("active"));
-
-                    tab.classList.add("active");
-                    const category = tab.dataset.category;
-                    const activeGrid = document.querySelector(`.product-grid.${category}`);
-                    activeGrid.classList.add("active");
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="container">
         <section class="header">
             <div class="top_header" id="topHeader">
-                <button class="slider-btn prev" aria-label="Previous"></button>
+                <button class="slider-btn prev" aria-label="Previous" onclick="prevSlide()"></button>
                 <div class="slider-viewport">
                     <div class="slider-track">
                         <div class="slide"><div class="number">(+84) 12 34 5678</div></div>
                         <div class="slide"><div class="address">78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi</div></div>
                     </div>
                 </div>
-                <button class="slider-btn next" aria-label="Next"></button>
+                <button class="slider-btn next" aria-label="Next" onclick="nextSlide()"></button>
             </div>
             <div class="main_header">
                 <div class="logo headings">
@@ -70,11 +52,11 @@
                     <h2 class="section-title headings">Our picks for you</h2>
 
                     <div class="tabs">
-                        <button class="tab active" data-category="seating">SEATING</button>
-                        <button class="tab" data-category="table">TABLE</button>
-                        <button class="tab" data-category="storage">STORAGE</button>
-                        <button class="tab" data-category="lighting">LIGHTING</button>
-                        <button class="tab" data-category="decor">DECOR</button>
+                        <button class="tab active" data-category="seating" onclick="changeTab(this, 'seating')">SEATING</button>
+                        <button class="tab" data-category="table" onclick="changeTab(this, 'table')">TABLE</button>
+                        <button class="tab" data-category="storage" onclick="changeTab(this, 'storage')">STORAGE</button>
+                        <button class="tab" data-category="lighting" onclick="changeTab(this, 'lighting')">LIGHTING</button>
+                        <button class="tab" data-category="decor" onclick="changeTab(this, 'decor')">DECOR</button>
                     </div>
                 </div>
 
@@ -719,7 +701,7 @@
                         </div>
                         <div class="email-input">
                             <input name="Email" id="email" type="email" placeholder="Email" required autocomplete="email">
-                            <button class="send-email" aria-label="Send"></button>
+                            <button class="send-email" aria-label="Send" onclick="submitEmail(event)"></button>
                         </div>
                         <div class="media">
                             <a href="https://facebook.com/ugmonk">
