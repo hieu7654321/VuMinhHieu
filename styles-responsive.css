@@ -3,6 +3,10 @@
         justify-content: center;
     }
 
+    .contact-container {
+        margin: 0 14%;
+    }
+
     .footer .footer-container {
         margin-top: 50px;
     }
@@ -204,6 +208,10 @@
     .our-service-container {
         justify-content: space-evenly;
         gap: 10px
+    }
+
+    .contact-container {
+        margin: 0;
     }
 }
 

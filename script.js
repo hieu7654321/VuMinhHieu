@@ -112,4 +112,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateBannerImage();
     window.addEventListener('resize', updateBannerImage);
+
+    const inspirationContent = document.querySelector('.inspiration-content');
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+
+    inspirationContent.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.pageX - inspirationContent.offsetLeft;
+        scrollLeft = inspirationContent.scrollLeft;
+        inspirationContent.style.cursor = 'grabbing';
+    });
+
+    inspirationContent.addEventListener('mouseleave', () => {
+        isDragging = false;
+        inspirationContent.style.cursor = 'grab';
+    });
+
+    inspirationContent.addEventListener('mouseup', () => {
+        isDragging = false;
+        inspirationContent.style.cursor = 'grab';
+    });
+
+    inspirationContent.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const x = e.pageX - inspirationContent.offsetLeft;
+        const walk = (x - startX) * 3;
+        inspirationContent.scrollLeft = scrollLeft - walk;
+    });
 });
