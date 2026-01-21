@@ -670,6 +670,7 @@ div.inspiration-heading ,div.inspiration-info-content {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 .inspiration-content::-webkit-scrollbar {
