@@ -9,12 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-responsive.css">
     <script src="script.js" defer></script>
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll(".tab");
+            const productGrids = document.querySelectorAll(".product-grid");
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", () => {
+                    tabs.forEach(t => t.classList.remove("active"));
+                    productGrids.forEach(grid => grid.classList.remove("active"));
+
+                    tab.classList.add("active");
+                    const category = tab.dataset.category;
+                    const activeGrid = document.querySelector(`.product-grid.${category}`);
+                    activeGrid.classList.add("active");
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -31,7 +50,7 @@
             </div>
             <div class="main_header">
                 <div class="logo headings">
-                    <h1><a href="#">ORANGY</a></h1>
+                    <h1><a href="/BThuchanh2/home.html">ORANGY</a></h1>
                 </div>
             </div>
         </section>
@@ -39,7 +58,9 @@
             <img src="Assets/hero.png" alt="" class="hero-img">
             <div class="hero-content">
                 <div class="hero-slogan headings">EMBRACE VISION</div>
-                <p class="hero-description">Clever products for every corner</p>
+                <div class="description-div">
+                    <p class="hero-description">Clever products for every corner</p>
+                </div>
                 <a href="#products" class="hero_btn">EXPLORE NOW</a>
             </div>
         </section>
@@ -57,9 +78,9 @@
                     </div>
                 </div>
 
-                <div class="product-grid">
+                <div class="product-grid seating active">
                     <div class="product-box wide">
-                        <div class="product seating">
+                        <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Oda Ottoman.jpg" alt="">
                             </div>
@@ -72,7 +93,7 @@
                     </div>
 
                     <div class="product-box tall">
-                        <div class="product seating">
+                        <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
                             <div class="product-image">
@@ -85,7 +106,7 @@
                             </div>
                         </div>
 
-                        <div class="product tall seating">
+                        <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Harbour side dining chair.jpg" alt="">
                             </div>
@@ -98,7 +119,7 @@
                     </div>
 
                     <div class="product-box tall">
-                        <div class="product seating">
+                        <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
                                 <img src="Assets/Tearoom club chair.jpg" alt="">
@@ -106,10 +127,10 @@
                             <div class="info">
                                 <span class="type">SOFA</span>
                                 <h3>Tearoom club chair</h3>
-                                <p><span style="color: red;">$699.00</span> <span style="text-decoration: line-through;">$999.00</span></p>
+                                <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="product tall seating">
+                        <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Co dining chair.jpg" alt="">
                             </div>
@@ -122,7 +143,7 @@
                     </div>
 
                     <div class="product-box wide">
-                        <div class="product seating">
+                        <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
                             </div>
@@ -133,6 +154,18 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="product-grid table">
+                    <!-- To do later -->
+                </div>
+                <div class="product-grid storage">
+                    <!-- To do later -->
+                </div>
+                <div class="product-grid lighting">
+                    <!-- To do later -->
+                </div>
+                <div class="product-grid decor">
+                    <!-- To do later -->
                 </div>
             </div>
         </section>
@@ -206,7 +239,11 @@
         <section class="text-carousel">
             <div class="carousel-container">
                 <div class="carousel-content headings">
-                    FIND INSPIRATION * DESIGN FOR LIVING * UNIQUE
+                    FIND INSPRATION
+                    <img src="Assets/star_black.svg" alt=""> 
+                    DESIGN FOR LIVING
+                    <img src="Assets/star_black.svg" alt="">
+                    UNIQUE
                 </div>
             </div>
         </section>
@@ -335,7 +372,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact-shop">
+        <!-- <section class="contact-shop">
             <div class="contact-all">
                 <div class="product-grid-container">
                     <div class="contact-container">
@@ -354,7 +391,7 @@
                             <div class="contact-content-container2-content">RENOVATE YOUR HOME AT</div>
                             <h2 class="headings">78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi</h2>
                             <div class="orangy-link">
-                                <a href="#">@ORANGY</a>
+                                <a href="https://instagram.com/ugmonk">@ORANGY</a>
                             </div>
                         </div>
                         <div class="contact-content-container3">
@@ -368,8 +405,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="footer">
+        </section> -->
+        <!-- <section class="footer">
             <div class="footer-container">
                 <div class="email-container">
                     <div class="email-info">
@@ -381,29 +418,29 @@
                         <button class="send-email" aria-label="Send"></button>
                     </div>
                     <div class="media">
-                        <a href="#">
+                        <a href="https://facebook.com/ugmonk">
                             <img src="Assets/fb.png" alt="">
                         </a>
-                        <a href="#">
+                        <a href="https://twitter.com/ugmonk">
                             <img src="Assets/x.png" alt="">
                         </a>
-                        <a href="#">
+                        <a href="https://instagram.com/ugmonk">
                             <img src="Assets/instagram.png" alt="">
                         </a>
-                        <a href="#">
+                        <a href="https://twitter.com/ugmonk">
                             <img src="Assets/tiktok.png" alt="">
                         </a>
-                        <a href="#">
+                        <a href="https://twitter.com/ugmonk">
                             <img src="Assets/yt.png" alt="">
                         </a>
-                        <a href="#">
+                        <a href="https://twitter.com/ugmonk">
                             <img src="Assets/vimeo.png" alt="">
                         </a>
                     </div>
                     <div class="copyright"><span>© 2024</span>&nbsp;<span class="underline">ORANGY</span></div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </div>
 </body>
 </html>

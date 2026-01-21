@@ -1,0 +1,340 @@
+@media (min-width: 492px) {
+    .tabs {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .top_header {
+        font-size: 14px;
+        padding: 5px 20px;
+        justify-content: center;
+        gap: 60px;
+        height: auto;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+
+    .slider-track {
+        width: 100%;
+        justify-content: space-between;
+        transition: none;
+    }
+
+    .slide {
+        flex: 0 1 auto;
+        justify-content: flex-start;
+    }
+
+    .slider-track .number {
+        text-align: left;
+    }
+
+    .slider-track .address {
+        text-align: right;
+        min-width: 240px;
+    }
+
+    /* hero_banner */
+
+    .hero_banner {
+        height: 680px;
+    }
+
+    .hero-slogan {
+        font-size: 58px;
+    }
+
+    .hero-content {
+        top: auto;
+    }
+
+    .hero-content .hero-description {
+        max-width: 352px;
+    }
+
+    /* Product Tabs */
+    .single_banner {
+        height: 349px;
+        margin-top: 100px;
+    }
+
+    .single_banner::after {
+        background: rgba(0, 0, 0, 0.35);
+    }
+
+    .banner-title {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        line-height: 64px;
+        font-size: 56px;
+        line-height: 80px;
+        letter-spacing: 0px;
+    }
+
+    .banner-content {
+        top: 53%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    /* service */
+    /* .service-info {
+        margin-left: 14px;
+        gap: 4px;
+    } */
+
+    .our-service-container {
+        justify-content: space-evenly;
+    }
+
+    .our-service-box {
+        width: 21.8%;
+        min-width: 300px;
+        height: 184px;
+        box-sizing: border-box;
+    }
+
+    .service-image img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .service-heading {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .service_info_content {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .slider-track .address {
+        min-width: 300px;
+    }
+
+    /* hero_banner */
+
+    .hero_banner {
+        height: 820px;
+    }
+
+    .hero-img {
+        height: 1200px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .hero-slogan {
+        font-size: 68px;
+    }
+
+    .hero-content .hero-description {
+        margin: 0px 40.84px;
+    }
+
+    /* Product Tabs */
+    .product-grid-container {
+        width: 73.438%;
+    }
+
+    .our-service-box {
+        flex-direction: column;
+        min-width: 400px;
+    }
+    .our-service-container {
+        justify-content: space-evenly;
+        gap: 10px
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero_banner {
+        height: 1080px;
+        max-height: 1200px;
+    }
+
+    .hero-content {
+        margin-top: 25px;
+    }
+
+    .hero-slogan {
+        font-size: 72px;
+        line-height: 90px;
+    }
+
+    .description-div {
+        margin: 25px 0px 32px 0px;;
+    }
+
+    .hero-content .hero-description {
+        line-height: 30px;
+    }
+
+    /* Product Tabs */
+
+    .product_grid_tabs {
+        margin-top: 5.2%;
+    }
+
+    .product-grid-header {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        line-height: 48px;
+        width: auto;
+    }
+
+    .tabs {
+        font-weight: 500;
+        justify-content: flex-end;
+        width: auto;
+        padding: 0;
+        gap: 13.8%;
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+
+    .product-grid.active {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 29.4px;
+        column-gap: 10px;
+    }
+
+    .product-image {
+        height: 459.98px;
+    }
+
+    .tag.sale {
+        padding: 11px 8.6px;
+    }
+
+    /* Product Splide */
+
+    .heading-container {
+        margin: 5px 0px 50px 0px;
+    }
+
+    .heading-container h2 {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: 0px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .product-slider-splide {
+        --slide-max-width: 345px;
+        --slide-ratio: 345 / 460;
+    }
+
+    /* Carousel */
+    .carousel-container {
+        height: 248px;
+        overflow: hidden;
+        margin-top: 22px;
+    }
+
+    .carousel-content {
+        font-size: 74px;
+        font-weight: 400;
+        white-space: nowrap;
+        gap: 48px;
+        line-height: 90px;
+    }
+
+    /* Sale Block */
+    .sale-block-container {
+        margin-top: 1.5px;
+        gap: 75px;
+    }
+
+    .sale-block {
+        width: 420px;
+        height: 560px;
+    }
+
+    .season-sale {
+        padding-top: 33px;
+    }
+
+    .sale-block-text {
+        padding: 0px;
+    }
+
+    .sale-block-text h3 {
+        margin-top: 110px;
+        font-size: 56px;
+        line-height: 80px;
+        padding: 0 90px;
+        height: 160px;
+    }
+
+    /* inspiration */
+    .inspiration-container {
+        gap: 62px;
+        margin-top: 80px;
+    }
+
+    .inspiration-heading-container {
+        width: 40%;
+    }
+
+    .inspiration-heading-first {
+        font-size: 36px;
+        line-height: 48px;
+        text-align: center;
+    }
+
+    .inspiration-content {
+        text-align: left;
+        gap: 5.8%;
+    }
+
+    .inspiration-block {
+        width: 20.64%;
+        flex: 0 0 20.64%;
+    }
+
+    .inspiration-heading {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 38px;
+        margin: 16px 0px 8px 0px;
+    }
+
+    .inspiration-info-content {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .our-service {
+        margin-top: 80px;
+    }
+
+    .service-info {
+        gap: 12px;
+    }
+
+    .our-service-box {
+        min-width: 184px;
+        gap: 20px;
+    }
+    .our-service-container {
+        justify-content: space-between;
+    }
+}
