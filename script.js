@@ -82,4 +82,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateBannerImage();
     window.addEventListener('resize', updateBannerImage);
+
+    const emailInput = document.getElementById('email');
+    const emailButton = document.querySelector('.send-email');
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|edu|gov|co|io|me|us|info|biz)$/;
+
+    emailButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+
+        if (email && emailRegex.test(email)) {
+            alert(`Cảm ơn đã đăng ký. Email: ${email}`);
+        } else {
+            alert('Email không hợp lệ. Vui lòng kiểm tra lại.');
+        }
+    });
 });

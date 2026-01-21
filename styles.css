@@ -318,7 +318,7 @@ html {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .product-box.tall {
@@ -564,29 +564,48 @@ div.product_slider-item {
     flex-direction: column;
 }
 
+.sale-block-text-container {
+    height: 100%;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 11%;
+    justify-content: space-between;
+}
+
 .season-sale {
-    letter-spacing: 0.2px;
-    padding-top: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.sale-block-text-content div {
+    margin-top: 14px;
 }
 
 .sale-block-text h3 {
     font-size: 46px;
-    margin-top: 89px;
-    padding: 0 83.51px;
+    padding: 0 15%;
     align-items: center;
     display: flex;                                                                                                                           
     height: 128px;
-    margin-bottom: 12px;
+    margin: 0;
     font-weight: 400;
     line-height: 64px;
     text-align: center;
     vertical-align: middle;
     color: rgba(255, 255, 255, 1);
+    justify-content: center;
 }
 
 .sale-block-text p {
     font-size: 14px;
-    margin: 1.5px;
+    margin: 0;
 }
 
 /* inspiration */
@@ -748,7 +767,7 @@ div.inspiration-heading ,div.inspiration-info-content {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 48px;
+    margin: 48px 0;
 }
 
 .our-service-container {
@@ -795,4 +814,257 @@ div.inspiration-heading ,div.inspiration-info-content {
     line-height: 24px;
     letter-spacing: 0px;
     vertical-align: middle;
+}
+
+/* contact */
+.contact-shop {
+    width: 100%;
+    display: flex;
+    background-color: #F6F2EE;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.contact-all {
+    justify-content: center;
+    display: flex;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: auto;
+}
+
+.contact-content-container1,
+.contact-content-container2,
+.contact-content-container3 {
+    position: relative;
+    width: 360px;
+}
+
+.contact-content-container1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 182.38px;
+    margin-top: 30px;
+}
+
+.contact-content-container2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-content-container2-content {
+    font-weight: 500;
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.contact-content-container2 h2 {
+    font-size: 32px;
+    line-height: 56px;
+    color: #000000;
+    font-weight: 400;
+    max-width: 82.32%;
+    margin: 14px 0px 0px 0px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.orangy-link a {
+    color: #000000;
+    font-size: 16px;
+    line-height: 30px;
+    border: 1px solid #D1CECA;
+    text-decoration: none;
+    padding: 8px 40px;
+    align-items: center;
+    display: inline-block;
+    margin-top: 20px;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+
+.contact-content-container3 {
+    width: 100%;
+    height: 109.19px;
+    margin-bottom: 36px;
+}
+
+.contact-content-container1-img-1,
+.contact-content-container1-img-2,
+.contact-content-container1-img-3,
+.contact-content-container3-img-1,
+.contact-content-container3-img-2 {
+    position: absolute;
+    max-width: none;
+}
+
+.contact-content-container1-img-1 img,
+.contact-content-container1-img-2 img,
+.contact-content-container1-img-3 img,
+.contact-content-container3-img-1 img,
+.contact-content-container3-img-2 img {
+    width: 30.33%;
+    position: relative;
+}
+
+.contact-content-container1-img-1 img {
+    top: 65px;
+    left: 0;
+    z-index: 3;
+}
+
+.contact-content-container1-img-2 img {
+    top: 0;
+    left: 27.4%;
+}
+
+.contact-content-container1-img-3 img {
+    bottom: -73px;
+    left: 70%;
+}
+
+.contact-content-container3-img-1 img {
+    top: 17px;
+    right: -7%;
+}
+
+.contact-content-container3-img-2 img {
+    bottom: -6px;
+    right: -62%;
+}
+
+/* footer */
+.footer {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.email-container {
+    width: 100%;
+    text-align: center;
+}
+
+.email-info {
+    margin-bottom: 22px;
+}
+
+.email-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33.6px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.email-content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    margin: 10px 0 20px 0;
+}
+
+.email-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.email-input input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.email-input button {
+    position: absolute;
+    right: 13px;
+    top: 19px;
+    background-image: url("Assets/Vector (1).svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 6.25px;
+    height: 12.5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.email-input button {
+    filter: invert(0) brightness(0) contrast(100%) grayscale(0) sepia(0);
+}
+
+.media {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: 27px;
+}
+
+.media a {
+    width: 24px;
+    height: 24px;
+}
+
+.media a img {
+    object-fit: contain;
+}
+
+.copyright {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.copyright span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #FFFFFFCC;
+}
+
+span.underline {
+    text-decoration: none;
 }
