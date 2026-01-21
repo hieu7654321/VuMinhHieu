@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let index = 0;
 
     function updateSlider() {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 767) {
             track.style.transform = 'translateX(0)';
             index = 0;
             return;
@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     nextBtn.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 767) {
             index = (index + 1) % slides.length;
             updateSlider();
         }
     });
 
     prevBtn.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 767) {
             index = (index - 1 + slides.length) % slides.length;
             updateSlider();
         }
@@ -44,15 +44,19 @@ document.addEventListener('DOMContentLoaded', function () {
         speed      : 600,
         breakpoints: {
             1600: {
-                perPage: 4,
-                gap: '10px',
-            },
-            1500: {
                 perPage: 3,
                 gap: '10px',
             },
-            768: {
-                perPage: 2,
+            1500: {
+                perPage: 3.5,
+                gap: '10px',
+            },
+            1100: {
+                perPage: 2.5,
+                gap: '10px',
+            },
+            968: {
+                perPage: 1.5,
                 gap: '8px',
             },
             391: {
@@ -79,22 +83,19 @@ document.addEventListener('DOMContentLoaded', function () {
     updateBannerImage();
     window.addEventListener('resize', updateBannerImage);
 
-    const tabs = document.querySelectorAll(".tab");
-    const items = document.querySelectorAll(".product_item");
+    const emailInput = document.getElementById('email');
+    const emailButton = document.querySelector('.send-email');
 
-    tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            tabs.forEach(t => t.classList.remove("active"));
-            tab.classList.add("active");
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|edu|gov|co|io|me|us|info|biz)$/;
 
-            const category = tab.dataset.category;
+    emailButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        const email = emailInput.value.trim();
 
-            items.forEach(item => {
-                item.classList.add("hidden");
-                if (item.classList.contains(category)) {
-                    item.classList.remove("hidden");
-                }
-            });
-        });
+        if (email && emailRegex.test(email)) {
+            alert(`Cảm ơn đã đăng ký. Email: ${email}`);
+        } else {
+            alert('Email không hợp lệ. Vui lòng kiểm tra lại.');
+        }
     });
 });
