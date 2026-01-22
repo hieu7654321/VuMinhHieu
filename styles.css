@@ -1,6 +1,23 @@
+:root {
+    --primary-headings-font: 'Lora', sans-serif;
+    --primary-body-font: 'Poppins', sans-serif;
+    --header-background-color: #ffffff;
+    --announcement-bar-bg-color: #000;
+    --announcement-bar-text-color: rgba(255, 255, 255, 1);
+    --hero-btn-color: rgba(255, 255, 255, 1);
+    --tag-selling-bg-color: #000000;
+    --tag-new-bg-color: #054E4A;
+    --tag-sale-bg-color: #A42003;
+    --sale-block-text-bg-color: #6E331A;
+    --contact-bg-color: #F6F2EE;
+    --footer-bg-color: #000000;
+    --text-white-color: #fff;
+    --text-dark-color: #000000; 
+}
+
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--primary-body-font);
 }
 
 body::-webkit-scrollbar {
@@ -10,19 +27,19 @@ body::-webkit-scrollbar {
 /* header */
 
 .headings {
-    font-family: 'Lora', sans-serif;
+    font-family: var(--primary-headings-font);
 }
 .container {
     width: 100%;
     margin: 0 auto;
 }
 .header {
-    background-color: #ffffff;
+    background-color: var(--header-background-color)
 }
 
 .top_header {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--announcement-bar-bg-color);
+    color: var(--text-white-color);
     font-size: 14px;
     padding: 0 15px;
     height: 40px;
@@ -70,7 +87,7 @@ body::-webkit-scrollbar {
     line-height: 24px;
     letter-spacing: 0;
     vertical-align: middle;
-    color: rgba(255, 255, 255, 1);
+    color: var(--announcement-bar-text-color);
 }
 
 .slider-track .address {
@@ -81,7 +98,7 @@ body::-webkit-scrollbar {
     line-height: 24px;
     letter-spacing: 0;
     vertical-align: middle;
-    color: rgba(255, 255, 255, 1);
+    color: var(--announcement-bar-text-color);
 }
 
 .slider-btn {
@@ -115,7 +132,7 @@ body::-webkit-scrollbar {
 .logo h1 {
     margin: 0;
     font-size: 24px;
-    color: #000000;
+    color: var(--text-dark-color);
     font-weight: normal;
 }
 
@@ -156,7 +173,7 @@ html {
 
 .hero-content {
     position: absolute;
-    color: white;
+    color: var(--text-white-color);
     max-width: 352px;
     top: 175.8px;
     z-index: 2;
@@ -193,7 +210,7 @@ html {
 }
 
 .hero_btn {
-    color: rgba(255, 255, 255, 1);
+    color: var(--hero-btn-color);
     font-size: 16px;
     border-radius: 5px;
     text-underline-offset: 8px;
@@ -235,7 +252,7 @@ html {
     font-weight: 400;
     line-height: 38.4px;
     vertical-align: middle;
-    color: rgba(0, 0, 0, 1);
+    color: var(--text-dark-color);
     margin: 0;
     letter-spacing: 0px;
     width: 100%;
@@ -290,7 +307,6 @@ html {
 
 .product-grid.active {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
     gap: 24px;
     justify-content: center;
     align-items: stretch;
@@ -301,6 +317,7 @@ html {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    max-width: 360px;
 }
 
 .product {
@@ -312,9 +329,16 @@ html {
 
 .product-image {
     width: 100%;
-    height: 234.66px;
     overflow: hidden;
     margin-bottom: 16px;
+}
+
+.wide .product-image {
+    aspect-ratio: 1.534;
+}
+
+.tall .product-image {
+    aspect-ratio: 0.75;
 }
 
 .product-image img {
@@ -347,22 +371,22 @@ html {
     line-height: 18px;
     letter-spacing: 0;
     vertical-align: middle;
-    color: #FFFFFF;
+    color: var(--text-white-color);
 }
 
 .tag.selling {
     padding: 3px 9.5px;
-    background-color: #000000;
+    background-color: var(--tag-selling-bg-color);
 }
 
 .tag.new {
     top: 36px;
-    background-color: #054E4A;
+    background-color: var(--tag-new-bg-color);
     padding: 3px 9.4px;
 }
 
 .tag.sale {
-    background: #A42003;
+    background: var(--tag-sale-bg-color);
     padding: 3px 8.6px;
 }
 
@@ -489,7 +513,7 @@ div.product_slider-item {
 .carousel-content {
     display: flex;
     align-items: center;
-    color: #000000;
+    color: var(--text-dark-color);
     opacity: 0.2;
     font-size: 60px;
     font-weight: 400;
@@ -530,7 +554,7 @@ div.product_slider-item {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 19px;
+    margin-top: 18px;
 }
 
 .sale-block-container {
@@ -560,8 +584,8 @@ div.product_slider-item {
 .sale-block-text {
     width: 100%;
     height: 100%;
-    background-color: #6E331A;
-    color: white;
+    background-color: var(--sale-block-text-bg-color);
+    color: var(--text-white-color);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -602,7 +626,7 @@ div.product_slider-item {
     line-height: 64px;
     text-align: center;
     vertical-align: middle;
-    color: rgba(255, 255, 255, 1);
+    color: var(--text-white-color);
     justify-content: center;
 }
 
@@ -718,8 +742,8 @@ div.inspiration-heading ,div.inspiration-info-content {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 1;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0.5;
     pointer-events: none;
     z-index: 1;
 }
@@ -739,7 +763,7 @@ div.inspiration-heading ,div.inspiration-info-content {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: var(--text-white-color);
     text-shadow: 0 2px 8px rgba(0,0,0,0.7);
     padding: 0 20px;
 }
@@ -804,7 +828,7 @@ div.inspiration-heading ,div.inspiration-info-content {
 }
 
 .service_heading {
-    color: #000000;
+    color: var(--text-dark-color);
     font-weight: 400;
     font-size: 20px;
     line-height: 25.6px;
@@ -814,7 +838,7 @@ div.inspiration-heading ,div.inspiration-info-content {
 
 .service_info_content {
     font-size: 14px;
-    color: #000000;
+    color: var(--text-dark-color);
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0px;
@@ -825,7 +849,7 @@ div.inspiration-heading ,div.inspiration-info-content {
 .contact-shop {
     width: 100%;
     display: flex;
-    background-color: #F6F2EE;
+    background-color: var(--contact-bg-color);
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -872,7 +896,7 @@ div.inspiration-heading ,div.inspiration-info-content {
 
 .contact-content-container2-content {
     font-weight: 500;
-    color: #000000;
+    color: var(--text-dark-color);
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0px;
@@ -884,7 +908,7 @@ div.inspiration-heading ,div.inspiration-info-content {
 .contact-content-container2 h2 {
     font-size: 32px;
     line-height: 56px;
-    color: #000000;
+    color: var(--text-dark-color);
     font-weight: 400;
     max-width: 82.32%;
     margin: 14px 0px 0px 0px;
@@ -894,7 +918,7 @@ div.inspiration-heading ,div.inspiration-info-content {
 }
 
 .orangy-link a {
-    color: #000000;
+    color: var(--text-dark-color);
     font-size: 16px;
     line-height: 30px;
     border: 1px solid #D1CECA;
@@ -961,8 +985,8 @@ div.inspiration-heading ,div.inspiration-info-content {
 
 /* footer */
 .footer {
-    background-color: #000000;
-    color: #fff;
+    background-color: var(--footer-bg-color);
+    color: var(--text-white-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -994,7 +1018,7 @@ div.inspiration-heading ,div.inspiration-info-content {
     letter-spacing: 0;
     vertical-align: middle;
     text-align: left;
-    color: #FFFFFF;
+    color: var(--text-white-color);
 }
 
 .email-content {
