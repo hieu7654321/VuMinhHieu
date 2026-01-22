@@ -98,6 +98,32 @@
     }
 
     /* Product Tabs */
+
+    .product-grid.active {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 29.4px;
+        column-gap: 10px;
+        justify-items: center;
+    }
+
+    .product-box {
+        max-width: 700px;
+    }
+
+    .product-box:nth-child(1),
+    .product-box:nth-child(3) {
+        justify-self: end;
+    }
+
+    .product-box:nth-child(2),
+    .product-box:nth-child(4) {
+        justify-self: start;
+    }
+
+    /* .product-image {
+        height: 459.98px;
+    } */
+
     .single_banner {
         height: 349px;
         margin-top: 100px;
@@ -105,6 +131,7 @@
 
     .single_banner::after {
         background: rgba(0, 0, 0, 0.5);
+        opacity: 1;
     }
 
     .banner-title {
@@ -201,6 +228,47 @@
         width: 73.438%;
     }
 
+    .product_grid_tabs {
+        margin-top: 5.2%;
+    }
+
+    .wide .product-image {
+        aspect-ratio: 1.5217;
+    }
+
+    .tall .product-image {
+        aspect-ratio: 0.75216;
+    }
+
+    .product-grid-header {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        line-height: 48px;
+        width: auto;
+    }
+
+    .tabs {
+        font-weight: 500;
+        justify-content: flex-end;
+        width: 21.7%;
+        padding: 0;
+        margin: 0;
+        gap: 13.8%;
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+
+    .tag.sale {
+        padding: 11px 8.6px;
+    }
+
     .our-service-box {
         flex-direction: column;
         min-width: 400px;
@@ -240,47 +308,6 @@
 
     /* Product Tabs */
 
-    .product_grid_tabs {
-        margin-top: 5.2%;
-    }
-
-    .product-grid-header {
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-    }
-
-    .section-title {
-        font-size: 36px;
-        line-height: 48px;
-        width: auto;
-    }
-
-    .tabs {
-        font-weight: 500;
-        justify-content: flex-end;
-        width: auto;
-        padding: 0;
-        gap: 13.8%;
-        overflow-x: visible;
-        overflow-y: visible;
-    }
-
-    .product-grid.active {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 29.4px;
-        column-gap: 10px;
-    }
-
-    .product-image {
-        height: 459.98px;
-    }
-
-    .tag.sale {
-        padding: 11px 8.6px;
-    }
 
     /* Product Splide */
 

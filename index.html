@@ -699,10 +699,12 @@
                             <div class="email-title headings">Subscribe to get 10% OFF</div>
                             <div class="email-content">Subscribe for store updates and discounts.</div>
                         </div>
-                        <div class="email-input">
-                            <input name="Email" id="email" type="email" placeholder="Email" required autocomplete="email">
-                            <button class="send-email" aria-label="Send" onclick="submitEmail(event)"></button>
-                        </div>
+                        <form class="email-input-form" onsubmit="submitEmail(event)">
+                            <div class="email-input">
+                                <input name="Email" id="email" type="email" placeholder="Email" required autocomplete="email">
+                                <button class="send-email" type="submit" aria-label="Send"></button>
+                            </div>
+                        </form>
                         <div class="media">
                             <a href="https://facebook.com/ugmonk">
                                 <img src="Assets/fb.png" alt="" style="width: 16.99px; height: 16.89px;">
