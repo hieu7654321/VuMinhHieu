@@ -104,7 +104,7 @@
     }
 
     .single_banner::after {
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.5);
     }
 
     .banner-title {
