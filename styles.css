@@ -716,6 +716,7 @@ div.inspiration-heading ,div.inspiration-info-content {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.38);
+    opacity: 1;
     pointer-events: none;
     z-index: 1;
 }
