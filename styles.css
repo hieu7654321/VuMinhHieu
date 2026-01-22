@@ -196,7 +196,7 @@ html {
     color: rgba(255, 255, 255, 1);
     font-size: 16px;
     border-radius: 5px;
-    text-underline-offset: 10px;
+    text-underline-offset: 8px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0;
@@ -252,9 +252,11 @@ html {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
-    padding: 0 4.17%;
+    margin: 0 4.17%;
 }
 
 .tabs::-webkit-scrollbar {
@@ -267,7 +269,7 @@ html {
     border: none;
     font-size: 16px;
     cursor: pointer;
-    text-underline-offset: 8px;
+    text-underline-offset: 7px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0;
@@ -275,6 +277,7 @@ html {
     vertical-align: middle;
     text-transform: uppercase;
     padding: 0;
+    scroll-snap-align: start;
 }
 
 .tab.active {
