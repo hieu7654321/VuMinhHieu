@@ -554,7 +554,8 @@ div.product_slider-item {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 18px;
+    margin: 19px auto 0 auto;
+    max-width: 1920px;
 }
 
 .sale-block-container {
@@ -567,6 +568,7 @@ div.product_slider-item {
 .sale-block {
     aspect-ratio: 3 / 4;
     width: 100%;
+    max-width: 419.94px;
 }
 
 .sale-block-image {
@@ -617,11 +619,11 @@ div.product_slider-item {
 
 .sale-block-text h3 {
     font-size: 46px;
-    padding: 0 15%;
+    margin: 0 auto;
+    max-width: 200px;
     align-items: center;
     display: flex;                                                                                                                           
     height: 128px;
-    margin: 0;
     font-weight: 400;
     line-height: 64px;
     text-align: center;
@@ -640,7 +642,7 @@ div.product_slider-item {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 19px;
+    margin-top: 18px;
 }
 
 .inspiration-container {
