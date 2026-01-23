@@ -3,6 +3,10 @@
         justify-content: center;
     }
 
+    .inspiration-heading-container {
+        width: 80%;
+    }
+
     .contact-container {
         margin: 0 14%;
     }
@@ -135,6 +139,10 @@
     /* .product-image {
         height: 459.98px;
     } */
+
+    .inspiration-heading-container {
+        width: 60%;
+    }
 
     .single_banner {
         height: 349px;
