@@ -99,19 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     splide.mount();
-
-    function updateBannerImage() {
-        const bannerImage = document.getElementById('banner-img-2');
-        
-        if (window.innerWidth <= 450) {
-            bannerImage.src = 'Assets/image 2.png';
-        } else {
-            bannerImage.src = 'Assets/Elevate your home.png';
-        }
-    }
-
-    updateBannerImage();
-    window.addEventListener('resize', updateBannerImage);
 });
 
 
