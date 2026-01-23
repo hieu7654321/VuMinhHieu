@@ -1,3 +1,10 @@
+@media (max-width: 365px) {
+    .sale-block-text h3 {
+        font-size: 34px;
+        line-height: 40px;
+    }
+}
+
 @media (min-width: 492px) {
     .tabs {
         justify-content: center;
@@ -366,9 +373,9 @@
     }
 
     .sale-block-text h3 {
-        font-size: 28px;
+        font-size: 42px;
         line-height: 40px;
-        height: 35%;
+        height: 55%;
     }
 
     /* inspiration */
