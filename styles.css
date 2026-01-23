@@ -232,7 +232,7 @@ html {
 }
 
 .product-grid-container {
-    width: 92.31%;
+    width: 92.216%;
 }
 
 .product-grid-header {
@@ -334,11 +334,11 @@ html {
 }
 
 .wide .product-image {
-    aspect-ratio: 1.534;
+    aspect-ratio: calc(360 / 235);
 }
 
 .tall .product-image {
-    aspect-ratio: 0.75;
+    aspect-ratio: calc(176 / 235);
 }
 
 .product-image img {
@@ -351,7 +351,7 @@ html {
 .product-box.tall {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+    gap: 2.225%;
     height: 100%;
 }
 
