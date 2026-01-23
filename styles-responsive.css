@@ -110,6 +110,10 @@
         max-width: 700px;
     }
 
+    .product-box.tall {
+        gap: 1.43%;
+    }
+
     .product-box:nth-child(1),
     .product-box:nth-child(3) {
         justify-self: end;
@@ -118,6 +122,14 @@
     .product-box:nth-child(2),
     .product-box:nth-child(4) {
         justify-self: start;
+    }
+
+    .wide .product-image {
+        aspect-ratio: calc(700 / 460);
+    }
+
+    .tall .product-image {
+        aspect-ratio: calc(345 / 460);
     }
 
     /* .product-image {
@@ -230,14 +242,6 @@
 
     .product_grid_tabs {
         margin-top: 5.2%;
-    }
-
-    .wide .product-image {
-        aspect-ratio: 1.5217;
-    }
-
-    .tall .product-image {
-        aspect-ratio: 0.75216;
     }
 
     .product-grid-header {
