@@ -4,7 +4,7 @@ link preview: https://allbirds-9858.myshopify.com/
 password: meeffa
 
 Put FAQ inside theme.liquid
-{
+```
   <!doctype html>
   <html
     {% if request.design_mode %}
@@ -546,6 +546,4 @@ Put FAQ inside theme.liquid
           window.addEventListener('load', showPopup);
       </script>
   </html>
-}
-
-
+```
