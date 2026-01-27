@@ -1,0 +1,57 @@
+@use "base" as *
+
+.cookie-bar
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  background: $clr-white
+  color: $clr-black
+  padding: 10px 20px
+  z-index: 9999
+  background: rgba(255,255,255,0.8)
+  backdrop-filter: blur(8px)
+  -webkit-backdrop-filter: blur(8px)
+
+.cookie-content
+  width: 100%
+  margin: 0 auto
+  flex-direction: column
+  @include flex-between
+  gap: 2rem
+  flex-wrap: wrap
+
+.cookie-content p
+  font-size: 20px
+  line-height: 56px
+  text-align: left
+  @include text-normal
+
+.cookie-buttons
+  display: flex
+  gap: 1rem
+
+.btn-accept, .btn-decline
+  padding: 5px 19.61px
+  border: none
+  cursor: pointer
+  font-weight: 700
+  font-size: $fs-body
+  line-height: 24px
+  letter-spacing: 0
+  text-align: center
+  vertical-align: middle
+  text-transform: uppercase
+
+.btn-accept
+  background: $clr-black
+  color: $clr-white
+
+.btn-decline
+  color: $clr-black
+  background: transparent
+
+@media (min-width: 768px)
+  .cookie-content
+    flex-direction: row
+    text-align: center

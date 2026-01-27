@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="Css/main.css">
     <script src="Javascript/script.js" defer></script>
+    <script src="Javascript/cookies.js" defer></script>
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
@@ -17,6 +19,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 </head>
 <body>
+    <div id="cookie-consent" class="cookie-bar" style="display:none;">
+        <div class="cookie-content">
+            <p>This website uses cookies to ensure you get the best experience on our website.</p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="btn-accept">Accept</button>
+                <button id="cookie-decline" class="btn-decline">Ignore</button>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <section class="header">
             <div class="top_header" id="topHeader">
@@ -35,7 +46,7 @@
                 </div>
             </div>
         </section>
-        <section class="hero_banner" id="hero">
+        <section data-aos="fade" class="hero_banner" id="hero">
             <img src="Assets/hero.png" alt="" class="hero-img">
             <div class="hero-content">
                 <div class="hero-slogan headings">EMBRACE VISION</div>
@@ -60,7 +71,7 @@
                 </div>
 
                 <div class="product-grid seating active">
-                    <div class="product-box wide">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Oda Ottoman.jpg" alt="">
@@ -73,7 +84,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -99,7 +110,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -123,7 +134,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
@@ -136,8 +147,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-grid table">
-                    <div class="product-box wide">
+                <div data-aos="fade" class="product-grid table">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Releve platter.png" alt="">
@@ -150,7 +161,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -176,7 +187,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -200,7 +211,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
@@ -214,7 +225,7 @@
                     </div>
                 </div>
                 <div class="product-grid storage">
-                    <div class="product-box wide">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Releve platter.png" alt="">
@@ -227,7 +238,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -253,7 +264,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -277,7 +288,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
@@ -291,7 +302,7 @@
                     </div>
                 </div>
                 <div class="product-grid lighting">
-                    <div class="product-box wide">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Releve platter.png" alt="">
@@ -304,7 +315,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -330,7 +341,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -354,7 +365,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
@@ -368,7 +379,7 @@
                     </div>
                 </div>
                 <div class="product-grid decor">
-                    <div class="product-box wide">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Releve platter.png" alt="">
@@ -381,7 +392,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -407,7 +418,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall">
+                    <div data-aos="fade-up" class="product-box tall">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -431,7 +442,7 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide">
+                    <div data-aos="fade-up" class="product-box wide">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Elevate-your-home.png" alt="">
@@ -446,7 +457,7 @@
                 </div>
             </div>
         </section>
-        <section class="product_slider">
+        <section data-aos="fade" class="product_slider">
             <div class="product-grid-container">
                 <div class="heading-container headings">
                     <h2>Discover unique items</h2>
@@ -527,13 +538,13 @@
         <section class="sale_block">
             <div class="product-grid-container">
                 <div class="sale-block-container">
-                    <div class="sale-block">
+                    <div data-aos="flip-left" class="sale-block">
                         <div class="sale-block-image">
                             <img src="Assets/Bundle and save.jpg" alt="Sale Image 1">
                         </div>
                     </div>
 
-                    <div class="sale-block">
+                    <div data-aos="flip-left" class="sale-block">
                         <div class="sale-block-text">
                             <div class="sale-block-text-container">
                                 <div class="season-sale">SEASON SALE COLLECTIONS</div>
@@ -549,7 +560,7 @@
                         </div>
                     </div>
 
-                    <div class="sale-block">
+                    <div data-aos="flip-left" class="sale-block">
                         <div class="sale-block-image">
                             <img src="Assets/Renovate your home.png" alt="Sale Image 3">
                         </div>
@@ -557,7 +568,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact-us">
+        <section data-aos="fade" class="contact-us">
             <div class="product-grid-container">
                 <div class="contact-us-container">
                     <div class="contact-us__heading">
@@ -686,7 +697,7 @@
                 </div>
             </div>
         </section>
-        <section class="single_banner">
+        <section data-aos="fade" class="single_banner">
             <picture>
                 <source srcset="Assets/image-2.png" media="(max-width: 450px)">
                 <img src="Assets/Elevate-your-home.png" alt="Single-banner" class="banner-img" id="banner-img-2">
@@ -813,5 +824,9 @@
             </div>
         </section>
     </div>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
