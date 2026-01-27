@@ -1,0 +1,74 @@
+@use "base" as *
+
+.faqs
+  width: 100%
+  @include flex-center
+  margin-top: 61px
+
+.faq-heading-container 
+  @include flex-center
+  margin-bottom: 30px
+
+.faq-heading 
+  font-size: $fs-h2
+  line-height: 38.4px
+  max-width: 198px
+  text-align: center
+  @include text-normal
+
+.faq-content 
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+.faq-question 
+  cursor: pointer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  transition: 0.3s ease
+  border-bottom: 1px solid #EDEDED
+  padding: 19.8px 0
+  gap: 20px
+
+.faq-question-content 
+  font-size: 20px
+  line-height: 30.4px
+  @include text-normal
+
+.faq-answer 
+  font-size: $fs-body
+  line-height: 24px
+  margin-top: 17px
+  @include text-normal
+
+.faq-mark 
+  font-size: $fs-h2
+  user-select: none
+  font-weight: lighter
+  height: 30px
+  @include flex-center
+
+@media (min-width: 768px) 
+  .faqs 
+    margin-top: 100px
+
+  .faq-heading 
+    font-size: 36px
+    line-height: 48px
+    max-width: 449px
+
+  .faq-question 
+    padding: 31px 0 17px 0
+
+  .faq-content 
+    gap: 11px
+
+  .faq-question-content 
+    font-size: 26px
+    line-height: 38px
+
+  .faq-answer 
+    font-size: $fs-body
+    line-height: 24px
+    margin-top: 18px

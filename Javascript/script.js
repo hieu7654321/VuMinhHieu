@@ -61,6 +61,76 @@ function submitEmail(event) {
     }
 }
 
+function applyFaqLineBreaks() {
+    const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+        if (!answer.dataset.originalText) {
+            answer.dataset.originalText = answer.innerHTML;
+        }
+
+        if (isDesktop) {
+            answer.innerHTML = answer.dataset.originalText.replace(/\.\s*/g, '.<br>');
+        } else {
+            answer.innerHTML = answer.dataset.originalText;
+        }
+    });
+}
+
+function initFaqs() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    let openItem = null;
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const mark = question.querySelector('.faq-mark');
+
+        answer.style.display = 'none';
+
+        question.addEventListener('click', () => {
+            if (openItem === item) {
+                answer.style.display = 'none';
+                answer.style.maxHeight = '0';
+                mark.textContent = '+';
+                question.style.borderBottom = '1px solid #EDEDED';
+                openItem = null;
+            } else {
+                if (openItem) {
+                    const prevAnswer = openItem.querySelector('.faq-answer');
+                    const prevQuestion = openItem.querySelector('.faq-question');
+                    const prevMark = prevQuestion.querySelector('.faq-mark');
+
+                    prevAnswer.style.display = 'none';
+                    prevAnswer.style.maxHeight = '0';
+                    prevMark.textContent = '+';
+                    prevQuestion.style.borderBottom = '1px solid #EDEDED';
+                }
+
+                answer.style.display = 'block';
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                mark.textContent = '−';
+                question.style.borderBottom = '1px solid #000';
+                openItem = item;
+            }
+        });
+    });
+
+    if (faqItems.length > 0) {
+        const firstItem = faqItems[0];
+        const firstQuestion = firstItem.querySelector('.faq-question');
+        const firstAnswer = firstItem.querySelector('.faq-answer');
+        const firstMark = firstQuestion.querySelector('.faq-mark');
+
+        firstAnswer.style.display = 'block';
+        firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+        firstMark.textContent = '−';
+        firstQuestion.style.borderBottom = '1px solid #000';
+        openItem = firstItem;
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('#product-slider', {
         type       : 'slide',
@@ -99,6 +169,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     splide.mount();
+
+    applyFaqLineBreaks();
+    initFaqs();
+});
+
+window.addEventListener('resize', () => {
+    applyFaqLineBreaks();
 });
 
 
