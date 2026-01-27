@@ -1,0 +1,34 @@
+@use "header"
+@use "hero"
+@use "product-grid"
+@use "product_slider"
+@use "text-carousel"
+@use "sale_block"
+@use "contact-us"
+@use "inspiration"
+@use "single_banner"
+@use "our-service"
+@use "contact-shop"
+@use "footer"
+@use "base" as *
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: $font-body
+  margin: 0
+  &::-webkit-scrollbar
+    display: none
+
+html
+  scroll-behavior: smooth
+
+.container
+  width: 100%
+  margin: 0 auto
+
+.headings
+  font-family: $font-headings

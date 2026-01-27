@@ -1,0 +1,178 @@
+@use "sass:math"
+// Fonts
+$font-headings: 'Lora', serif
+$font-body: 'Poppins', sans-serif
+
+// Colors
+$clr-white: #ffffff
+$clr-black: #000000
+$clr-dark: #000000
+$clr-text-muted: #666666
+$clr-text-light: rgba(255,255,255,0.8)
+$clr-primary-text: #000000
+$clr-announcement-bg: $clr-black
+$clr-announcement-text: $clr-white
+$clr-hero-btn: $clr-white
+$clr-tag-selling: $clr-black
+$clr-tag-new: #054E4A
+$clr-tag-sale: #A42003
+$clr-sale-block-text-bg: #6E331A
+$clr-contact-bg: #F6F2EE
+$clr-footer-bg: $clr-black
+$clr-error-red: #D63A2F
+$border-color: #D1CECA
+$bg-contact: #F6F3EE
+$border-input: #E6E6E6
+
+// Sizes & spacing
+$container-width-wide: 92.31%
+$container-width-narrow: 73.438%
+$gap-products: 24px
+$gap-tabs: 28.89px
+$border-radius-sm: 5px
+$header-height: 40px
+$slider-btn-width: 5px
+$slider-btn-height: 10px
+$product-max-width: 360px
+$product-image-mb: 16px
+$tab-height: 28px
+$slider-mt: 45.3px
+$heading-mb: 34px
+$carousel-height: 140px
+$carousel-gap: 48px
+$carousel-mt: 22px
+$sale-max-width: 1920px
+$sale-aspect: math.div(3, 4)
+$sale-block-max-w: 419.94px
+$inspiration-mt: 17px
+$inspiration-container-mt: 30px
+$inspiration-gap: 50px
+$banner-height: 600px
+$banner-mt: 60px
+$service-mt-mb: 48px
+$service-height: 77.5px
+$service-gap: 16px
+$service-img-size: 40px
+$contact-width: 360px
+$footer-mt: 30px
+$footer-mb: 10px
+$email-mb: 22px
+$media-gap: 16px
+$media-mt: 27px
+$copyright-mt: 20px
+$gap-form: 16px
+$gap-row-mobile: 10px
+$gap-row-desktop: 50px
+
+// Typography scale
+$carousel-fs: 60px
+$fs-h1: 32px
+$fs-h2: 28px
+$fs-h3: 24px
+$fs-body: 16px
+$fs-small: 14px
+$hero-height: 599px
+$hero-slogan-fs: 56px
+
+// Mixins
+@mixin headings
+  font-family: $font-headings
+  font-weight: 400
+
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin flex-between
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+@mixin text-truncate
+  white-space: nowrap
+  overflow: hidden
+
+@mixin tag-base
+  position: absolute
+  top: 12px
+  left: 12px
+  font-size: 14px
+  font-weight: 700
+  line-height: 18px
+  color: $clr-white
+  z-index: 2
+  padding: 3px 9px
+
+@mixin reset-button
+  background: none
+  border: none
+  padding: 0
+  cursor: pointer
+
+@mixin slider-btn
+  width: $slider-btn-width
+  height: $slider-btn-height
+  background-repeat: no-repeat
+  background-position: center
+  background-size: $slider-btn-width $slider-btn-height
+  border: none
+  cursor: pointer
+  padding: 0
+  background-color: transparent
+
+@mixin product-info
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  .type
+    color: rgba($clr-black, 0.6)
+    font-weight: 400
+    font-size: $fs-small
+    line-height: 22px
+    letter-spacing: 0
+    vertical-align: middle
+    text-transform: uppercase
+
+  h3
+    margin: 5px 0
+    font-weight: 500
+    font-size: $fs-body
+    line-height: 25.88px
+    letter-spacing: 0
+    vertical-align: middle
+
+  p
+    font-size: $fs-body
+    margin: 0
+    font-weight: 400
+    line-height: 23px
+    letter-spacing: 0
+    vertical-align: middle
+
+@mixin tag-selling
+  @include tag-base
+  padding: 3px 9.5px
+  background-color: $clr-tag-selling
+
+@mixin tag-new
+  @include tag-base
+  top: 36px
+  padding: 3px 9.4px
+  background-color: $clr-tag-new
+
+@mixin tag-sale
+  @include tag-base
+  padding: 3px 8.6px
+  background-color: $clr-tag-sale
+
+@mixin text-normal
+  font-weight: 400
+  letter-spacing: 0
+  vertical-align: middle
+
+@mixin text-head
+  font-weight: 500
+  letter-spacing: 0
+  vertical-align: middle

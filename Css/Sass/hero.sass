@@ -1,0 +1,108 @@
+@use "base" as *
+
+.hero_banner
+  width: 100%
+  height: $hero-height
+  overflow: hidden
+  position: relative
+  @include flex-center
+
+.hero-img
+  width: 200%
+  height: 200%
+  object-fit: cover
+  object-position: 65% center
+  flex-shrink: 0
+
+.hero-content
+  position: absolute
+  color: $clr-white
+  max-width: 352px
+  top: 175.8px
+  z-index: 2
+  text-align: center
+  align-items: center
+
+  .hero-slogan
+    font-size: $hero-slogan-fs
+    width: 100%
+    display: flex
+    align-items: center
+    line-height: 76.8px
+    margin: 0
+    font-weight: 400
+    letter-spacing: 0
+    text-align: center
+    vertical-align: middle
+
+  .description-div
+    margin: 12px 0px 24px 0px
+
+  .hero-description
+    width: 82.4%
+    font-size: 18px
+    margin: 0 30.84px
+    font-weight: 400
+    line-height: 30px
+    letter-spacing: 0
+    text-align: center
+    vertical-align: middle
+
+.hero_btn
+  color: $clr-hero-btn
+  font-size: $fs-body
+  border-radius: $border-radius-sm
+  text-underline-offset: 8px
+  font-weight: 500
+  line-height: 24px
+  letter-spacing: 0
+  text-align: center
+  vertical-align: middle
+  text-transform: uppercase
+
+@media (min-width: 768px)
+  .hero_banner
+    height: 680px
+
+  .hero-content
+    top: auto
+
+    .hero-slogan
+      font-size: 58px
+    
+    .hero-description
+      max-width: 352px
+
+@media (min-width: 1024px)
+  .hero_banner
+    height: 820px
+
+  .hero-img
+    width: 100%
+    height: 1200px
+    object-position: center
+
+  .hero-content
+    .hero-slogan
+      font-size: 68px
+
+    .hero-description
+      margin: 0 40.84px
+
+@media (min-width: 1400px)
+  .hero_banner
+    height: 1080px
+    max-height: 1200px
+
+  .hero-content
+    margin-top: 25px
+
+    .hero-slogan
+      font-size: 72px
+      line-height: 90px
+
+    .description-div
+      margin: 25px 0px 32px 0px
+
+    .hero-description
+      line-height: 30px

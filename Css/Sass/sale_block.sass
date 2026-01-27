@@ -1,0 +1,127 @@
+@use "base" as *
+
+.sale_block
+  width: 100%
+  @include flex-center
+  margin: 19px auto 48px auto
+  max-width: $sale-max-width
+
+.sale-block-container
+  display: flex
+  justify-content: center
+  gap: $gap-products
+  flex-wrap: wrap
+
+.sale-block
+  aspect-ratio: $sale-aspect
+  width: 100%
+  max-width: $sale-block-max-w
+
+.sale-block-image
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.sale-block-text
+  width: 100%
+  height: 100%
+  background-color: $clr-sale-block-text-bg
+  color: $clr-white
+  text-align: center
+  display: flex
+  flex-direction: column
+
+.sale-block-text-container
+  height: 100%
+  margin: 30px
+  display: flex
+  flex-direction: column
+  gap: 11%
+  justify-content: space-between
+
+.season-sale
+  font-weight: 500
+  font-size: $fs-body
+  line-height: 24px
+  letter-spacing: 0
+  text-align: center
+  vertical-align: middle
+  text-transform: uppercase
+  margin-bottom: 12px
+
+.sale-block-text-content div
+  margin-top: 14px
+
+.sale-block-text h3
+  font-size: 46px
+  margin: 0 auto
+  max-width: 200px
+  align-items: center
+  display: flex
+  height: 128px
+  font-weight: 400
+  line-height: 64px
+  text-align: center
+  vertical-align: middle
+  color: $clr-white
+  justify-content: center
+
+.sale-block-text p
+  font-size: $fs-small
+  margin: 0
+
+@media (max-width: 365px)
+  .sale-block-text h3
+    font-size: 46px
+    line-height: 46px
+
+@media (min-width: 768px)
+  .sale-block
+    width: 29.78%
+
+  .sale-block-container
+    justify-content: space-between
+
+  .sale-block-text h3
+    font-size: 26px
+    line-height: 32px
+    height: 25%
+    max-width: 120px
+
+@media (min-width: 1024px)
+  .sale_block
+    margin: 20px auto 100px auto
+
+  .sale-block-text h3
+    height: 40%
+    font-size: 32px
+    line-height: 32px
+    max-width: 150px
+
+@media (min-width: 1400px)
+  .sale-block-container
+    margin-top: 1.5px
+
+  .sale-block-text
+    padding: 0
+
+  .sale-block-text h3
+    font-size: 52px
+    line-height: 64px
+    height: 55%
+    max-width: 220px
+
+@media (min-width: 1800px)
+  .sale-block-text h3
+    font-size: 56px
+    line-height: 80px
+    height: 144px
+    max-width: 240px
+
+  .sale-block-text-content div
+    margin-top: 26px

@@ -1,0 +1,131 @@
+@use "base" as *
+
+.header
+  background-color: $clr-white
+
+.top_header
+  background-color: $clr-announcement-bg
+  color: $clr-white
+  font-size: $fs-small
+  padding: 0 15px
+  height: $header-height
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.slider-viewport
+  overflow: hidden
+  flex: 1
+  position: relative
+
+.slider-track
+  display: flex
+  transition: transform 0.4s ease
+  width: 200%
+
+.slide
+  width: 100%
+  text-align: center
+  white-space: nowrap
+  display: flex
+  justify-content: center
+  line-height: 1
+  align-items: center
+
+.slider-btn
+  @include reset-button
+
+  &.prev
+    background-image: url("../Assets/Prev-Button.svg")
+
+  &.next
+    background-image: url("../Assets/next-button.svg")
+
+.slider-track .number
+  width: 100%
+  font-weight: 400
+  font-size: $fs-small
+  line-height: 24px
+  letter-spacing: 0
+  vertical-align: middle
+  color: $clr-announcement-text
+
+.slider-track .address
+  width: 100%
+  text-align: center
+  font-weight: 400
+  font-size: $fs-small
+  line-height: 24px
+  letter-spacing: 0
+  vertical-align: middle
+  color: $clr-announcement-text
+
+.slider-btn
+  width: 5px;
+  height: 10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 5px 10px;
+
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  background-color: transparent;
+
+
+.main_header
+  @include flex-center
+
+.logo
+  line-height: 24px
+  padding-top: 6px
+  padding-bottom: 6px
+
+  h1
+    margin: 0
+    font-size: 24px
+    color: $clr-black
+    font-weight: normal
+
+    a
+      text-decoration: none
+      color: inherit
+      font-size: $fs-h1
+      padding: 0
+      margin: 0
+      display: inline-flex
+      align-items: center
+      line-height: 1
+
+@media (min-width: 768px)
+  .top_header
+    font-size: $fs-small
+    padding: 5px 20px
+    justify-content: center
+    gap: 60px
+    height: auto
+
+  .slider-btn
+    display: none
+
+  .slider-track
+    width: 100%
+    justify-content: space-between
+    transition: none
+
+  .slide
+    flex: 0 1 auto
+    justify-content: flex-start
+
+  .slider-track .number
+    text-align: left
+
+  .slider-track .address
+    text-align: right
+    min-width: 240px
+
+@media (min-width: 1024px)
+  .slider-track .address
+    min-width: 300px

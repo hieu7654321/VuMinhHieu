@@ -1,0 +1,91 @@
+@use "base" as *
+
+.our-service
+  width: 100%
+  @include flex-center
+  margin: $service-mt-mb 0
+
+.our-service-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  gap: $gap-products
+
+.our-service-box
+  width: 100%
+  height: $service-height
+  flex-direction: row
+  justify-content: flex-start
+  display: flex
+  gap: $service-gap
+
+.service-image img
+  width: $service-img-size
+  height: $service-img-size
+  object-fit: cover
+
+.service-info
+  display: flex
+  flex-direction: column
+  gap: 4px
+
+.service_heading
+  color: $clr-black
+  font-weight: 400
+  font-size: 20px
+  line-height: 25.6px
+  letter-spacing: 0
+  vertical-align: middle
+
+.service_info_content
+  font-size: $fs-small
+  color: $clr-black
+  font-weight: 400
+  line-height: 24px
+  letter-spacing: 0
+  vertical-align: middle
+
+@media (min-width: 768px)
+  .our-service-container
+    justify-content: space-evenly
+
+  .our-service-box
+    width: 21.8%
+    min-width: 300px
+    height: 184px
+    box-sizing: border-box
+
+  .service-image img
+    width: 72px
+    height: 72px
+
+  .service_heading
+    font-size: 20px
+    line-height: 32px
+
+  .service_info_content
+    font-size: $fs-body
+    line-height: 24px
+
+@media (min-width: 1024px)
+  .our-service-box
+    flex-direction: column
+    min-width: 400px
+
+  .our-service-container
+    justify-content: space-evenly
+    gap: 10px
+
+@media (min-width: 1400px)
+  .our-service
+    margin: 80px 0
+
+  .service-info
+    gap: 12px
+
+  .our-service-box
+    min-width: 184px
+    gap: 20px
+
+  .our-service-container
+    justify-content: space-between

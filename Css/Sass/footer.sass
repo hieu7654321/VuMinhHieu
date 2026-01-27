@@ -1,0 +1,123 @@
+@use "base" as *
+
+.footer
+  background-color: $clr-footer-bg
+  color: $clr-white
+  @include flex-center
+  flex-direction: column
+  text-align: center
+
+  .footer-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: $footer-mt
+    margin-bottom: $footer-mb
+
+.email-container
+  width: 100%
+  text-align: center
+
+.email-info
+  margin-bottom: $email-mb
+
+.email-title
+  font-weight: 400
+  font-size: 24px
+  line-height: 33.6px
+  letter-spacing: 0
+  vertical-align: middle
+  text-align: left
+  color: $clr-white
+
+.email-content
+  font-weight: 400
+  font-size: $fs-body
+  line-height: 24px
+  text-align: left
+  margin: 11px 0 20px 0
+
+.email-input
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  position: relative
+
+  input
+    width: 100%
+    padding: 16px
+    font-size: $fs-body
+
+  button
+    position: absolute
+    right: 20px
+    top: 19px
+    background-image: url("../Assets/send-button.svg")
+    background-size: contain
+    background-repeat: no-repeat
+    height: 100%
+    width: 6.25px
+    height: 12.5px
+    background-color: transparent
+    border: none
+    cursor: pointer
+    filter: invert(0) brightness(0) contrast(100%) grayscale(0) sepia(0)
+
+.media
+  display: flex
+  justify-content: flex-start
+  gap: $media-gap
+  margin-top: $media-mt
+
+  a
+    width: 24px
+    height: 24px
+
+    img
+      object-fit: contain
+
+.copyright
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-top: $copyright-mt
+
+  span
+    font-weight: 400
+    font-size: $fs-body
+    line-height: 24px
+    letter-spacing: 0
+    text-align: center
+    color: rgba($clr-white, 0.8)
+
+span.underline
+  text-decoration: none
+
+@media (min-width: 492px)
+  .footer .footer-container
+    margin-top: 50px
+
+  .email-container
+    width: 465px
+
+  .email-title
+    font-size: 32px
+    line-height: 42px
+    text-align: center
+
+  .email-content
+    text-align: center
+
+  .media
+    justify-content: center
+
+  .copyright
+    justify-content: center
+    align-items: center
+
+  .copyright span
+    text-align: left
+
+  span.underline
+    text-decoration: underline

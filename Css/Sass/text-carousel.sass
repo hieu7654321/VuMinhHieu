@@ -1,0 +1,50 @@
+@use "base" as *
+
+.text-carousel
+  width: 100%
+  overflow: hidden
+
+.carousel-container
+  @include flex-center
+  height: $carousel-height
+  overflow: hidden
+  margin-top: $carousel-mt
+
+.carousel-content
+  display: flex
+  align-items: center
+  color: $clr-black
+  opacity: 0.2
+  font-size: $carousel-fs
+  font-weight: 400
+  white-space: nowrap
+  gap: $carousel-gap
+  line-height: 64px
+  letter-spacing: 0
+  vertical-align: middle
+  animation: scrollText 10s linear infinite
+  will-change: transform
+
+  img
+    width: 30.84px
+    height: 32px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 5px 10px
+    border: none
+    cursor: pointer
+    padding: 0
+
+@keyframes scrollText
+  0%
+    transform: translateX(100%)
+  100%
+    transform: translateX(-100%)
+
+@media (min-width: 1400px)
+  .carousel-container
+    height: 248px
+
+  .carousel-content
+    font-size: 74px
+    line-height: 90px
