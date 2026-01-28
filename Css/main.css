@@ -25,7 +25,7 @@
 
 .cookie-content p {
   font-size: 20px;
-  line-height: 56px;
+  line-height: 28px;
   text-align: left;
   font-weight: 400;
   letter-spacing: 0;
@@ -64,6 +64,9 @@
   .cookie-content {
     flex-direction: row;
     text-align: center;
+  }
+  .cookie-content p {
+    line-height: 56px;
   }
 }
 .header {
@@ -1268,6 +1271,7 @@ div.inspiration-heading, div.inspiration-info-content {
   font-size: 16px;
   line-height: 24px;
   margin-top: 17px;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
   font-weight: 400;
   letter-spacing: 0;
   vertical-align: middle;
@@ -1278,9 +1282,14 @@ div.inspiration-heading, div.inspiration-info-content {
   user-select: none;
   font-weight: lighter;
   height: 30px;
+  transition: transform 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.faq-item.active .faq-mark {
+  transform: rotate(45deg);
 }
 
 @media (min-width: 768px) {
@@ -1884,6 +1893,134 @@ span.underline {
   }
   span.underline {
     text-decoration: underline;
+  }
+}
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.popup-image {
+  background-image: url(../Assets/Popup-image.jpg.png);
+  background-size: cover;
+  background-position: center 79%;
+  width: 100%;
+  height: 180px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  background: url("../Assets/Button-Close.svg") no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.popup__text {
+  padding: 24.5px 27.6px;
+}
+
+.big-sale-container {
+  margin: 3px 0 14px;
+}
+
+.big-sale__content, .popup-message {
+  font-size: 24px;
+  line-height: 42px;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.big-sale__50, .big-sale__date {
+  font-size: 32px;
+  line-height: 42px;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.big-sale__app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-sale__app p {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 210px;
+  font-weight: 400;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.popup-message {
+  padding: 40px 0;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .popup-content {
+    flex-direction: row;
+    text-align: left;
+    max-width: 880px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #popup-success .popup-content {
+    max-width: 800px;
+  }
+  #popup-error .popup-content {
+    max-width: 782px;
+  }
+  .popup-image {
+    max-width: 420px;
+    height: 396px;
+  }
+  .popup-close {
+    top: 12px;
+    right: 12px;
+    width: 48px;
+    height: 48px;
+  }
+  .popup__text {
+    height: 396px;
+    max-width: 460px;
+    min-width: 360px;
+    width: 55%;
+    padding: 9.2%;
+  }
+  .big-sale__content, .popup-message {
+    font-size: 32px;
+    line-height: 56px;
+  }
+  .big-sale__50, .big-sale__date {
+    font-size: 36px;
+    line-height: 56px;
   }
 }
 * {

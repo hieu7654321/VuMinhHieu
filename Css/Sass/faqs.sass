@@ -38,6 +38,7 @@
   font-size: $fs-body
   line-height: 24px
   margin-top: 17px
+  transition: max-height 0.4s ease, opacity 0.3s ease
   @include text-normal
 
 .faq-mark 
@@ -45,7 +46,11 @@
   user-select: none
   font-weight: lighter
   height: 30px
+  transition: transform 0.3s ease
   @include flex-center
+
+.faq-item.active .faq-mark
+  transform: rotate(45deg)
 
 @media (min-width: 768px) 
   .faqs 

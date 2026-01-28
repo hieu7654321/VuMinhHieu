@@ -1,4 +1,3 @@
-// Cookie Consent
 function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -29,7 +28,6 @@ function showCookieBar() {
     } else if (consent === 'decline') {
         cookieBar.style.display = 'block';
     }
-    // if 'accept' → hidden forever (or until 6 months)
 }
 
 function hideCookieBar() {
@@ -37,14 +35,13 @@ function hideCookieBar() {
 }
 
 document.getElementById('cookie-accept')?.addEventListener('click', () => {
-    setCookie('cookieConsent', 'accept', 180); // ≈6 months
+    setCookie('cookieConsent', 'accept', 180);
     hideCookieBar();
 });
 
 document.getElementById('cookie-decline')?.addEventListener('click', () => {
-    setCookie('cookieConsent', 'decline', 0); // session only → shows every time
+    setCookie('cookieConsent', 'decline', 0);
     hideCookieBar();
 });
 
-// Run on load
 window.addEventListener('load', showCookieBar);

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="Css/main.css">
     <script src="Javascript/script.js" defer></script>
     <script src="Javascript/cookies.js" defer></script>
+    <script src="Javascript/popup.js" defer></script>
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
@@ -824,9 +825,44 @@
             </div>
         </section>
     </div>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <div id="popup-discount" class="popup discount-popup" style="display:none;" onclick="closeDiscountPopup(this)">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <div class="popup-image"></div>
+            <button class="popup-close" onclick="closeDiscountPopup(this.closest('.popup'))"></button>
+            <div class="popup__text">
+                <div class="big-sale-container headings">
+                    <div class="big-sale__content">Big Sale</div>
+                    <p class="big-sale__50">Up to 50% Off</p>
+                    <p class="big-sale__date">Black Friday</p>
+                </div>
+                <div class="big-sale__app">
+                    <p>Applicable to all products from Nov 25 to Nov 29</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-success" class="popup" style="display:none;" onclick="hidePopup('popup-success')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <button class="popup-close" onclick="hidePopup('popup-success')"></button>
+            <div class="popup-message headings">
+                <p>Thank you!</p>
+                <p>Data has been sent successfully.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-error" class="popup" style="display:none;" onclick="hidePopup('popup-error')">
+        <div class="popup-content error" onclick="event.stopPropagation()">
+            <button class="popup-close" onclick="hidePopup('popup-error')"></button>
+            <div class="popup-message headings">
+                <p>Oops! An error occurred.</p>
+                <p>Please check your information and try again.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
