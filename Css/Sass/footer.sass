@@ -64,11 +64,19 @@
     cursor: pointer
     filter: invert(0) brightness(0) contrast(100%) grayscale(0) sepia(0)
 
-.g-recaptcha
+.email-input-form .g-recaptcha
   display: flex
   align-items: center
   justify-content: left
   margin-top: 10px
+
+.recaptcha-error
+  color: red
+  font-size: 12px
+  margin-top: 5px
+  display: none
+  justify-content: left
+
 
 .media
   display: flex
@@ -115,6 +123,12 @@ span.underline
   .email-content
     text-align: center
 
+  .email-input-form .g-recaptcha
+    justify-content: center
+
+  .recaptcha-error
+    justify-content: center
+
   .media
     justify-content: center
 
@@ -127,6 +141,3 @@ span.underline
 
   span.underline
     text-decoration: underline
-
-  .g-recaptcha
-    justify-content: center

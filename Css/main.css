@@ -1052,6 +1052,20 @@ div.product_slider-item {
   vertical-align: middle;
 }
 
+.contact-us-form .g-recaptcha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recaptcha-error-contact {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .contact-us-container {
     margin: 100px 0 56px 0;
@@ -1253,7 +1267,6 @@ div.inspiration-heading, div.inspiration-info-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.3s ease;
   border-bottom: 1px solid #EDEDED;
   padding: 19.8px 0;
   gap: 20px;
@@ -1270,11 +1283,13 @@ div.inspiration-heading, div.inspiration-info-content {
 .faq-answer {
   font-size: 16px;
   line-height: 24px;
-  margin-top: 17px;
   transition: max-height 0.4s ease, opacity 0.3s ease;
   font-weight: 400;
   letter-spacing: 0;
   vertical-align: middle;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .faq-mark {
@@ -1289,7 +1304,15 @@ div.inspiration-heading, div.inspiration-info-content {
 }
 
 .faq-item.active .faq-mark {
-  transform: rotate(45deg);
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  transition: max-height 0.4s ease-in;
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 17px;
 }
 
 @media (min-width: 768px) {
@@ -1314,6 +1337,8 @@ div.inspiration-heading, div.inspiration-info-content {
   .faq-answer {
     font-size: 16px;
     line-height: 24px;
+  }
+  .faq-item.active .faq-answer {
     margin-top: 18px;
   }
 }
@@ -1833,11 +1858,19 @@ div.inspiration-heading, div.inspiration-info-content {
   filter: invert(0) brightness(0) contrast(100%) grayscale(0) sepia(0);
 }
 
-.g-recaptcha {
+.email-input-form .g-recaptcha {
   display: flex;
   align-items: center;
   justify-content: left;
   margin-top: 10px;
+}
+
+.recaptcha-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+  justify-content: left;
 }
 
 .media {
@@ -1888,6 +1921,12 @@ span.underline {
   .email-content {
     text-align: center;
   }
+  .email-input-form .g-recaptcha {
+    justify-content: center;
+  }
+  .recaptcha-error {
+    justify-content: center;
+  }
   .media {
     justify-content: center;
   }
@@ -1900,9 +1939,6 @@ span.underline {
   }
   span.underline {
     text-decoration: underline;
-  }
-  .g-recaptcha {
-    justify-content: center;
   }
 }
 .popup {

@@ -14,12 +14,38 @@
     <script src="Javascript/cookies.js" defer></script>
     <script src="Javascript/popup.js" defer></script>
     <script src="Javascript/footer.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="Javascript/contactus.js" defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+     <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
+     <script>
+        function onRecaptchaLoad() {
+            window.newsletterWidgetId = grecaptcha.render('recaptcha-newsletter', {
+                'sitekey': '6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY'
+            });
+
+            window.contactWidgetId = grecaptcha.render('recaptcha-contact', {
+                'sitekey': '6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY'
+            });
+        }
+     </script>
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <style>
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
 </head>
 <body>
     <div id="cookie-consent" class="cookie-bar" style="display:none;">
@@ -584,7 +610,7 @@
                     </div>
 
                     <div class="contact-us__content">
-                        <form class="contact-us-form" autocomplete="on">
+                        <form class="contact-us-form" autocomplete="on" onsubmit="return submitContactForm(event)" method="post">
                             <div class="form-component-1 form-row">
                                 <div class="form-field">
                                     <label for="name">Name</label>
@@ -610,6 +636,16 @@
                                     <label for="message">Your message</label>
                                     <textarea id="message" name="message" rows="5" placeholder="Example: I want to buy 6 chairs and a table brand Oda ottoman..."></textarea>
                                 </div>
+                            </div>
+                            <div 
+                                class="g-recaptcha"
+                                data-sitekey="6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY"
+                                id="recaptcha-contact"
+                                data-callback="onContactRecaptchaSuccess"
+                                data-expired-callback="onContactRecaptchaExpired">
+                            </div>
+                            <div id="recaptcha-error-message-contact" class="recaptcha-error-contact">
+                                Please complete the CAPTCHA.
                             </div>
                             <div class="form-component-4">
                                 <button type="submit" class="btn-submit headings">SUBMIT NOW</button>
@@ -795,7 +831,7 @@
                             <div class="email-title headings">Subscribe to get 10% OFF</div>
                             <div class="email-content">Subscribe for store updates and discounts.</div>
                         </div>
-                        <form class="email-input-form" onsubmit="submitEmail(event)">
+                        <form class="email-input-form" onsubmit="submitEmail(event)" method="post">
                             <div class="email-input">
                                 <input name="Email" id="footer-email" type="email" placeholder="Email" required autocomplete="email">
                                 <button class="send-email" type="submit" aria-label="Send"></button>
@@ -803,7 +839,13 @@
 
                             <div 
                                 class="g-recaptcha"
-                                data-sitekey="6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY">
+                                data-sitekey="6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY"
+                                id="recaptcha-newsletter"
+                                data-callback="onNewsletterRecaptchaSuccess"
+                                data-expired-callback="onNewsletterRecaptchaExpired">
+                            </div>
+                            <div id="recaptcha-error-message" class="recaptcha-error">
+                                Please complete the CAPTCHA.
                             </div>
                         </form>
                         <div class="media">
