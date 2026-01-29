@@ -44,23 +44,6 @@ function changeTab(tab, category) {
     document.querySelector(`.product-grid.${category}`).classList.add('active');
 }
 
-function submitEmail(event) {
-    event.preventDefault();
-
-    const emailInput = document.getElementById('email');
-    const email = emailInput.value.trim();
-
-    const emailRegex =
-        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|edu|gov|co|io|me|us|info|biz)$/;
-
-    if (email && emailRegex.test(email)) {
-        alert(`Cảm ơn đã đăng ký. Email: ${email}`);
-        emailInput.value = '';
-    } else {
-        alert('Email không hợp lệ. Vui lòng kiểm tra lại.');
-    }
-}
-
 function applyFaqLineBreaks() {
     const isDesktop = window.matchMedia('(min-width: 768px)').matches;
 
