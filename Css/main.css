@@ -1020,6 +1020,7 @@ div.product_slider-item {
   font-weight: 400;
   letter-spacing: 0;
   vertical-align: middle;
+  resize: none;
 }
 
 .form-component-4 {
@@ -1064,6 +1065,21 @@ div.product_slider-item {
   margin-top: 5px;
   display: none;
   justify-content: center;
+}
+
+@media (max-width: 350px) {
+  .contact-us-heading {
+    font-size: 18px;
+    line-height: 28.4px;
+  }
+}
+.ct-us__heading-container {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.contact-us-heading__1 {
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -2078,9 +2094,6 @@ span.underline {
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
-}
-body::-webkit-scrollbar {
-  display: none;
 }
 
 html {
