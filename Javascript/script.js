@@ -69,30 +69,27 @@ function initFaqs() {
         const answer = item.querySelector('.faq-answer');
         const mark = question.querySelector('.faq-mark');
 
-        // No need to manually set display style anymore, CSS will control this
-
         question.addEventListener('click', () => {
-            if (openItem === item) {
-                // Close the currently open item
+            if (openItem && openItem !== item) {
+                const prevQuestion = openItem.querySelector('.faq-question');
+                const prevAnswer = openItem.querySelector('.faq-answer');
+                const prevMark = prevQuestion.querySelector('.faq-mark');
+
+                openItem.classList.remove('active');
+                prevAnswer.style.maxHeight = '0';
+                prevMark.textContent = '+';
+                prevQuestion.style.borderBottom = '1px solid #EDEDED';
+            }
+
+            if (item.classList.contains('active')) {
                 item.classList.remove('active');
+                answer.style.maxHeight = '0';
                 mark.textContent = '+';
                 question.style.borderBottom = '1px solid #EDEDED';
                 openItem = null;
             } else {
-                // Close the previous open item if any
-                if (openItem) {
-                    const prevItem = openItem;
-                    const prevAnswer = prevItem.querySelector('.faq-answer');
-                    const prevQuestion = prevItem.querySelector('.faq-question');
-                    const prevMark = prevQuestion.querySelector('.faq-mark');
-
-                    prevItem.classList.remove('active');
-                    prevMark.textContent = '+';
-                    prevQuestion.style.borderBottom = '1px solid #EDEDED';
-                }
-
-                // Open the clicked item
                 item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
                 mark.textContent = '−';
                 question.style.borderBottom = '1px solid #000';
                 openItem = item;
@@ -100,15 +97,18 @@ function initFaqs() {
         });
     });
 
-    // Optionally open the first FAQ item by default
     if (faqItems.length > 0) {
         const firstItem = faqItems[0];
         const firstAnswer = firstItem.querySelector('.faq-answer');
         const firstMark = firstItem.querySelector('.faq-mark');
+
         firstItem.classList.add('active');
+        firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
         firstMark.textContent = '−';
+        openItem = firstItem;
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('#product-slider', {
