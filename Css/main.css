@@ -1074,16 +1074,14 @@ div.product_slider-item {
     font-size: 18px;
     line-height: 28.4px;
   }
+  .ct-us__heading-container {
+    width: 280px;
+    margin: 0 auto;
+  }
+  .contact-us-heading__1 {
+    text-align: center;
+  }
 }
-.ct-us__heading-container {
-  width: 280px;
-  margin: 0 auto;
-}
-
-.contact-us-heading__1 {
-  text-align: center;
-}
-
 @media (min-width: 768px) {
   .contact-us-container {
     margin: 100px 0 56px 0;
@@ -1328,7 +1326,7 @@ div.inspiration-heading, div.inspiration-info-content {
 
 .faq-item.active .faq-answer {
   transition: max-height 0.4s ease-in;
-  max-height: 200px;
+  max-height: 500px;
   opacity: 1;
   margin-top: 17px;
 }
