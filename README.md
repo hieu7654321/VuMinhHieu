@@ -9,23 +9,23 @@ HTML, CSS, SASS/SCSS, Javascript
 
 ## Project gồm có
 
-● Header
-● Các section giới thiệu về shop
-● Danh sách sản phẩm shop đang bán
-● Form Contact us
-● Các chương trình khuyến mãi đang diễn ra
-● Phần FAQs - các câu hỏi thường gặp
-● Thông tin liên hệ
-● Footer
+- Header
+- Các section giới thiệu về shop
+- Danh sách sản phẩm shop đang bán
+- Form Contact us
+- Các chương trình khuyến mãi đang diễn ra
+- Phần FAQs - các câu hỏi thường gặp
+- Thông tin liên hệ
+- Footer
 
 ## Clone the repository
 
-"""
+```
 git clone -b BThuchanh4 https://github.com/hieu7654321/VuMinhHieu.git
-"""
+```
 
 ## Build SASS/SCSS
 
-"""
+```
 npm run build:css
-"""
+```
