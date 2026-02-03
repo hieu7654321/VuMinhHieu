@@ -20,12 +20,12 @@ HTML, CSS, SASS/SCSS, Javascript
 
 ## Clone the repository
 
-'''
+"""
 git clone -b BThuchanh4 https://github.com/hieu7654321/VuMinhHieu.git
-'''
+"""
 
 ## Build SASS/SCSS
 
-'''
+"""
 npm run build:css
-'''
+"""
