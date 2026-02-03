@@ -1,19 +1,19 @@
 function submitContactForm(event) {
     event.preventDefault();
 
-    const name     = document.getElementById('name')?.value?.trim()     || '';
-    const emailcontact    = document.getElementById('email')?.value?.trim()    || '';
-    const phone    = document.getElementById('phone')?.value?.trim()    || '';
-    const address  = document.getElementById('address')?.value?.trim()  || '';
-    const message  = document.getElementById('message')?.value?.trim()  || '';
+    const name     = document.getElementById('name')?.value.trim() || '';
+    const email    = document.getElementById('email')?.value.trim() || '';
+    const phone    = document.getElementById('phone')?.value.trim() || '';
+    const address  = document.getElementById('address')?.value.trim() || '';
+    const message  = document.getElementById('message')?.value.trim() || '';
 
-    if (!name || !emailcontact || !phone) {
+    if (!name || !email || !phone) {
         showPopup('popup-error');
         return false;
     }
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(emailcontact)) {
+    if (!emailRegex.test(email)) {
         showPopup('popup-error');
         return false;
     }
@@ -29,46 +29,23 @@ function submitContactForm(event) {
         return false;
     }
 
-    const tokencontact = grecaptcha.getResponse(window.contactWidgetId);
+    const token = grecaptcha.getResponse(window.contactWidgetId);
 
-    const recaptchaContainercontact = document.getElementById('recaptcha-contact');
-    const errorMessagecontact = document.getElementById('recaptcha-error-message-contact');
+    const recaptchaContainer = document.getElementById('recaptcha-contact');
+    const errorMessage = document.getElementById('recaptcha-error-message-contact');
 
-    if (!tokencontact) {
-        recaptchaContainercontact.classList.add('shake');
-        errorMessagecontact.style.display = 'flex';
+    if (!token) {
+        recaptchaContainer.classList.add('shake');
+        errorMessage.style.display = 'flex';
 
-        recaptchaContainercontact.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        recaptchaContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
         setTimeout(() => {
-            recaptchaContainercontact.classList.remove('shake');
+            recaptchaContainer.classList.remove('shake');
         }, 500);
 
         return false;
     }
-
-    const API_URL = 'https://testapi.demo.wgentech.com/notify.php';
-
-    console.log("Attempting to send to URL:", API_URL);
-
-    if (!API_URL || typeof API_URL !== 'string' || API_URL.trim() === '' || API_URL === 'h') {
-        console.error("Invalid API URL detected:", API_URL);
-        showPopup('popup-error');
-        if (document.getElementById('form-error-message')) {
-            document.getElementById('form-error-message').textContent = "Server configuration error. Please try again later.";
-            document.getElementById('form-error-message').style.display = 'block';
-        }
-        return false;
-    }
-
-    const payload = JSON.stringify({
-        name,
-        emailcontact,
-        phone,
-        address,
-        message,
-        'g-recaptcha-response': tokencontact
-    });
 
     const submitBtn = event.target.querySelector('.btn-submit');
     if (submitBtn) {
@@ -76,15 +53,20 @@ function submitContactForm(event) {
         submitBtn.textContent = 'Sending...';
     }
 
-    fetch('https://testapi.demo.wgentech.com/notify.php', {
+    fetch('https://script.google.com/macros/s/AKfycbxaT6WO1DzUEA4cofWd7lTgQYZToU2tdpeI96PJtLXJYqgZ7L1lQ1tXY1U4598PGAk2ww/exec', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: payload,
-        keepalive: true
+        body: new URLSearchParams({
+            name: name,
+            email: email,
+            phone: phone,
+            address: address,
+            message: message,
+            'g-recaptcha-response': token
+        })
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === 'success' || data.success === true) {
+    .then(res => res.json())
+    .then(result => {
+        if (result.result === 'success') {
             showPopup('popup-success');
 
             localStorage.setItem('contactInfo', JSON.stringify({
@@ -113,14 +95,14 @@ function submitContactForm(event) {
 }
 
 function onContactRecaptchaSuccess() {
-    console.log('Contact reCAPTCHA verified');
-    const errorMessagecontact = document.getElementById('recaptcha-error-message-contact');
-    errorMessagecontact.style.display = 'none';
+    const errorMessage = document.getElementById('recaptcha-error-message-contact');
+    errorMessage.style.display = 'none';
 }
 
 function onContactRecaptchaExpired() {
     console.log('Contact reCAPTCHA expired');
 }
+
 
 // fetch('https://testapi.demo.wgentech.com/notify.php', {
 //         method: 'POST',
