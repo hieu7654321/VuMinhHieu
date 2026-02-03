@@ -2,5 +2,24 @@
   "scripts": {
     "build:css": "sass Css/Sass/main.sass Css/main.css",
     "watch:css": "sass --watch Css/Sass:Css"
+  },
+  "name": "bthuchanh4",
+  "version": "1.0.0",
+  "description": "Đây là 1 project với mục đích thực hành tạo 1 trang website dựa theo yêu cầu và design figma có sẵn.\r Project được dựa theo figma để làm theo tỉ lệ gần với design figma nhất có thể",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieu7654321/VuMinhHieu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hieu7654321/VuMinhHieu/issues"
+  },
+  "homepage": "https://github.com/hieu7654321/VuMinhHieu/tree/BThuchanh4#README.md",
+  "devDependencies": {
+    "sass": "^1.97.1"
   }
 }
