@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build:css": "sass Css/Sass/main.sass Css/main.css",
+    "watch:css": "sass --watch Css/Sass:Css"
+  }
+}
