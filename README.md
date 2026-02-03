@@ -24,6 +24,12 @@ HTML, CSS, SASS/SCSS, Javascript
 git clone -b BThuchanh4 https://github.com/hieu7654321/VuMinhHieu.git
 ```
 
+## Install Dependencies
+
+```
+npm install sass
+```
+
 ## Build SASS/SCSS
 
 ```
