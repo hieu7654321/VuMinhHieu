@@ -36,23 +36,41 @@
 .faq-answer 
   font-size: $fs-body
   line-height: 24px
-  transition: max-height 0.4s ease, opacity 0.3s ease
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease
   @include text-normal
   max-height: 0
   opacity: 0
+  margin: 0
   overflow: hidden
 
-.faq-mark 
-  font-size: $fs-h2
-  user-select: none
-  font-weight: lighter
-  height: 30px
-  transition: transform 0.3s ease
-  @include flex-center
+.faq-mark
+  position: relative
+  width: 18px
+  height: 18px
 
-.faq-item.active .faq-mark
-  transform: rotate(-180deg)
+.faq-mark::before,
+.faq-mark::after
+  content: ""
+  position: absolute
+  background: $clr-black
   transition: transform 0.3s ease
+
+.faq-mark::before
+  top: 50%
+  left: 0
+  right: 0
+  height: 2px
+  transform: translateY(-50%)
+
+.faq-mark::after
+  left: 50%
+  top: 0
+  bottom: 0
+  width: 2px
+  transform: translateX(-50%) rotate(0deg)
+
+.faq-item.active .faq-mark::after
+  transform: translateX(-50%) rotate(90deg)
 
 .faq-item.active .faq-answer
   transition: max-height 0.4s ease-in

@@ -64,17 +64,30 @@
   padding: 0
   scroll-snap-align: start
 
-  &.active
-    text-decoration: underline
+#tab-seating:checked ~ .product-grid-header .tab[for="tab-seating"],
+#tab-table:checked ~ .product-grid-header .tab[for="tab-table"],
+#tab-storage:checked ~ .product-grid-header .tab[for="tab-storage"],
+#tab-lighting:checked ~ .product-grid-header .tab[for="tab-lighting"],
+#tab-decor:checked ~ .product-grid-header .tab[for="tab-decor"]
+  text-decoration: underline
+
+.product_grid_tabs input[type="radio"]
+  position: absolute
+  opacity: 0
+  pointer-events: none
 
 .product-grid
   display: none
 
-  &.active
-    display: grid
-    gap: $gap-products
-    justify-content: center
-    align-items: stretch
+#tab-seating:checked ~ .product-grid.seating,
+#tab-table:checked ~ .product-grid.table,
+#tab-storage:checked ~ .product-grid.storage,
+#tab-lighting:checked ~ .product-grid.lighting,
+#tab-decor:checked ~ .product-grid.decor
+  display: grid
+  gap: $gap-products
+  justify-content: center
+  align-items: stretch
 
 .product-box
   display: flex
@@ -140,7 +153,11 @@
     justify-content: center
 
 @media (min-width: 768px)
-  .product-grid.active
+  #tab-seating:checked ~ .product-grid.seating,
+  #tab-table:checked ~ .product-grid.table,
+  #tab-storage:checked ~ .product-grid.storage,
+  #tab-lighting:checked ~ .product-grid.lighting,
+  #tab-decor:checked ~ .product-grid.decor
     grid-template-columns: repeat(2, 1fr)
     row-gap: 29.4px
     column-gap: 10px

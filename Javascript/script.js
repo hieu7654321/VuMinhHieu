@@ -31,19 +31,6 @@ function prevSlide() {
     }
 }
 
-function changeTab(tab, category) {
-    document.querySelectorAll('.tab').forEach(t =>
-        t.classList.remove('active')
-    );
-
-    document.querySelectorAll('.product-grid').forEach(grid =>
-        grid.classList.remove('active')
-    );
-
-    tab.classList.add('active');
-    document.querySelector(`.product-grid.${category}`).classList.add('active');
-}
-
 function applyFaqLineBreaks() {
     const isDesktop = window.matchMedia('(min-width: 768px)').matches;
 
@@ -67,30 +54,25 @@ function initFaqs() {
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
-        const mark = question.querySelector('.faq-mark');
 
         question.addEventListener('click', () => {
             if (openItem && openItem !== item) {
                 const prevQuestion = openItem.querySelector('.faq-question');
                 const prevAnswer = openItem.querySelector('.faq-answer');
-                const prevMark = prevQuestion.querySelector('.faq-mark');
 
                 openItem.classList.remove('active');
                 prevAnswer.style.maxHeight = '0';
-                prevMark.textContent = '+';
                 prevQuestion.style.borderBottom = '1px solid #EDEDED';
             }
 
             if (item.classList.contains('active')) {
                 item.classList.remove('active');
                 answer.style.maxHeight = '0';
-                mark.textContent = '+';
                 question.style.borderBottom = '1px solid #EDEDED';
                 openItem = null;
             } else {
                 item.classList.add('active');
                 answer.style.maxHeight = answer.scrollHeight + 'px';
-                mark.textContent = '−';
                 question.style.borderBottom = '1px solid #000';
                 openItem = item;
             }
@@ -100,11 +82,9 @@ function initFaqs() {
     if (faqItems.length > 0) {
         const firstItem = faqItems[0];
         const firstAnswer = firstItem.querySelector('.faq-answer');
-        const firstMark = firstItem.querySelector('.faq-mark');
 
         firstItem.classList.add('active');
         firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
-        firstMark.textContent = '−';
         openItem = firstItem;
     }
 }

@@ -12,18 +12,6 @@ function submitContactForm(event) {
         return false;
     }
 
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email)) {
-        showPopup('popup-error');
-        return false;
-    }
-
-    const phoneClean = phone.replace(/[\s+()-]/g, '');
-    if (!/^\d{9,15}$/.test(phoneClean)) {
-        showPopup('popup-error');
-        return false;
-    }
-
     if (typeof window.contactWidgetId === 'undefined') {
         showPopup('popup-error');
         return false;

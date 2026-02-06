@@ -4,13 +4,6 @@ function submitEmail(event) {
     const emailInput = document.getElementById('footer-email');
     const email = emailInput.value.trim();
 
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    if (!emailRegex.test(email)) {
-        showPopup('popup-error');
-        return;
-    }
-
     if (typeof window.newsletterWidgetId === 'undefined') {
         showPopup('popup-error');
         return;

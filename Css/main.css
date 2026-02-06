@@ -404,14 +404,30 @@
   padding: 0;
   scroll-snap-align: start;
 }
-.tab.active {
+
+#tab-seating:checked ~ .product-grid-header .tab[for=tab-seating],
+#tab-table:checked ~ .product-grid-header .tab[for=tab-table],
+#tab-storage:checked ~ .product-grid-header .tab[for=tab-storage],
+#tab-lighting:checked ~ .product-grid-header .tab[for=tab-lighting],
+#tab-decor:checked ~ .product-grid-header .tab[for=tab-decor] {
   text-decoration: underline;
+}
+
+.product_grid_tabs input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .product-grid {
   display: none;
 }
-.product-grid.active {
+
+#tab-seating:checked ~ .product-grid.seating,
+#tab-table:checked ~ .product-grid.table,
+#tab-storage:checked ~ .product-grid.storage,
+#tab-lighting:checked ~ .product-grid.lighting,
+#tab-decor:checked ~ .product-grid.decor {
   display: grid;
   gap: 24px;
   justify-content: center;
@@ -550,7 +566,11 @@
   }
 }
 @media (min-width: 768px) {
-  .product-grid.active {
+  #tab-seating:checked ~ .product-grid.seating,
+  #tab-table:checked ~ .product-grid.table,
+  #tab-storage:checked ~ .product-grid.storage,
+  #tab-lighting:checked ~ .product-grid.lighting,
+  #tab-decor:checked ~ .product-grid.decor {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 29.4px;
     column-gap: 10px;
@@ -1101,7 +1121,7 @@ div.product_slider-item {
     flex-direction: row;
   }
   .form-row {
-    gap: 50px;
+    gap: 3.5%;
   }
   .form-component-1 .form-field,
   .form-component-2 .form-field {
@@ -1299,29 +1319,48 @@ div.inspiration-heading, div.inspiration-info-content {
 .faq-answer {
   font-size: 16px;
   line-height: 24px;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
   font-weight: 400;
   letter-spacing: 0;
   vertical-align: middle;
   max-height: 0;
   opacity: 0;
+  margin: 0;
   overflow: hidden;
 }
 
 .faq-mark {
-  font-size: 28px;
-  user-select: none;
-  font-weight: lighter;
-  height: 30px;
-  transition: transform 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 18px;
+  height: 18px;
 }
 
-.faq-item.active .faq-mark {
-  transform: rotate(-180deg);
+.faq-mark::before,
+.faq-mark::after {
+  content: "";
+  position: absolute;
+  background: #000000;
   transition: transform 0.3s ease;
+}
+
+.faq-mark::before {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.faq-mark::after {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.faq-item.active .faq-mark::after {
+  transform: translateX(-50%) rotate(90deg);
 }
 
 .faq-item.active .faq-answer {
@@ -1520,7 +1559,7 @@ div.inspiration-heading, div.inspiration-info-content {
 @media (min-width: 1024px) {
   .our-service-box {
     flex-direction: column;
-    min-width: 400px;
+    min-width: 360px;
   }
   .our-service-container {
     justify-content: space-evenly;
@@ -1532,7 +1571,7 @@ div.inspiration-heading, div.inspiration-info-content {
     margin: 80px 0;
   }
   .service-info {
-    gap: 12px;
+    gap: 8px;
   }
   .our-service-box {
     min-width: 184px;
