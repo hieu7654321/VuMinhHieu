@@ -60,6 +60,15 @@ function submitEmail(event) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const newsletterForm = document.getElementById('newsletter-form');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', submitEmail);
+    }
+});
+
+
 function onNewsletterRecaptchaSuccess() {
     const errorMessage = document.getElementById('recaptcha-error-message');
     console.log('Newsletter reCAPTCHA verified');

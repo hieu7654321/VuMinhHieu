@@ -4,44 +4,76 @@
   background-color: $clr-white
 
 .top_header
+  position: relative
   background-color: $clr-announcement-bg
   color: $clr-white
   font-size: $fs-small
   padding: 0 15px
   height: $header-height
-  display: flex
-  align-items: center
-  justify-content: space-between
+  @include flex-between
+
+.top_header input[type="radio"]
+  position: absolute
+  opacity: 0
+  pointer-events: none
 
 .slider-viewport
-  overflow: hidden
-  flex: 1
   position: relative
-
-.slider-track
-  display: flex
-  transition: transform 0.4s ease
-  width: 200%
+  z-index: 1
+  flex: 1
+  height: 24px
+  @include flex-center
+  overflow: hidden
 
 .slide
-  width: 100%
+  position: absolute
+  inset: 0
+  @include flex-center
   text-align: center
-  white-space: nowrap
-  display: flex
-  justify-content: center
-  line-height: 1
-  align-items: center
+  opacity: 0
+  transition: opacity 0.35s ease, transform 0.35s ease
+
+#slide-1:checked ~ .slider-viewport .number
+  opacity: 1
+  transform: translateY(0)
+
+#slide-2:checked ~ .slider-viewport .address
+  opacity: 1
+  transform: translateY(0)
 
 .slider-btn
-  @include reset-button
+  position: absolute
+  z-index: 2
+  top: 50%
+  transform: translateY(-50%)
+  width: 5px
+  height: 10px
+  cursor: pointer
+  background-repeat: no-repeat
+  background-position: center
+  background-size: contain
 
   &.prev
     background-image: url("../Assets/Prev-Button.svg")
+    left: 15px
 
   &.next
     background-image: url("../Assets/next-button.svg")
+    right: 15px
 
-.slider-track .number
+#slide-1:checked ~ .btn-1
+  display: block
+
+#slide-1:checked ~ .btn-2
+  display: none
+
+#slide-2:checked ~ .btn-2
+  display: block
+
+#slide-2:checked ~ .btn-1 
+  display: none
+
+.number
   width: 100%
   font-weight: 400
   font-size: $fs-small
@@ -50,7 +82,7 @@
   vertical-align: middle
   color: $clr-announcement-text
 
-.slider-track .address
+.address
   width: 100%
   text-align: center
   font-weight: 400
@@ -59,21 +91,6 @@
   letter-spacing: 0
   vertical-align: middle
   color: $clr-announcement-text
-
-.slider-btn
-  width: 5px;
-  height: 10px;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 5px 10px;
-
-  border: none;
-  cursor: pointer;
-  padding: 0;
-
-  background-color: transparent;
-
 
 .main_header
   @include flex-center
@@ -108,24 +125,26 @@
     height: auto
 
   .slider-btn
-    display: none
+    display: none !important
 
-  .slider-track
-    width: 100%
+  .slider-viewport
+    position: static
+    height: auto
     justify-content: space-between
-    transition: none
 
   .slide
-    flex: 0 1 auto
-    justify-content: flex-start
+    position: static
+    opacity: 1 !important
+    transform: none !important
+    width: auto
 
-  .slider-track .number
+  .number
     text-align: left
 
-  .slider-track .address
+  .address
     text-align: right
     min-width: 240px
 
 @media (min-width: 1024px)
-  .slider-track .address
+  .address
     min-width: 300px

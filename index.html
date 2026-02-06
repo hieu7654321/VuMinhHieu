@@ -59,19 +59,27 @@
     </div>
     <div class="container">
         <section class="header">
-            <div class="top_header" id="topHeader">
-                <button class="slider-btn prev" aria-label="Previous" onclick="prevSlide()"></button>
+            <div class="top_header">
+
+                <input type="radio" name="announcement" id="slide-1" checked>
+                <input type="radio" name="announcement" id="slide-2">
+
+                <label for="slide-2" class="slider-btn prev btn-1"></label>
+                <label for="slide-2" class="slider-btn next btn-1"></label>
+
+                <label for="slide-1" class="slider-btn prev btn-2"></label>
+                <label for="slide-1" class="slider-btn next btn-2"></label>
+
                 <div class="slider-viewport">
-                    <div class="slider-track">
-                        <div class="slide"><div class="number">(+84) 12 34 5678</div></div>
-                        <div class="slide"><div class="address">78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi</div></div>
+                    <div class="slide number">(+84) 12 34 5678</div>
+                    <div class="slide address">
+                    78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi
                     </div>
                 </div>
-                <button class="slider-btn next" aria-label="Next" onclick="nextSlide()"></button>
             </div>
             <div class="main_header">
                 <div class="logo headings">
-                    <h1><a href="/BThuchanh2/index.html">ORANGY</a></h1>
+                    <h1><a href="./">ORANGY</a></h1>
                 </div>
             </div>
         </section>
@@ -615,7 +623,7 @@
                     </div>
 
                     <div class="contact-us__content">
-                        <form class="contact-us-form" autocomplete="on" onsubmit="return submitContactForm(event)" method="post">
+                        <form class="contact-us-form" id="contact-form" autocomplete="on" method="post">
                             <div class="form-component-1 form-row">
                                 <div class="form-field">
                                     <label for="name">Name</label>
@@ -836,7 +844,7 @@
                             <div class="email-title headings">Subscribe to get 10% OFF</div>
                             <div class="email-content">Subscribe for store updates and discounts.</div>
                         </div>
-                        <form class="email-input-form" onsubmit="submitEmail(event)" method="post">
+                        <form class="email-input-form" id="newsletter-form" method="post">
                             <div class="email-input">
                                 <input name="Email" id="footer-email" type="email" placeholder="Email" required autocomplete="email" title="Vui lòng nhập vào địa chỉ email hợp lệ (e.g. name@example.com)">
                                 <button class="send-email" type="submit" aria-label="Send"></button>

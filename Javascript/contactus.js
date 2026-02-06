@@ -82,6 +82,15 @@ function submitContactForm(event) {
     return false;
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', submitContactForm);
+    }
+});
+
+
 function onContactRecaptchaSuccess() {
     const errorMessage = document.getElementById('recaptcha-error-message-contact');
     errorMessage.style.display = 'none';

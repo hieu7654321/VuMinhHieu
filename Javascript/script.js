@@ -1,36 +1,3 @@
-let index = 0;
-function updateSlider() {
-    const track = document.querySelector('.slider-track');
-    const slides = document.querySelectorAll('.slide');
-
-    if (!track || slides.length === 0) return;
-
-    if (window.innerWidth > 767) {
-        track.style.transform = 'translateX(0)';
-        index = 0;
-        return;
-    }
-
-    const slideWidth = slides[0].offsetWidth;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-}
-
-function nextSlide() {
-    if (window.innerWidth <= 767) {
-        const slides = document.querySelectorAll('.slide');
-        index = (index + 1) % slides.length;
-        updateSlider();
-    }
-}
-
-function prevSlide() {
-    if (window.innerWidth <= 767) {
-        const slides = document.querySelectorAll('.slide');
-        index = (index - 1 + slides.length) % slides.length;
-        updateSlider();
-    }
-}
-
 function applyFaqLineBreaks() {
     const isDesktop = window.matchMedia('(min-width: 768px)').matches;
 
