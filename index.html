@@ -8,16 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"> -->
     <link rel="stylesheet" href="Css/main.css">
-    <script src="Javascript/script.js" defer></script>
-    <script src="Javascript/cookies.js" defer></script>
-    <script src="Javascript/popup.js" defer></script>
-    <script src="Javascript/footer.js" defer></script>
-    <script src="Javascript/contactus.js" defer></script>
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <!-- <script src="Javascript/script.js" defer></script> -->
+    <!-- <script src="Javascript/cookies.js" defer></script>
+    <script src="Javascript/popup.js" defer></script> -->
+    <!-- <script src="Javascript/footer.js" defer></script> -->
+    <!-- <script src="Javascript/contactus.js" defer></script> -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
-     <script>
+     <!-- <script>
         function onRecaptchaLoad() {
             window.newsletterWidgetId = grecaptcha.render('recaptcha-newsletter', {
                 'sitekey': '6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY'
@@ -27,13 +27,13 @@
                 'sitekey': '6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY'
             });
         }
-     </script>
-    <link
+     </script> -->
+    <!-- <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <style>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script> -->
+    <!-- <style>
         @keyframes shake {
             0% { transform: translateX(0); }
             25% { transform: translateX(-10px); }
@@ -45,15 +45,16 @@
         .shake {
             animation: shake 0.5s ease-in-out;
         }
-    </style>
+    </style> -->
 </head>
 <body>
-    <div id="cookie-consent" class="cookie-bar" style="display:none;">
+    <input type="checkbox" id="cookie-toggle" hidden checked>
+    <div id="cookie-consent" class="cookie-bar">
         <div class="cookie-content">
             <p>This website uses cookies to ensure you get the best experience on our website.</p>
             <div class="cookie-buttons">
-                <button id="cookie-accept" class="btn-accept">Accept</button>
-                <button id="cookie-decline" class="btn-decline">Ignore</button>
+                <label for="cookie-toggle" id="cookie-accept" class="btn-accept">Accept</label>
+                <label for="cookie-toggle" id="cookie-decline" class="btn-decline">Ignore</label>
             </div>
         </div>
     </div>
@@ -83,7 +84,8 @@
                 </div>
             </div>
         </section>
-        <section data-aos="fade" class="hero_banner" id="hero">
+
+        <section class="hero_banner aos-fade" id="hero">
             <img src="Assets/hero.png" alt="" class="hero-img">
             <div class="hero-content">
                 <div class="hero-slogan headings">EMBRACE VISION</div>
@@ -93,6 +95,7 @@
                 <a href="#products" class="hero_btn">EXPLORE NOW</a>
             </div>
         </section>
+
         <section class="product_grid_tabs" id="products">
             <div class="product-grid-container">
                 <input type="radio" name="product-tab" id="tab-seating" checked>
@@ -113,7 +116,7 @@
                 </div>
 
                 <div class="product-grid seating">
-                    <div data-aos="fade-up" class="product-box wide">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Oda Ottoman.jpg" alt="">
@@ -126,7 +129,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -152,7 +155,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -176,7 +179,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box wide">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
@@ -189,8 +192,8 @@
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade" class="product-grid table">
-                    <div data-aos="fade-up" class="product-box wide">
+                <div class="product-grid table aos-fade">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Releve platter.png" alt="">
@@ -203,7 +206,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -229,7 +232,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -253,7 +256,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box wide">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
@@ -267,7 +270,7 @@
                     </div>
                 </div>
                 <div class="product-grid storage">
-                    <div data-aos="fade-up" class="product-box wide">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Releve platter.png" alt="">
@@ -280,7 +283,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -306,7 +309,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -330,7 +333,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box wide">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
@@ -344,7 +347,7 @@
                     </div>
                 </div>
                 <div class="product-grid lighting">
-                    <div data-aos="fade-up" class="product-box wide">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Releve platter.png" alt="">
@@ -357,7 +360,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -383,7 +386,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -407,7 +410,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box wide">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
@@ -421,7 +424,7 @@
                     </div>
                 </div>
                 <div class="product-grid decor">
-                    <div data-aos="fade-up" class="product-box wide">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Releve platter.png" alt="">
@@ -434,7 +437,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag selling">Selling fast!</span>
                             <span class="tag new">New</span>
@@ -460,7 +463,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box tall">
+                    <div class="product-box tall aos-fade-up">
                         <div class="product">
                             <span class="tag sale">-30%</span>
                             <div class="product-image">
@@ -484,7 +487,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" class="product-box wide">
+                    <div class="product-box wide aos-fade-up">
                         <div class="product">
                             <div class="product-image">
                                 <img src="Assets/Elevate-your-home.png" alt="">
@@ -499,73 +502,63 @@
                 </div>
             </div>
         </section>
-        <section data-aos="fade" class="product_slider">
+
+        <section class="product_slider">
             <div class="product-grid-container">
                 <div class="heading-container headings">
                     <h2>Discover unique items</h2>
                 </div>
 
-                <div class="splide product-slider-splide" id="product-slider">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <div class="product_slider-item">
-                                <div class="product-slider-image">
-                                    <img src="Assets/Releve platter.png" alt="Releve platter">
-                                </div>
-                                <div class="info">
-                                    <span class="type">DINING TABLE</span>
-                                    <h3>Releve platter</h3>
-                                    <p>$699.00</p>
-                                </div>
-                            </div>
-                        </li>
+                <div class="product-slider">
+                    <div class="product_slider-item">
+                        <div class="product-slider-image">
+                            <img src="Assets/Releve platter.png" alt="Releve platter">
+                        </div>
+                        <div class="info">
+                            <span class="type">DINING TABLE</span>
+                            <h3>Releve platter</h3>
+                            <p>$699.00</p>
+                        </div>
+                    </div>
 
-                        <li class="splide__slide">
-                            <div class="product_slider-item">
-                                <div class="product-slider-image">
-                                    <img src="Assets/Spire tapered candle.png" alt="Spire tapered candle">
-                                </div>
-                                <div class="info">
-                                    <span class="type">CANDLE</span>
-                                    <h3>Spire tapered candle</h3>
-                                    <p>$699.00</p>
-                                </div>
-                            </div>
-                        </li>
+                    <div class="product_slider-item">
+                        <div class="product-slider-image">
+                            <img src="Assets/Spire tapered candle.png" alt="Spire tapered candle">
+                        </div>
+                        <div class="info">
+                            <span class="type">CANDLE</span>
+                            <h3>Spire tapered candle</h3>
+                            <p>$699.00</p>
+                        </div>
+                    </div>
 
-                        <li class="splide__slide">
-                            <div class="product_slider-item">
-                                <span class="tag selling">Selling fast!</span>
-                                <span class="tag new">New</span>
-                                <div class="product-slider-image">
-                                    <img src="Assets/Umanoff platter.png" alt="Umanoff planter">
-                                </div>
-                                <div class="info">
-                                    <span class="type">STORAGE</span>
-                                    <h3>Umanoff planter</h3>
-                                    <p>$699.00</p>
-                                </div>
-                            </div>
-                        </li>
+                    <div class="product_slider-item">
+                        <span class="tag selling">Selling fast!</span>
+                        <span class="tag new">New</span>
+                        <div class="product-slider-image">
+                            <img src="Assets/Umanoff platter.png" alt="Umanoff planter">
+                        </div>
+                        <div class="info">
+                            <span class="type">STORAGE</span>
+                            <h3>Umanoff planter</h3>
+                            <p>$699.00</p>
+                        </div>
+                    </div>
 
-                        <li class="splide__slide">
-                            <div class="product_slider-item">
-                                <div class="product-slider-image">
-                                    <img src="Assets/Hashira pendant lamp cluster.png" alt="Hashira pendant lamp cluster">
-                                </div>
-                                <div class="info">
-                                    <span class="type">LANTERN</span>
-                                    <h3>Hashira pendant lamp cluster</h3>
-                                    <p>$1,199.00</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="product_slider-item">
+                        <div class="product-slider-image">
+                            <img src="Assets/Hashira pendant lamp cluster.png" alt="Hashira pendant lamp cluster">
+                        </div>
+                        <div class="info">
+                            <span class="type">LANTERN</span>
+                            <h3>Hashira pendant lamp cluster</h3>
+                            <p>$1,199.00</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
         <section class="text-carousel">
             <div class="carousel-container">
                 <div class="carousel-content headings">
@@ -577,16 +570,17 @@
                 </div>
             </div>
         </section>
+
         <section class="sale_block">
             <div class="product-grid-container">
                 <div class="sale-block-container">
-                    <div data-aos="flip-left" class="sale-block">
+                    <div class="sale-block aos-flip-left">
                         <div class="sale-block-image">
                             <img src="Assets/Bundle and save.jpg" alt="Sale Image 1">
                         </div>
                     </div>
 
-                    <div data-aos="flip-left" class="sale-block">
+                    <div class="sale-block aos-flip-left">
                         <div class="sale-block-text">
                             <div class="sale-block-text-container">
                                 <div class="season-sale">SEASON SALE COLLECTIONS</div>
@@ -602,7 +596,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="flip-left" class="sale-block">
+                    <div class="sale-block aos-flip-left">
                         <div class="sale-block-image">
                             <img src="Assets/Renovate your home.png" alt="Sale Image 3">
                         </div>
@@ -610,7 +604,8 @@
                 </div>
             </div>
         </section>
-        <section data-aos="fade" class="contact-us">
+
+        <section class="contact-us aos-fade-up">
             <div class="product-grid-container">
                 <div class="contact-us-container">
                     <div class="contact-us__heading">
@@ -623,7 +618,7 @@
                     </div>
 
                     <div class="contact-us__content">
-                        <form class="contact-us-form" id="contact-form" autocomplete="on" method="post">
+                        <form class="contact-us-form" id="contact-form" autocomplete="on" method="post" action="https://script.google.com/macros/s/AKfycbxaT6WO1DzUEA4cofWd7lTgQYZToU2tdpeI96PJtLXJYqgZ7L1lQ1tXY1U4598PGAk2ww/exec">
                             <div class="form-component-1 form-row">
                                 <div class="form-field">
                                     <label for="name">Name</label>
@@ -653,9 +648,7 @@
                             <div 
                                 class="g-recaptcha"
                                 data-sitekey="6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY"
-                                id="recaptcha-contact"
-                                data-callback="onContactRecaptchaSuccess"
-                                data-expired-callback="onContactRecaptchaExpired">
+                                id="recaptcha-contact">
                             </div>
                             <div id="recaptcha-error-message-contact" class="recaptcha-error-contact">
                                 Please complete the CAPTCHA.
@@ -669,7 +662,8 @@
                 </div>
             </div>
         </section>
-        <section class="inspiration">
+
+        <section class="inspiration aos-fade-up">
             <div class="product-grid-container">
                 <div class="inspiration-container">
                     <div class="inspiration-heading-container">
@@ -678,7 +672,7 @@
                         </div>
                     </div>
                     <div class="inspiration-content">
-                        <div data-aos="fade" class="inspiration-block">
+                        <div class="inspiration-block aos-fade">
                             <div class="inspiration-image">
                                 <img src="Assets/Showroom.png" alt="Showroom">
                             </div>
@@ -687,7 +681,7 @@
                                 <div class="inspiration-info-content">Experience design for living at our flagship showroom located in Boston’s South End.</div>
                             </div>
                         </div>
-                        <div data-aos="fade" class="inspiration-block">
+                        <div class="inspiration-block aos-fade">
                             <div class="inspiration-image">
                                 <img src="Assets/Interior work.png" alt="Interior work">
                             </div>
@@ -696,7 +690,7 @@
                                 <div class="inspiration-info-content">Crafting spaces through meticulous planning, material selection, and creative execution, enhancing aesthetics and functionality.</div>
                             </div>
                         </div>
-                        <div data-aos="fade" class="inspiration-block">
+                        <div class="inspiration-block aos-fade">
                             <div class="inspiration-image">
                                 <img src="Assets/Authentic Design.jpg" alt="Authentic Design">
                             </div>
@@ -705,7 +699,7 @@
                                 <div class="inspiration-info-content">We only carry designs we believe in ethically and aesthetically – original, authentic pieces that are made to last.</div>
                             </div>
                         </div>
-                        <div data-aos="fade" class="inspiration-block">
+                        <div class="inspiration-block aos-fade">
                             <div class="inspiration-image">
                                 <img src="Assets/Custom additions.png" alt="Custom additions">
                             </div>
@@ -725,31 +719,42 @@
                         <div class="faq-heading headings">Discover more in our FAQs</div>
                     </div>
                     <div class="faq-content">
+
+                        <input type="radio" name="faq" id="faq-1" checked hidden>
                         <div class="faq-item">
-                            <div class="faq-question"><span class="faq-question-content headings">How long does shipping take?</span><span class="faq-mark"></span></div>
+                            <label for="faq-1" class="faq-question"><span class="faq-question-content headings">How long does shipping take?</span><span class="faq-mark"></span></label>
                             <div class="faq-answer">Your sales managers will go into the field feeling energized, excited, and inspired. We are a full service business development group – we build strategies and systems.</div>
                         </div>
+
+                        <input type="radio" name="faq" id="faq-2" hidden>
                         <div class="faq-item">
-                            <div class="faq-question"><span class="faq-question-content headings">Does my piece come in any packaging?</span><span class="faq-mark"></span></div>
+                            <label for="faq-2" class="faq-question"><span class="faq-question-content headings">Does my piece come in any packaging?</span><span class="faq-mark"></span></label>
                             <div class="faq-answer">Yes, all our products come in protective and aesthetically pleasing packaging to ensure they arrive in perfect condition. Each product is securely wrapped, and we use eco-friendly materials whenever possible. Additionally, many of our products come in recyclable containers to support sustainability.</div>
                         </div>
+
+                        <input type="radio" name="faq" id="faq-3" hidden>
                         <div class="faq-item">
-                            <div class="faq-question"><span class="faq-question-content headings">Do you ship internationally?</span><span class="faq-mark"></span></div>
+                            <label for="faq-3" class="faq-question"><span class="faq-question-content headings">Do you ship internationally?</span><span class="faq-mark"></span></label>
                             <div class="faq-answer">Yes, we do ship internationally! We offer worldwide shipping to ensure customers around the globe can enjoy our products. Please note that shipping times and costs may vary depending on the destination country. International customers may also be subject to customs fees or import duties imposed by their country's customs authorities.</div>
                         </div>
+
+                        <input type="radio" name="faq" id="faq-4" hidden>
                         <div class="faq-item">
-                            <div class="faq-question"><span class="faq-question-content headings">What payment methods do you accept?</span><span class="faq-mark"></span></div>
+                            <label for="faq-4" class="faq-question"><span class="faq-question-content headings">What payment methods do you accept?</span><span class="faq-mark"></span></label>
                             <div class="faq-answer">We accept a variety of payment methods to make your shopping experience convenient. These include credit cards (Visa, Mastercard, American Express), PayPal, and, in some regions, alternative payment methods such as Apple Pay or Google Pay. Rest assured, your payment information is secure and protected during the checkout process.</div>
                         </div>
+
+                        <input type="radio" name="faq" id="faq-5" hidden>
                         <div class="faq-item">
-                            <div class="faq-question"><span class="faq-question-content headings">What should I do if my order is not placed?</span><span class="faq-mark"></span></div>
+                            <label for="faq-5" class="faq-question"><span class="faq-question-content headings">What should I do if my order is not placed?</span><span class="faq-mark"></span></label>
                             <div class="faq-answer">We’re sorry to hear that you’re unable to place an order. Please contact Customer Service and we will work on resolving the issue as quickly as possible</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section data-aos="fade" class="single_banner">
+
+        <section class="single_banner aos-fade">
             <picture>
                 <source srcset="Assets/image-2.png" media="(max-width: 450px)">
                 <img src="Assets/Elevate-your-home.png" alt="Single-banner" class="banner-img" id="banner-img-2">
@@ -760,7 +765,8 @@
                 <p class="banner-description">Clever products for every corner</p>
             </div>
         </section>
-        <section class="our-service">
+
+        <section class="our-service aos-fade-up">
             <div class="product-grid-container">
                 <div class="our-service-container">
                     <div class="our-service-box">
@@ -802,6 +808,7 @@
                 </div>
             </div>
         </section>
+
         <section class="contact-shop">
             <div class="contact-all">
                 <div class="product-grid-container">
@@ -830,6 +837,7 @@
                 </div>
             </div>
         </section>
+
         <section class="footer">
             <div class="product-grid-container">
                 <div class="footer-container">
@@ -838,18 +846,16 @@
                             <div class="email-title headings">Subscribe to get 10% OFF</div>
                             <div class="email-content">Subscribe for store updates and discounts.</div>
                         </div>
-                        <form class="email-input-form" id="newsletter-form" method="post">
+                        <form class="email-input-form" id="newsletter-form" method="post" action="https://script.google.com/macros/s/AKfycbwlnruolAEFek8x1wUYLxocHdIuwHWrHYXSfzSXZSygslzejM-ppDe76EuK8jkKWyB4/exec">
                             <div class="email-input">
-                                <input name="Email" id="footer-email" type="email" placeholder="Email" required autocomplete="email" title="Vui lòng nhập vào địa chỉ email hợp lệ (e.g. name@example.com)">
+                                <input name="email" id="footer-email" type="email" placeholder="Email" required autocomplete="email" title="Vui lòng nhập vào địa chỉ email hợp lệ (e.g. name@example.com)">
                                 <button class="send-email" type="submit" aria-label="Send"></button>
                             </div>
 
                             <div 
                                 class="g-recaptcha"
                                 data-sitekey="6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY"
-                                id="recaptcha-newsletter"
-                                data-callback="onNewsletterRecaptchaSuccess"
-                                data-expired-callback="onNewsletterRecaptchaExpired">
+                                id="recaptcha-newsletter">
                             </div>
                             <div id="recaptcha-error-message" class="recaptcha-error">
                                 Please complete the CAPTCHA.
@@ -881,10 +887,12 @@
             </div>
         </section>
     </div>
-    <div id="popup-discount" class="popup discount-popup" style="display:none;" onclick="closeDiscountPopup(this)">
-        <div class="popup-content" onclick="event.stopPropagation()">
+    <input type="checkbox" id="discount-toggle" hidden checked>
+    <div id="popup-discount" class="popup discount-popup">
+        <label for="discount-toggle" class="popup-overlay"></label>
+        <div class="popup-content">
             <div class="popup-image"></div>
-            <button class="popup-close" onclick="closeDiscountPopup(this.closest('.popup'))"></button>
+            <label for="discount-toggle" class="popup-close"></label>
             <div class="popup__text">
                 <div class="big-sale-container headings">
                     <div class="big-sale__content">Big Sale</div>
@@ -897,9 +905,12 @@
             </div>
         </div>
     </div>
-    <div id="popup-success" class="popup" style="display:none;" onclick="hidePopup('popup-success')">
-        <div class="popup-content" onclick="event.stopPropagation()">
-            <button class="popup-close" onclick="hidePopup('popup-success')"></button>
+
+    <input type="checkbox" id="success-toggle" hidden checked>
+    <div id="popup-success" class="popup" style="display:none;">
+        <label for="discount-toggle" class="popup-overlay"></label>
+        <div class="popup-content">
+            <label for="discount-toggle" class="popup-close"></label>
             <div class="popup-message headings">
                 <p>Thank you!</p>
                 <p>Data has been sent successfully.</p>
@@ -907,18 +918,20 @@
         </div>
     </div>
 
-    <div id="popup-error" class="popup" style="display:none;" onclick="hidePopup('popup-error')">
-        <div class="popup-content error" onclick="event.stopPropagation()">
-            <button class="popup-close" onclick="hidePopup('popup-error')"></button>
+    <input type="checkbox" id="error-toggle" hidden checked>
+    <div id="popup-error" class="popup" style="display:none;">
+        <label for="discount-toggle" class="popup-overlay"></label>
+        <div class="popup-content error">
+            <label for="discount-toggle" class="popup-close"></label>
             <div class="popup-message headings">
                 <p>Oops! An error occurred.</p>
                 <p>Please check your information and try again.</p>
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
+    </script> -->
 </body>
 </html>

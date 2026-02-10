@@ -43,6 +43,12 @@
   margin: 0
   overflow: hidden
 
+input[type="radio"]:checked + .faq-item .faq-answer
+  transition: max-height 0.4s ease-in
+  max-height: 500px
+  opacity: 1
+  margin-top: 17px
+
 .faq-mark
   position: relative
   width: 18px
@@ -69,14 +75,8 @@
   width: 2px
   transform: translateX(-50%) rotate(0deg)
 
-.faq-item.active .faq-mark::after
+input[type="radio"]:checked + .faq-item .faq-mark::after
   transform: translateX(-50%) rotate(90deg)
-
-.faq-item.active .faq-answer
-  transition: max-height 0.4s ease-in
-  max-height: 500px
-  opacity: 1
-  margin-top: 17px
 
 @media (min-width: 768px) 
   .faqs 
@@ -101,5 +101,5 @@
     font-size: $fs-body
     line-height: 24px
 
-  .faq-item.active .faq-answer
+  input[type="radio"]:checked + .faq-item .faq-answer
     margin-top: 18px

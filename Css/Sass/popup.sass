@@ -6,6 +6,16 @@
   background: rgba(0,0,0,0.65)
   @include flex-center
   z-index: 10000
+  display: none
+
+#discount-toggle:checked ~ .popup
+  display: flex
+
+#success-toggle:checked ~ #popup-success
+  display: flex
+
+#error-toggle:checked ~ #popup-error
+  display: flex
 
 .popup-content
   display: flex
@@ -35,6 +45,11 @@
   cursor: pointer
   padding: 0
 
+.popup-overlay
+  position: fixed
+  inset: 0
+  cursor: pointer
+
 .popup__text
   padding: 24.5px 27.6px
 
@@ -62,7 +77,6 @@
   text-align: center
   max-width: 210px
   @include text-normal
-
 
 .popup-message
   padding: 40px 0
