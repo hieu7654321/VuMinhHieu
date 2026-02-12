@@ -3,148 +3,136 @@
 .header
   background-color: $clr-white
 
-.top_header
-  position: relative
-  background-color: $clr-announcement-bg
-  color: $clr-white
-  font-size: $fs-small
-  padding: 0 15px
-  height: $header-height
-  @include flex-between
+  &__top
+    position: relative
+    background-color: $clr-announcement-bg
+    color: $clr-white
+    font-size: $fs-small
+    padding: 0 15px
+    height: $header-height
+    @include flex-between
 
-.top_header input[type="radio"]
-  position: absolute
-  opacity: 0
-  pointer-events: none
+    input[type="radio"]
+      position: absolute
+      opacity: 0
+      pointer-events: none
 
-.slider-viewport
-  position: relative
-  z-index: 1
-  flex: 1
-  height: 24px
-  @include flex-center
-  overflow: hidden
+  &__slider
+    position: relative
+    z-index: 1
+    flex: 1
+    height: 24px
+    @include flex-center
+    overflow: hidden
 
-.slide
-  position: absolute
-  inset: 0
-  @include flex-center
-  text-align: center
-  opacity: 0
-  transition: opacity 0.35s ease, transform 0.35s ease
+  &__slide
+    position: absolute
+    inset: 0
+    @include flex-center
+    text-align: center
+    opacity: 0
+    transition: opacity 0.35s ease, transform 0.35s ease
 
-#slide-1:checked ~ .slider-viewport .number
-  opacity: 1
-  transform: translateY(0)
+  &--phone,
+  &--address
+    width: 100%
+    font-weight: 400
+    font-size: $fs-small
+    line-height: 24px
+    color: $clr-announcement-text
 
-#slide-2:checked ~ .slider-viewport .address
-  opacity: 1
-  transform: translateY(0)
+  &__nav
+    position: absolute
+    z-index: 2
+    top: 50%
+    transform: translateY(-50%)
+    width: 5px
+    height: 10px
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
 
-.slider-btn
-  position: absolute
-  z-index: 2
-  top: 50%
-  transform: translateY(-50%)
-  width: 5px
-  height: 10px
-  cursor: pointer
-  background-repeat: no-repeat
-  background-position: center
-  background-size: contain
+    &--prev
+      background-image: url("../Assets/Prev-Button.svg")
+      left: 15px
 
-  &.prev
-    background-image: url("../Assets/Prev-Button.svg")
-    left: 15px
+    &--next
+      background-image: url("../Assets/next-button.svg")
+      right: 15px
 
-  &.next
-    background-image: url("../Assets/next-button.svg")
-    right: 15px
+  &__main
+    @include flex-center
 
-#slide-1:checked ~ .btn-1
-  display: block
+  &__logo
+    line-height: 24px
+    padding: 6px 0
 
-#slide-1:checked ~ .btn-2
-  display: none
-
-#slide-2:checked ~ .btn-2
-  display: block
-
-#slide-2:checked ~ .btn-1 
-  display: none
-
-.number
-  width: 100%
-  font-weight: 400
-  font-size: $fs-small
-  line-height: 24px
-  letter-spacing: 0
-  vertical-align: middle
-  color: $clr-announcement-text
-
-.address
-  width: 100%
-  text-align: center
-  font-weight: 400
-  font-size: $fs-small
-  line-height: 24px
-  letter-spacing: 0
-  vertical-align: middle
-  color: $clr-announcement-text
-
-.main_header
-  @include flex-center
-
-.logo
-  line-height: 24px
-  padding-top: 6px
-  padding-bottom: 6px
-
-  h1
-    margin: 0
-    font-size: 24px
-    color: $clr-black
-    font-weight: normal
-
-    a
-      text-decoration: none
-      color: inherit
-      font-size: $fs-h1
-      padding: 0
+    h1
       margin: 0
-      display: inline-flex
-      align-items: center
-      line-height: 1
+      font-size: 24px
+      color: $clr-black
+      font-weight: normal
+
+      a
+        text-decoration: none
+        color: inherit
+        font-size: $fs-h1
+        padding: 0
+        margin: 0
+        display: inline-flex
+        align-items: center
+        line-height: 1
+
+#slide-1:checked ~ .header__slider .header__slide--phone
+  opacity: 1
+  transform: translateY(0)
+
+#slide-2:checked ~ .header__slider .header__slide--address
+  opacity: 1
+  transform: translateY(0)
+
+#slide-1:checked ~ .header__nav--group-1
+  display: block
+
+#slide-1:checked ~ .header__nav--group-2
+  display: none
+
+#slide-2:checked ~ .header__nav--group-2
+  display: block
+
+#slide-2:checked ~ .header__nav--group-1
+  display: none
 
 @media (min-width: 768px)
-  .top_header
+  .header__top
     font-size: $fs-small
     padding: 5px 20px
     justify-content: center
     gap: 60px
     height: auto
 
-  .slider-btn
+  .header__nav
     display: none !important
 
-  .slider-viewport
+  .header__slider
     position: static
     height: auto
     justify-content: space-between
 
-  .slide
+  .header__slide
     position: static
     opacity: 1 !important
     transform: none !important
     width: auto
 
-  .number
-    text-align: left
+    &--phone
+      text-align: left
 
-  .address
-    text-align: right
-    min-width: 240px
+    &--address
+      text-align: right
+      min-width: 240px
 
 @media (min-width: 1024px)
-  .address
+  .header__slide--address
     min-width: 300px

@@ -65,68 +65,68 @@
     </div>
     <div class="container">
         <section class="header">
-            <div class="top_header">
+            <div class="header__top">
 
                 <input type="radio" name="announcement" id="slide-1" checked>
                 <input type="radio" name="announcement" id="slide-2">
 
-                <label for="slide-2" class="slider-btn prev btn-1"></label>
-                <label for="slide-2" class="slider-btn next btn-1"></label>
+                <label for="slide-2" class="header__nav header__nav--prev header__nav--group-1"></label>
+                <label for="slide-2" class="header__nav header__nav--next header__nav--group-1"></label>
 
-                <label for="slide-1" class="slider-btn prev btn-2"></label>
-                <label for="slide-1" class="slider-btn next btn-2"></label>
+                <label for="slide-1" class="header__nav header__nav--prev header__nav--group-2"></label>
+                <label for="slide-1" class="header__nav header__nav--next header__nav--group-2"></label>
 
-                <div class="slider-viewport">
-                    <div class="slide number">(+84) 12 34 5678</div>
-                    <div class="slide address">
+                <div class="header__slider">
+                    <div class="header__slide header__slide--phone">(+84) 12 34 5678</div>
+                    <div class="header__slide header__slide--address">
                     78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi
                     </div>
                 </div>
             </div>
-            <div class="main_header">
-                <div class="logo headings">
+            <div class="header__main">
+                <div class="header__logo headings">
                     <h1><a href="./">ORANGY</a></h1>
                 </div>
             </div>
         </section>
 
-        <section class="hero_banner aos-fade" id="hero">
-            <img src="Assets/hero.png" alt="" class="hero-img">
-            <div class="hero-content">
-                <div class="hero-slogan headings">EMBRACE VISION</div>
-                <div class="description-div">
-                    <p class="hero-description">Clever products for every corner</p>
+        <section class="hero aos-fade" id="hero">
+            <img src="Assets/hero.png" alt="" class="hero__image">
+            <div class="hero__content">
+                <div class="hero__title headings">EMBRACE VISION</div>
+                <div class="hero__descriptiondiv">
+                    <p class="hero__description">Clever products for every corner</p>
                 </div>
-                <a href="#products" class="hero_btn">EXPLORE NOW</a>
+                <a href="#products" class="hero__button">EXPLORE NOW</a>
             </div>
         </section>
 
-        <section class="product_grid_tabs" id="products">
-            <div class="product-grid-container">
+        <section class="products" id="products">
+            <div class="products__container">
                 <input type="radio" name="product-tab" id="tab-seating" checked>
                 <input type="radio" name="product-tab" id="tab-table">
                 <input type="radio" name="product-tab" id="tab-storage">
                 <input type="radio" name="product-tab" id="tab-lighting">
                 <input type="radio" name="product-tab" id="tab-decor">
 
-                <div class="product-grid-header">
-                    <h2 class="section-title headings">Our picks for you</h2>
-                    <div class="tabs">
-                        <label class="tab" for="tab-seating">SEATING</label>
-                        <label class="tab" for="tab-table">TABLE</label>
-                        <label class="tab" for="tab-storage">STORAGE</label>
-                        <label class="tab" for="tab-lighting">LIGHTING</label>
-                        <label class="tab" for="tab-decor">DECOR</label>
+                <div class="products__header">
+                    <h2 class="products__title headings">Our picks for you</h2>
+                    <div class="products__tabs">
+                        <label class="products__tab" for="tab-seating">SEATING</label>
+                        <label class="products__tab" for="tab-table">TABLE</label>
+                        <label class="products__tab" for="tab-storage">STORAGE</label>
+                        <label class="products__tab" for="tab-lighting">LIGHTING</label>
+                        <label class="products__tab" for="tab-decor">DECOR</label>
                     </div>
                 </div>
 
-                <div class="product-grid seating">
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                <div class="products__grid products__grid--seating aos-fade">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Oda Ottoman.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">SOFA</span>
                                 <h3>Oda ottoman</h3>
                                 <p>$699.00</p>
@@ -134,25 +134,25 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag selling">Selling fast!</span>
-                            <span class="tag new">New</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--selling">Selling fast!</span>
+                            <span class="products__tag products__tag--new">New</span>
+                            <div class="products__image">
                                 <img src="Assets/Ready Dining Chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DINING CHAIR</span>
                                 <h3>Ready dining chair</h3>
                                 <p>$699.00</p>
                             </div>
                         </div>
 
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Harbour side dining chair.jpg" alt="">
                             </div>
-                            <div class="info harbour">
+                            <div class="products__info harbour">
                                 <span class="type">DINING CHAIR</span>
                                 <h3>Harbour side dining chair</h3>
                                 <p>$999.00</p>
@@ -160,23 +160,23 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag sale">-30%</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--sale">-30%</span>
+                            <div class="products__image">
                                 <img src="Assets/Tearoom club chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">SOFA</span>
                                 <h3>Tearoom club chair</h3>
                                 <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Co dining chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DINING CHAIR</span>
                                 <h3>Co dining chair</h3>
                                 <p>$1,199.00</p>
@@ -184,12 +184,12 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">SOFA</span>
                                 <h3>Knitting lounge chair</h3>
                                 <p>$999.00</p>
@@ -197,13 +197,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-grid table aos-fade">
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                <div class="products__grid products__grid--table aos-fade">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Releve platter.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">TABLE</span>
                                 <h3>Random new table</h3>
                                 <p>$699.00</p>
@@ -211,25 +211,25 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag selling">Selling fast!</span>
-                            <span class="tag new">New</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--selling">Selling fast!</span>
+                            <span class="products__tag products__tag--new">New</span>
+                            <div class="products__image">
                                 <img src="Assets/Ready Dining Chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DINING TABLE</span>
                                 <h3>Ready dining table</h3>
                                 <p>$699.00</p>
                             </div>
                         </div>
 
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Harbour side dining chair.jpg" alt="">
                             </div>
-                            <div class="info harbour">
+                            <div class="products__info harbour">
                                 <span class="type">DINING TABLE</span>
                                 <h3>Harbour side dining table</h3>
                                 <p>$999.00</p>
@@ -237,23 +237,23 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag sale">-30%</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--sale">-30%</span>
+                            <div class="products__image">
                                 <img src="Assets/Tearoom club chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">TABLE</span>
                                 <h3>Tearoom club table</h3>
                                 <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Co dining chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DINING TABLE</span>
                                 <h3>Co dining table</h3>
                                 <p>$1,199.00</p>
@@ -261,12 +261,12 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">TABLE</span>
                                 <h3>Knitting lounge table</h3>
                                 <p>$999.00</p>
@@ -274,13 +274,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-grid storage">
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                <div class="products__grid products__grid--storage aos-fade">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Releve platter.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">STORAGE</span>
                                 <h3>Random storage somewhere</h3>
                                 <p>$699.00</p>
@@ -288,25 +288,25 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag selling">Selling fast!</span>
-                            <span class="tag new">New</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--selling">Selling fast!</span>
+                            <span class="products__tag products__tag--new">New</span>
+                            <div class="products__image">
                                 <img src="Assets/Spire tapered candle.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DINING STORAGE</span>
                                 <h3>Ready dining storage</h3>
                                 <p>$699.00</p>
                             </div>
                         </div>
 
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Harbour side dining chair.jpg" alt="">
                             </div>
-                            <div class="info harbour">
+                            <div class="products__info harbour">
                                 <span class="type">DINING STORAGE</span>
                                 <h3>Harbour side dining storage</h3>
                                 <p>$999.00</p>
@@ -314,23 +314,23 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag sale">-30%</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--sale">-30%</span>
+                            <div class="products__image">
                                 <img src="Assets/Tearoom club chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">STORAGE</span>
                                 <h3>Tearoom club storage</h3>
                                 <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Co dining chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">STORAGE</span>
                                 <h3>Co dining storage</h3>
                                 <p>$1,199.00</p>
@@ -338,12 +338,12 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">STORAGE</span>
                                 <h3>Knitting lounge storage</h3>
                                 <p>$999.00</p>
@@ -351,13 +351,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-grid lighting">
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                <div class="products__grid products__grid--lighting aos-fade">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Releve platter.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">LIGHTING</span>
                                 <h3>Random lighting somewhere</h3>
                                 <p>$699.00</p>
@@ -365,25 +365,25 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag selling">Selling fast!</span>
-                            <span class="tag new">New</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--selling">Selling fast!</span>
+                            <span class="products__tag products__tag--new">New</span>
+                            <div class="products__image">
                                 <img src="Assets/Spire tapered candle.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DINING LIGHTING</span>
                                 <h3>Ready dining lighting</h3>
                                 <p>$699.00</p>
                             </div>
                         </div>
 
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Umanoff platter.png" alt="">
                             </div>
-                            <div class="info harbour">
+                            <div class="products__info harbour">
                                 <span class="type">DINING Llighting</span>
                                 <h3>Harbour side dining lighting</h3>
                                 <p>$999.00</p>
@@ -391,23 +391,23 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag sale">-30%</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--sale">-30%</span>
+                            <div class="products__image">
                                 <img src="Assets/Hashira pendant lamp cluster.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">LIGHTING</span>
                                 <h3>Tearoom club lighting</h3>
                                 <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Renovate your home.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">LIGHTING</span>
                                 <h3>Co dining lighting</h3>
                                 <p>$1,199.00</p>
@@ -415,12 +415,12 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Knitting louge chair.jpg" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">LIGHTING</span>
                                 <h3>Knitting lounge lighting</h3>
                                 <p>$999.00</p>
@@ -428,13 +428,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-grid decor">
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                <div class="products__grid products__grid--decor aos-fade">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Releve platter.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DECOR</span>
                                 <h3>Random decor somewhere</h3>
                                 <p>$699.00</p>
@@ -442,25 +442,25 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag selling">Selling fast!</span>
-                            <span class="tag new">New</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--selling">Selling fast!</span>
+                            <span class="products__tag products__tag--new">New</span>
+                            <div class="products__image">
                                 <img src="Assets/Spire tapered candle.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DECOR</span>
                                 <h3>Ready dining decor</h3>
                                 <p>$699.00</p>
                             </div>
                         </div>
 
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Umanoff platter.png" alt="">
                             </div>
-                            <div class="info harbour">
+                            <div class="products__info harbour">
                                 <span class="type">DECOR</span>
                                 <h3>Harbour side dining decor</h3>
                                 <p>$999.00</p>
@@ -468,23 +468,23 @@
                         </div>
                     </div>
 
-                    <div class="product-box tall aos-fade-up">
-                        <div class="product">
-                            <span class="tag sale">-30%</span>
-                            <div class="product-image">
+                    <div class="products__item products__item--tall aos-fade-up">
+                        <div class="products__card">
+                            <span class="products__tag products__tag--sale">-30%</span>
+                            <div class="products__image">
                                 <img src="Assets/Hashira pendant lamp cluster.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DECOR</span>
                                 <h3>Tearoom club decor</h3>
                                 <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="product">
-                            <div class="product-image">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Renovate your home.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DECOR</span>
                                 <h3>Co dining decor</h3>
                                 <p>$1,199.00</p>
@@ -492,12 +492,12 @@
                         </div>
                     </div>
 
-                    <div class="product-box wide aos-fade-up">
-                        <div class="product">
-                            <div class="product-image">
+                    <div class="products__item products__item--wide aos-fade-up">
+                        <div class="products__card">
+                            <div class="products__image">
                                 <img src="Assets/Elevate-your-home.png" alt="">
                             </div>
-                            <div class="info">
+                            <div class="products__info">
                                 <span class="type">DECOR</span>
                                 <h3>Knitting lounge decor</h3>
                                 <p>$999.00</p>
@@ -509,7 +509,7 @@
         </section>
 
         <section class="product_slider">
-            <div class="product-grid-container">
+            <div class="products__container">
                 <div class="heading-container headings">
                     <h2>Discover unique items</h2>
                 </div>
@@ -519,7 +519,7 @@
                         <div class="product-slider-image">
                             <img src="Assets/Releve platter.png" alt="Releve platter">
                         </div>
-                        <div class="info">
+                        <div class="products__info">
                             <span class="type">DINING TABLE</span>
                             <h3>Releve platter</h3>
                             <p>$699.00</p>
@@ -530,7 +530,7 @@
                         <div class="product-slider-image">
                             <img src="Assets/Spire tapered candle.png" alt="Spire tapered candle">
                         </div>
-                        <div class="info">
+                        <div class="products__info">
                             <span class="type">CANDLE</span>
                             <h3>Spire tapered candle</h3>
                             <p>$699.00</p>
@@ -538,12 +538,12 @@
                     </div>
 
                     <div class="product_slider-item">
-                        <span class="tag selling">Selling fast!</span>
-                        <span class="tag new">New</span>
+                        <span class="products__tag products__tag--selling">Selling fast!</span>
+                        <span class="products__tag products__tag--new">New</span>
                         <div class="product-slider-image">
                             <img src="Assets/Umanoff platter.png" alt="Umanoff planter">
                         </div>
-                        <div class="info">
+                        <div class="products__info">
                             <span class="type">STORAGE</span>
                             <h3>Umanoff planter</h3>
                             <p>$699.00</p>
@@ -554,7 +554,7 @@
                         <div class="product-slider-image">
                             <img src="Assets/Hashira pendant lamp cluster.png" alt="Hashira pendant lamp cluster">
                         </div>
-                        <div class="info">
+                        <div class="products__info">
                             <span class="type">LANTERN</span>
                             <h3>Hashira pendant lamp cluster</h3>
                             <p>$1,199.00</p>
@@ -577,7 +577,7 @@
         </section>
 
         <section class="sale_block">
-            <div class="product-grid-container">
+            <div class="products__container">
                 <div class="sale-block-container">
                     <div class="sale-block aos-fade-up">
                         <div class="sale-block-image">
@@ -611,7 +611,7 @@
         </section>
 
         <section class="contact-us aos-fade-up">
-            <div class="product-grid-container">
+            <div class="products__container">
                 <div class="contact-us-container">
                     <div class="contact-us__heading">
                         <div class="ct-us__heading-container">
@@ -669,7 +669,7 @@
         </section>
 
         <section class="inspiration aos-fade-up">
-            <div class="product-grid-container">
+            <div class="products__container">
                 <div class="inspiration-container">
                     <div class="inspiration-heading-container">
                         <div class="inspiration-heading-first headings">
@@ -718,7 +718,7 @@
             </div>
         </section>
         <section class="faqs">
-            <div class="product-grid-container">
+            <div class="products__container">
                 <div class="faqs-container">
                     <div class="faq-heading-container">
                         <div class="faq-heading headings">Discover more in our FAQs</div>
@@ -772,7 +772,7 @@
         </section>
 
         <section class="our-service aos-fade-up">
-            <div class="product-grid-container">
+            <div class="products__container">
                 <div class="our-service-container">
                     <div class="our-service-box">
                         <div class="service-image">
@@ -816,7 +816,7 @@
 
         <section class="contact-shop">
             <div class="contact-all">
-                <div class="product-grid-container">
+                <div class="products__container">
                     <div class="contact-container">
                         <div class="contact-content-container1">
                             <div class="image-stage image-stage--top">
@@ -844,7 +844,7 @@
         </section>
 
         <section class="footer">
-            <div class="product-grid-container">
+            <div class="products__container">
                 <div class="footer-container">
                     <div class="email-container">
                         <div class="email-info">

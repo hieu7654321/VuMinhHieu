@@ -1,198 +1,191 @@
 @use "base" as *
 
-.product_grid_tabs
+.products
   width: 100%
   @include flex-center
   margin-top: 47.3px
 
-.product-grid-container
-  width: $container-width-wide
+  &__container
+    width: $container-width-wide
 
-.product-grid-header
-  display: flex
-  justify-content: space-between
-  align-items: center
-  text-align: center
-  gap: 32px
-  margin-bottom: 32.59px
-  flex-wrap: wrap
-  width: 100%
+  &__header
+    @include flex-between
+    text-align: center
+    gap: 32px
+    margin-bottom: 32.59px
+    flex-wrap: wrap
+    width: 100%
 
-.section-title
-  font-size: $fs-h2
-  align-items: center
-  font-weight: 400
-  line-height: 38.4px
-  vertical-align: middle
-  color: $clr-black
-  margin: 0
-  letter-spacing: 0
-  width: 100%
+  &__title
+    font-size: $fs-h2
+    align-items: center
+    font-weight: 400
+    line-height: 38.4px
+    vertical-align: middle
+    color: $clr-black
+    margin: 0
+    letter-spacing: 0
+    width: 100%
 
-.tabs
-  display: inline-flex
-  line-height: 1
-  align-items: center
-  justify-content: flex-start
-  gap: $gap-tabs
-  height: $tab-height
-  width: 100%
-  flex-wrap: nowrap
-  overflow-x: auto
-  overflow-y: hidden
-  scroll-snap-type: x mandatory
-  scroll-behavior: smooth
-  -webkit-overflow-scrolling: touch
-  -ms-overflow-style: none
-  margin: 0 4.17%
+  &__tabs
+    display: inline-flex
+    line-height: 1
+    align-items: center
+    justify-content: flex-start
+    gap: $gap-tabs
+    height: $tab-height
+    width: 100%
+    flex-wrap: nowrap
+    overflow-x: auto
+    overflow-y: hidden
+    scroll-snap-type: x mandatory
+    scroll-behavior: smooth
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: none
+    margin: 0 4.17%
 
-  &::-webkit-scrollbar
+    &::-webkit-scrollbar
+      display: none
+
+  &__tab
+    font-family: $font-body
+    @include reset-button
+    font-size: $fs-body
+    cursor: pointer
+    text-underline-offset: 7px
+    @include text-normal
+    line-height: 24px
+    text-align: center
+    text-transform: uppercase
+    padding: 0
+    scroll-snap-align: start
+
+  input[type="radio"]
+    position: absolute
+    opacity: 0
+    pointer-events: none
+
+  &__grid
     display: none
 
-.tab
-  font-family: $font-body
-  @include reset-button
-  font-size: $fs-body
-  cursor: pointer
-  text-underline-offset: 7px
-  font-weight: 400
-  line-height: 24px
-  letter-spacing: 0
-  text-align: center
-  vertical-align: middle
-  text-transform: uppercase
-  padding: 0
-  scroll-snap-align: start
+  &__item
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    max-width: $product-max-width
 
-#tab-seating:checked ~ .product-grid-header .tab[for="tab-seating"],
-#tab-table:checked ~ .product-grid-header .tab[for="tab-table"],
-#tab-storage:checked ~ .product-grid-header .tab[for="tab-storage"],
-#tab-lighting:checked ~ .product-grid-header .tab[for="tab-lighting"],
-#tab-decor:checked ~ .product-grid-header .tab[for="tab-decor"]
+    &--tall
+      display: grid
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+      gap: 2.225%
+
+    &--wide
+      display: flex
+      flex-direction: column
+
+  &__card
+    position: relative
+    display: flex
+    flex-direction: column
+    height: 100%
+
+  &__image
+    width: 100%
+    overflow: hidden
+    margin-bottom: $product-image-mb
+
+    img
+      width: 100%
+      height: 100%
+      display: block
+      object-fit: fill
+
+  &__item--wide &__image
+    aspect-ratio: calc(360 / 235)
+
+  &__item--tall &__image
+    aspect-ratio: calc(176 / 235)
+
+  &__tag
+    font-size: $fs-small
+    color: $clr-white
+
+    &--selling
+      @include tag-selling
+
+    &--new
+      @include tag-new
+
+    &--sale
+      @include tag-sale
+
+  &__info
+    @include product-info
+
+#tab-seating:checked ~ .products__header .products__tab[for="tab-seating"],
+#tab-table:checked ~ .products__header .products__tab[for="tab-table"],
+#tab-storage:checked ~ .products__header .products__tab[for="tab-storage"],
+#tab-lighting:checked ~ .products__header .products__tab[for="tab-lighting"],
+#tab-decor:checked ~ .products__header .products__tab[for="tab-decor"]
   text-decoration: underline
   font-weight: 500
 
-.product_grid_tabs input[type="radio"]
-  position: absolute
-  opacity: 0
-  pointer-events: none
-
-.product-grid
-  display: none
-
-#tab-seating:checked ~ .product-grid.seating,
-#tab-table:checked ~ .product-grid.table,
-#tab-storage:checked ~ .product-grid.storage,
-#tab-lighting:checked ~ .product-grid.lighting,
-#tab-decor:checked ~ .product-grid.decor
+#tab-seating:checked ~ .products__grid--seating,
+#tab-table:checked ~ .products__grid--table,
+#tab-storage:checked ~ .products__grid--storage,
+#tab-lighting:checked ~ .products__grid--lighting,
+#tab-decor:checked ~ .products__grid--decor
   display: grid
   gap: $gap-products
   justify-content: center
   align-items: stretch
 
-.product-box
-  display: flex
-  flex-direction: column
-  width: 100%
-  height: 100%
-  max-width: $product-max-width
-
-.product
-  position: relative
-  display: flex
-  flex-direction: column
-  height: 100%
-
-.product-image
-  width: 100%
-  overflow: hidden
-  margin-bottom: $product-image-mb
-
-  img
-    width: 100%
-    height: 100%
-    display: block
-    object-fit: fill
-
-.wide .product-image
-  aspect-ratio: calc(360 / 235)
-
-.tall .product-image
-  aspect-ratio: calc(176 / 235)
-
-.product-box.tall
-  display: grid
-  grid-template-columns: repeat(2, minmax(0, 1fr))
-  gap: 2.225%
-  height: 100%
-
-.product-box.wide
-  display: flex
-  flex-direction: column
-  height: 100%
-
-.tag
-  font-size: $fs-small
-  letter-spacing: 0
-  vertical-align: middle
-  color: $clr-white
-
-  &.selling
-    @include tag-selling
-
-  &.new
-    @include tag-new
-
-  &.sale
-    @include tag-sale
-
-.info
-  @include product-info
-
 @media (min-width: 492px)
-  .tabs
+  .products__tabs
     justify-content: center
 
 @media (min-width: 768px)
-  #tab-seating:checked ~ .product-grid.seating,
-  #tab-table:checked ~ .product-grid.table,
-  #tab-storage:checked ~ .product-grid.storage,
-  #tab-lighting:checked ~ .product-grid.lighting,
-  #tab-decor:checked ~ .product-grid.decor
+
+  #tab-seating:checked ~ .products__grid--seating,
+  #tab-table:checked ~ .products__grid--table,
+  #tab-storage:checked ~ .products__grid--storage,
+  #tab-lighting:checked ~ .products__grid--lighting,
+  #tab-decor:checked ~ .products__grid--decor
     grid-template-columns: repeat(2, 1fr)
     row-gap: 29.4px
     column-gap: 10px
     justify-items: center
 
-  .product-box
+  .products__item
     max-width: 700px
 
-  .product-box.tall
+  .products__item--tall
     gap: 1.43%
 
-  .product-box:nth-child(1),
-  .product-box:nth-child(3)
+  .products__item:nth-child(1),
+  .products__item:nth-child(3)
     justify-self: end
 
-  .product-box:nth-child(2),
-  .product-box:nth-child(4)
+  .products__item:nth-child(2),
+  .products__item:nth-child(4)
     justify-self: start
 
-  .wide .product-image
+  .products__item--wide .products__image
     aspect-ratio: calc(700 / 460)
 
-  .tall .product-image
+  .products__item--tall .products__image
     aspect-ratio: calc(345 / 460)
 
 @media (min-width: 1024px)
-  .product-grid-container
+
+  .products__container
     width: $container-width-narrow
 
-  .product_grid_tabs
+  .products
     margin-top: 5.2%
 
-  .product-grid-header
-    display: flex
+  .products__header
     flex-direction: row
     justify-content: space-between
     align-items: center
@@ -200,23 +193,22 @@
     max-width: 1410px
     gap: 0
 
-  .section-title
+  .products__title
     font-size: 36px
     line-height: 48px
     width: auto
     flex: 0 0 50%
     text-align: left
 
-  .tabs
+  .products__tabs
     font-weight: 500
     justify-content: flex-end
     width: 21.7%
     padding: 0
     margin: 0
     gap: 6%
-    overflow-x: visible
-    overflow-y: visible
+    overflow: visible
     flex: 0 0 50%
 
-  .tag.sale
+  .products__tag--sale
     padding: 11px 8.6px
