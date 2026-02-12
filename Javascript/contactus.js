@@ -35,7 +35,7 @@ function submitContactForm(event) {
         return false;
     }
 
-    const submitBtn = event.target.querySelector('.btn-submit');
+    const submitBtn = event.target.querySelector('.contact-us__submit');
     if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';

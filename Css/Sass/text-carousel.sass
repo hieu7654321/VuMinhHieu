@@ -4,26 +4,26 @@
   width: 100%
   overflow: hidden
 
-.carousel-container
-  @include flex-center
-  height: $carousel-height
-  overflow: hidden
-  margin-top: $carousel-mt
+  &__container
+    @include flex-center
+    height: $carousel-height
+    overflow: hidden
+    margin-top: $carousel-mt
 
-.carousel-content
-  display: flex
-  align-items: center
-  color: $clr-black
-  opacity: 0.2
-  font-size: $carousel-fs
-  font-weight: 400
-  white-space: nowrap
-  gap: $carousel-gap
-  line-height: 64px
-  letter-spacing: 0
-  vertical-align: middle
-  animation: scrollText 10s linear infinite
-  will-change: transform
+  &__content
+    display: flex
+    align-items: center
+    color: $clr-black
+    opacity: 0.2
+    font-size: $carousel-fs
+    font-weight: 400
+    white-space: nowrap
+    gap: $carousel-gap
+    line-height: 64px
+    letter-spacing: 0
+    vertical-align: middle
+    animation: scrollText 10s linear infinite
+    will-change: transform
 
   img
     width: 30.84px
@@ -42,9 +42,9 @@
     transform: translateX(-100%)
 
 @media (min-width: 1400px)
-  .carousel-container
+  .text-carousel__container
     height: 248px
 
-  .carousel-content
+  .text-carousel__content
     font-size: 74px
     line-height: 90px

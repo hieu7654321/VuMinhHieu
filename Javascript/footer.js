@@ -12,7 +12,7 @@ function submitEmail(event) {
     const token = grecaptcha.getResponse(window.newsletterWidgetId);
 
     const recaptchaContainer = document.getElementById('recaptcha-newsletter');
-    const errorMessage = document.getElementById('recaptcha-error-message');
+    const errorMessage = document.getElementById('footer__form--error-message');
 
     if (!token) {
         recaptchaContainer.classList.add('shake');
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function onNewsletterRecaptchaSuccess() {
-    const errorMessage = document.getElementById('recaptcha-error-message');
+    const errorMessage = document.getElementById('footer__form--error-message');
     console.log('Newsletter reCAPTCHA verified');
     errorMessage.style.display = 'none';
 }

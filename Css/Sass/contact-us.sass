@@ -5,149 +5,149 @@
   background-color: $bg-contact
   @include flex-center
 
-.contact-us-container
-  @include flex-center
-  flex-wrap: wrap 
-  margin: 47.73px 0 63px 0
+  &__container
+    @include flex-center
+    flex-wrap: wrap 
+    margin: 47.73px 0 63px 0
 
-.contact-us__heading
-  width: 100%
+  &__heading
+    width: 100%
 
-.contact-us-heading
-  font-size: $fs-h2
-  line-height: 38.4px
-  text-align: center
-  width: 100%
-  @include text-normal
+  &__inner
+    font-size: $fs-h2
+    line-height: 38.4px
+    text-align: center
+    width: 100%
+    @include text-normal
 
-.ct-us__heading-container  
-  width: 318px 
-  margin: 0 auto 
+  &__title  
+    width: 318px 
+    margin: 0 auto 
 
-.contact-us-heading__1  
-  text-align: left 
+  &__inner--1  
+    text-align: left 
 
-.contact-us__content  
-  width: 100% 
+  &__content  
+    width: 100% 
 
-.contact-us-form  
-  display: flex 
-  flex-direction: column 
-  gap: $gap-form 
-  margin-top: 38.44px 
+  &__submit  
+    padding: 9px 24px
+    cursor: pointer
+    border: none
+    background-color: $clr-black
+    color: $clr-white
+    font-weight: 500 
+    font-size: $fs-body
+    line-height: 30px
+    letter-spacing: 1.2px
+    text-align: center
+    vertical-align: middle
+    text-transform: uppercase
+    width: 100%
 
-.form-row  
-  display: flex 
-  flex-direction: column 
-  gap: $gap-row-mobile
+  &__required  
+    margin-top: 20px
+    font-size: $fs-body
+    line-height: 24px
+    text-align: center
+    @include text-normal
 
-.form-field  
-  display: flex 
-  flex-direction: column 
+  &__form  
+    display: flex 
+    flex-direction: column 
+    gap: $gap-form 
+    margin-top: 38.44px
 
-.form-field label  
-  margin-bottom: 8px 
-  font-size: $fs-body
-  line-height: 24px 
-  @include text-normal
+    .g-recaptcha
+      @include flex-center
 
-.form-field:has(input:required) label::after
-  content: " *"
-  color: #000
+    &--error
+      color: red
+      font-size: 12px
+      margin-top: 5px
+      display: none
+      justify-content: center
 
-.form-field input  
-  font-family: $font-body
-  padding: 12.5px 16px 
-  border: 1px solid $border-input
-  font-size: $fs-body 
-  line-height: 100% 
-  @include text-normal
+  &__form-row  
+    display: flex 
+    flex-direction: column 
+    gap: $gap-row-mobile
 
-.form-field textarea  
-  padding: 10px 16px
-  border: 1px solid $border-input
-  font-family: $font-body
-  font-size: $fs-body
-  line-height: 24px
-  height: 204px
-  @include text-normal
-  resize: none
+  &__form-field  
+    display: flex 
+    flex-direction: column 
 
-.form-component-4  
-  margin-top: 18px
+    label  
+      margin-bottom: 8px 
+      font-size: $fs-body
+      line-height: 24px 
+      @include text-normal
 
-.btn-submit  
-  padding: 9px 24px
-  cursor: pointer
-  border: none
-  background-color: $clr-black
-  color: $clr-white
-  font-weight: 500 
-  font-size: $fs-body
-  line-height: 30px
-  letter-spacing: 1.2px
-  text-align: center
-  vertical-align: middle
-  text-transform: uppercase
-  width: 100%
+    &:has(input:required) label::after
+      content: " *"
+      color: #000
 
-.div-required  
-  margin-top: 20px
-  font-size: $fs-body
-  line-height: 24px
-  text-align: center
-  @include text-normal
+    input  
+      font-family: $font-body
+      padding: 12.5px 16px 
+      border: 1px solid $border-input
+      font-size: $fs-body 
+      line-height: 100% 
+      @include text-normal
 
-.contact-us-form .g-recaptcha
-  @include flex-center
+    textarea  
+      padding: 10px 16px
+      border: 1px solid $border-input
+      font-family: $font-body
+      font-size: $fs-body
+      line-height: 24px
+      height: 204px
+      @include text-normal
+      resize: none
 
-.recaptcha-error-contact
-  color: red
-  font-size: 12px
-  margin-top: 5px
-  display: none
-  justify-content: center
+  &__form-component--4  
+    margin-top: 18px
 
 @media (max-width: 350px)
-  .contact-us-heading
+  .contact-us__inner
     font-size: 18px
     line-height: 28.4px
 
-  .ct-us__heading-container  
+  .contact-us__title  
     width: 280px 
     margin: 0 auto 
 
-  .contact-us-heading__1  
+  .contact-us__inner--1  
     text-align: center
 
 @media (min-width: 768px)  
-  .contact-us-container
+  .contact-us__container
     margin: 100px 0 56px 0
 
-  .contact-us-heading
+  .contact-us__inner
     font-size: 36px
     line-height: 48px
 
-  .ct-us__heading-container
+  .contact-us__title
     width: 409px
 
-  .contact-us-form
+  .contact-us__form
     margin-top: 60px
 
-  .form-component-1,
-  .form-component-2
+  .contact-us__form-component--1,
+  .contact-us__form-component--2
     flex-direction: row
 
-  .form-row
+  .contact-us__form-row
     gap: $gap-row-desktop
 
-  .form-component-1 .form-field,
-  .form-component-2 .form-field
+  .contact-us__form-component--1 .contact-us__form-field,
+  .contact-us__form-component--2 .contact-us__form-field
     width: 50%
 
-  .form-field textarea
+  .contact-us__form-field textarea
     height: 180px
 
-  .form-component-4
+  .contact-us__form-component--4
     margin: 6px auto 0 auto 
     width: 219px
