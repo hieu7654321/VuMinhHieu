@@ -21,5 +21,9 @@
   "homepage": "https://github.com/hieu7654321/VuMinhHieu/tree/BThuchanh4?tab=readme-ov-file#readme",
   "devDependencies": {
     "sass": "^1.97.1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
   }
 }

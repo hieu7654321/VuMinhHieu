@@ -26,12 +26,24 @@ git clone -b BThuchanh4 https://github.com/hieu7654321/VuMinhHieu.git
 
 ## Install Dependencies
 
+Install Sass
 ```
 npm install sass
+```
+
+Install Tailwind
+```
+npm install tailwindcss @tailwindcss/cli
 ```
 
 ## Build SASS/SCSS
 
 ```
 npm run build:css
+```
+
+## Build Tailwind
+
+```
+npx @tailwindcss/cli -i ./Css/input.css -o ./Css/output.css --watch
 ```
