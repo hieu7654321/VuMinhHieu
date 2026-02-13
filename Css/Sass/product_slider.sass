@@ -1,79 +1,76 @@
 @use "base" as *
 
-.product_slider
+.product-slider
   width: 100%
   @include flex-center
   margin-top: $slider-mt
 
-.heading-container
-  margin-bottom: $heading-mb
+  &__heading
+    margin-bottom: $heading-mb
 
-  h2
-    font-weight: 400
-    font-size: $fs-h2
-    line-height: 38.4px
-    text-align: center
-    margin: 0
+    h2
+      font-weight: 400
+      font-size: $fs-h2
+      line-height: 38.4px
+      text-align: center
+      margin: 0
 
-.product-slider
-  display: flex
-  gap: 10px
-  width: 100%
-  overflow-x: auto
-  scroll-snap-type: x mandatory
-  scroll-behavior: smooth
-  padding-bottom: 10px
-
-  scrollbar-width: none
-  -ms-overflow-style: none
-
-  &::-webkit-scrollbar
-    display: none
-
-.product_slider-item
-  flex: 0 0 auto
-  scroll-snap-align: start
-  width: clamp(220px, 70vw, 265px)
-  position: relative
-
-.product-slider-image
-  width: 100%
-  aspect-ratio: 265 / 353
-  overflow: hidden
-  margin-bottom: 16px
-
-  img
+  &__track
+    display: flex
+    gap: 10px
     width: 100%
-    height: 100%
-    object-fit: cover
-    display: block
+    overflow-x: auto
+    scroll-snap-type: x mandatory
+    scroll-behavior: smooth
+    padding-bottom: 10px
 
-.info
-  @include product-info
+    scrollbar-width: none
+    -ms-overflow-style: none
+
+    &::-webkit-scrollbar
+      display: none
+
+  &__item
+    flex: 0 0 auto
+    scroll-snap-align: start
+    width: clamp(220px, 70vw, 265px)
+    position: relative
+
+  &__image
+    width: 100%
+    aspect-ratio: 265 / 353
+    overflow: hidden
+    margin-bottom: 16px
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
 
 @media (min-width: 391px) and (max-width: 1099px)
-  .product_slider-item
+  .product-slider__item
     width: 35%
 
 @media (min-width: 1100px) and (max-width: 1919px)
-  .product_slider-item
+  .product-slider__item
     width: 24%
 
-@media (min-width: 1920px)
-  .product-slider
+@media (min-width: 1920px)  
+  .product-slider__track
     justify-content: center
 
-  .product_slider-item
+  .product-slider__item
     width: 24.45%
     max-width: 345px
-  
-  .product-slider-image
+
+  .product-slider__image
     aspect-ratio: 345 / 460
 
 @media (min-width: 1400px)
-  .heading-container
+  .product-slider__heading
     margin: 5px 0 50px
-  
-  .heading-container h2
+
+  .product-slider__heading h2
     font-size: 36px
     line-height: 48px

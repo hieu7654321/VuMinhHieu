@@ -5,114 +5,115 @@
   @include flex-center
   margin-top: $inspiration-mt
 
-.inspiration-container
-  display: flex
-  justify-content: center
-  gap: $inspiration-gap
-  flex-wrap: wrap
-  margin-top: $inspiration-container-mt
-  align-items: center
+  &__container
+    display: flex
+    justify-content: center
+    gap: $inspiration-gap
+    flex-wrap: wrap
+    margin-top: $inspiration-container-mt
+    align-items: center
 
-.inspiration-heading-container
-  width: 100%
+  &__header
+    width: 100%
 
-.inspiration-heading-first
-  font-size: $fs-h2
-  width: 100%
-  text-align: center
-  font-weight: 400
-  line-height: 38.4px
-  letter-spacing: 0
-  vertical-align: middle
+  &__title
+    font-size: $fs-h2
+    width: 100%
+    text-align: center
+    font-weight: 400
+    line-height: 38.4px
+    letter-spacing: 0
+    vertical-align: middle
 
-.inspiration-heading
-  font-size: 20px
-  margin: 21px 0px 3px 0px
-  font-weight: 400
-  line-height: 30.4px
-  letter-spacing: 0
-  vertical-align: middle
+  &__info-title
+    font-size: 20px
+    margin: 21px 0px 3px 0px
+    font-weight: 400
+    line-height: 30.4px
+    letter-spacing: 0
+    vertical-align: middle
 
-div.inspiration-heading , div.inspiration-info-content
-  text-align: left
+  &__info-title
+    text-align: left
 
-.inspiration-info-content
-  font-size: $fs-small
-  font-weight: 400
-  line-height: 24px
-  letter-spacing: 0
-  vertical-align: middle
+  &__info-content
+    font-size: $fs-small
+    text-align: left
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0
+    vertical-align: middle
 
-.inspiration-content
-  display: flex
-  justify-content: flex-start
-  flex-wrap: nowrap
-  gap: $gap-products
-  width: 100%
-  scroll-snap-type: x mandatory
-  -webkit-overflow-scrolling: touch
-  overflow-x: auto
-  overflow-y: hidden
-  scroll-behavior: smooth
+  &__content
+    display: flex
+    justify-content: flex-start
+    flex-wrap: nowrap
+    gap: $gap-products
+    width: 100%
+    scroll-snap-type: x mandatory
+    -webkit-overflow-scrolling: touch
+    overflow-x: auto
+    overflow-y: hidden
+    scroll-behavior: smooth
 
-  &::-webkit-scrollbar
-    display: none
+    &::-webkit-scrollbar
+      display: none
 
-.inspiration-block
-  width: 265px
-  flex: 0 0 265px
-  scroll-snap-align: start
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  text-align: center
+  &__block
+    width: 265px
+    flex: 0 0 265px
+    scroll-snap-align: start
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
 
-.inspiration-image img
-  width: 100%
-  height: auto
-  object-fit: cover
-  display: block
+  &__image img
+    width: 100%
+    height: auto
+    object-fit: cover
+    display: block
 
 @media (min-width: 492px)
-  .inspiration-heading-container
+  .inspiration__header
     width: 80%
 
 @media (min-width: 768px)
-  .inspiration-heading-container
+  .inspiration__header
     width: 60%
 
 @media (min-width: 1400px)
   .inspiration
     margin-top: 20px
 
-  .inspiration-container
-    gap: 60px
-    margin-top: 80px
+    &__container
+      gap: 60px
+      margin-top: 80px
 
-  .inspiration-heading-container
-    width: 40%
+    &__header
+      width: 40%
 
-  .inspiration-heading-first
-    font-size: 36px
-    line-height: 48px
-    text-align: center
+    &__title
+      font-size: 36px
+      line-height: 48px
+      text-align: center
 
-  .inspiration-content
-    text-align: left
-    gap: 5.8%
-    justify-content: center
+    &__content
+      text-align: left
+      gap: 5.8%
+      justify-content: center
 
-  .inspiration-block
-    width: 20.64%
-    flex: 0 0 20.64%
-    max-width: 291px
+    &__block
+      width: 20.64%
+      flex: 0 0 20.64%
+      max-width: 291px
 
-  .inspiration-heading
-    font-size: 24px
-    line-height: 38px
-    margin: 16px 0 8px 0
+    &__info-title
+      font-size: 24px
+      line-height: 38px
+      margin: 16px 0 8px 0
 
-  .inspiration-info-content
-    font-size: $fs-body
-    line-height: 24px
+    &__info-content
+      font-size: $fs-body
+      line-height: 24px

@@ -1,7 +1,7 @@
 function applyFaqLineBreaks() {
     const isDesktop = window.matchMedia('(min-width: 768px)').matches;
 
-    document.querySelectorAll('.faq-answer').forEach(answer => {
+    document.querySelectorAll('.faqs__answer').forEach(answer => {
         if (!answer.dataset.originalText) {
             answer.dataset.originalText = answer.innerHTML;
         }
@@ -15,17 +15,17 @@ function applyFaqLineBreaks() {
 }
 
 function initFaqs() {
-    const faqItems = document.querySelectorAll('.faq-item');
+    const faqItems = document.querySelectorAll('.faqs__item');
     let openItem = null;
 
     faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
+        const question = item.querySelector('.faqs__question');
+        const answer = item.querySelector('.faqs__answer');
 
         question.addEventListener('click', () => {
             if (openItem && openItem !== item) {
-                const prevQuestion = openItem.querySelector('.faq-question');
-                const prevAnswer = openItem.querySelector('.faq-answer');
+                const prevQuestion = openItem.querySelector('.faqs__question');
+                const prevAnswer = openItem.querySelector('.faqs__answer');
 
                 openItem.classList.remove('active');
                 prevAnswer.style.maxHeight = '0';
@@ -48,7 +48,7 @@ function initFaqs() {
 
     if (faqItems.length > 0) {
         const firstItem = faqItems[0];
-        const firstAnswer = firstItem.querySelector('.faq-answer');
+        const firstAnswer = firstItem.querySelector('.faqs__answer');
 
         firstItem.classList.add('active');
         firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';

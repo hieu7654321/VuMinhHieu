@@ -1,6 +1,6 @@
 @use "base" as *
 
-.cookie-bar
+.cookie
   position: fixed
   bottom: 0
   left: 0
@@ -13,53 +13,53 @@
   backdrop-filter: blur(8px)
   -webkit-backdrop-filter: blur(8px)
 
-.cookie-content
-  width: 100%
-  margin: 0 auto
-  flex-direction: column
-  @include flex-between
-  gap: 2rem
-  flex-wrap: wrap
+  &__content
+    width: 100%
+    margin: 0 auto
+    flex-direction: column
+    @include flex-between
+    gap: 2rem
+    flex-wrap: wrap
 
-.cookie-content p
-  font-size: 20px
-  line-height: 28px
-  text-align: left
-  @include text-normal
+  &__content p
+    font-size: 20px
+    line-height: 28px
+    text-align: left
+    @include text-normal
 
-.cookie-buttons
-  display: flex
-  gap: 1rem
+  &__buttons
+    display: flex
+    gap: 1rem
+
+  &__btn--accept,
+  &__btn--decline
+    padding: 5px 19.61px
+    border: none
+    cursor: pointer
+    font-weight: 700
+    font-size: $fs-body
+    line-height: 24px
+    letter-spacing: 0
+    text-align: center
+    vertical-align: middle
+    text-transform: uppercase
+
+  &__btn--accept
+    background: $clr-black
+    color: $clr-white
+
+  &__btn--decline
+    color: $clr-black
+    background: transparent
 
 #cookie-toggle:not(:checked) ~ #cookie-consent
   display: none
 
-
-.btn-accept, .btn-decline
-  padding: 5px 19.61px
-  border: none
-  cursor: pointer
-  font-weight: 700
-  font-size: $fs-body
-  line-height: 24px
-  letter-spacing: 0
-  text-align: center
-  vertical-align: middle
-  text-transform: uppercase
-
-.btn-accept
-  background: $clr-black
-  color: $clr-white
-
-.btn-decline
-  color: $clr-black
-  background: transparent
-
 @media (min-width: 768px)
-  .cookie-content p
+  .cookie__content p
     line-height: 56px
 
 @media (min-width: 1100px)
-  .cookie-content
+  .cookie__content
     flex-direction: row
     text-align: center

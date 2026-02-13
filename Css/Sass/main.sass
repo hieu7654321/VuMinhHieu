@@ -26,6 +26,7 @@ body
   
 html
   scroll-behavior: smooth
+  overflow-y: auto
 
 .container
   width: 100%
@@ -40,7 +41,7 @@ html
     opacity: 0
     animation-fill-mode: both
     animation-timing-function: ease-out
-    animation-duration: 3s
+    animation-duration: 1s
 
     animation-timeline: view()
     animation-range: entry 20% cover 40%
@@ -60,19 +61,7 @@ html
 @keyframes aosFadeUp
   from
     opacity: 0
-    transform: translateY(100px)
+    transform: translateY(60px)
   to
     opacity: 1
     transform: translateY(0)
-
-.aos-flip-left
-  transform-origin: left center
-  animation-name: aosFlipLeft
-
-@keyframes aosFlipLeft
-  from
-    opacity: 0
-    transform: rotateY(-90deg)
-  to
-    opacity: 1
-    transform: rotateY(0)
