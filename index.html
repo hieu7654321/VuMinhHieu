@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"> -->
     <!-- <link rel="stylesheet" href="Css/main.css"> -->
-    <link rel="stylesheet" href="Css/output.css">
+    <link rel="stylesheet" href="./Css/output.css">
     <!-- <script src="Javascript/script.js" defer></script> -->
     <!-- <script src="Javascript/cookies.js" defer></script>
     <script src="Javascript/popup.js" defer></script> -->
@@ -55,453 +55,567 @@
 </head>
 <body>
     <input type="checkbox" id="cookie-toggle" hidden checked>
-    <div id="cookie-consent" class="cookie">
-        <div class="cookie__content">
-            <p>This website uses cookies to ensure you get the best experience on our website.</p>
-            <div class="cookie__buttons">
-                <label for="cookie-toggle" id="cookie-accept" class="cookie__btn--accept">Accept</label>
-                <label for="cookie-toggle" id="cookie-decline" class="cookie__btn--decline">Ignore</label>
+    <div
+    id="cookie-consent"
+    class="fixed inset-x-0 bottom-0 z-9999
+            bg-white/80 backdrop-blur-sm
+            px-5 py-2.5 text-black">
+        <div class="w-full flex flex-col flex-wrap
+                    items-center justify-between
+                    gap-8 lg:flex-row">
+            <p class="text-[20px] leading-7 md:leading-14
+                    font-normal text-left">
+            This website uses cookies to ensure you get the best experience on our website.
+            </p>
+            <div class="flex gap-4">
+            <label
+                for="cookie-toggle"
+                class="px-[19.61px] py-1.25
+                    text-[16px] leading-6
+                    font-bold uppercase
+                    bg-black text-white cursor-pointer">
+                Accept
+            </label>
+            <label
+                for="cookie-toggle"
+                class="px-[19.61px] py-1.25
+                    text-[16px] leading-6
+                    font-bold uppercase
+                    text-black cursor-pointer">
+                Ignore
+            </label>
             </div>
         </div>
     </div>
-    <div class="container">
-        <section class="header">
-            <div class="header__top">
+    <div class="w-full mx-auto">
+        <section class="bg-white">
+            <div class="relative bg-black text-white
+                        text-[14px]
+                        px-3.75 h-10
+                        flex items-center justify-between
+                        md:px-5 md:py-1.25 md:h-auto
+                        md:justify-center md:gap-15">
 
-                <input type="radio" name="announcement" id="slide-1" checked>
-                <input type="radio" name="announcement" id="slide-2">
+                <input type="radio" name="announcement" id="slide-1" checked
+                    class="absolute opacity-0">
 
-                <label for="slide-2" class="header__nav header__nav--prev header__nav--group-1"></label>
-                <label for="slide-2" class="header__nav header__nav--next header__nav--group-1"></label>
+                <input type="radio" name="announcement" id="slide-2"
+                    class="absolute opacity-0">
 
-                <label for="slide-1" class="header__nav header__nav--prev header__nav--group-2"></label>
-                <label for="slide-1" class="header__nav header__nav--next header__nav--group-2"></label>
+                <label for="slide-2"
+                    class="header__nav header__nav--prev header__nav--group-1
+                            absolute z-20 left-3.75 top-1/2 -translate-y-1/2 w-1.25 h-2.5">
+                </label>
 
-                <div class="header__slider">
-                    <div class="header__slide header__slide--phone">(+84) 12 34 5678</div>
-                    <div class="header__slide header__slide--address">
+                <label for="slide-2"
+                    class="header__nav header__nav--next header__nav--group-1
+                            absolute z-20 right-3.75 top-1/2 -translate-y-1/2 w-1.25 h-2.5">
+                </label>
+
+                <label for="slide-1"
+                    class="header__nav header__nav--prev header__nav--group-2
+                            absolute z-20 left-3.75 top-1/2 -translate-y-1/2 w-1.25 h-2.5">
+                </label>
+
+                <label for="slide-1"
+                    class="header__nav header__nav--next header__nav--group-2
+                            absolute z-20 right-3.75 top-1/2 -translate-y-1/2 w-1.25 h-2.5">
+                </label>
+
+                <div class="header__slider
+                            relative z-10 flex-1 h-6
+                            flex items-center justify-center
+                            overflow-hidden
+                            md:static md:h-auto md:justify-between">
+
+                <div class="header__slide header__slide--phone
+                    absolute inset-0
+                    flex items-center justify-center text-center
+                    opacity-0 transition-opacity duration-[350ms]
+                    md:static md:opacity-100 md:!transform-none
+                    md:text-left">
+
+                    <span class="w-full font-normal text-[14px] leading-6">
+                    (+84) 12 34 5678
+                    </span>
+
+                </div>
+
+                <div class="header__slide header__slide--address
+                    absolute inset-0
+                    flex items-center justify-center text-center
+                    opacity-0 transition-opacity duration-[350ms]
+                    md:static md:opacity-100 md:!transform-none
+                    md:text-right md:min-w-60 lg:min-w-75">
+
+                    <span class="w-full font-normal text-[14px] leading-6">
                     78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi
-                    </div>
+                    </span>
+
+                </div>
                 </div>
             </div>
-            <div class="header__main">
-                <div class="header__logo headings">
-                    <h1><a href="./">ORANGY</a></h1>
+            <div class="flex justify-center items-center py-1.5">
+                <div class="headings leading-6">
+                <h1 class="text-[24px] font-normal text-black m-0">
+                    <a href="./"
+                    class="inline-flex items-center
+                            text-[32px] leading-none">
+                    ORANGY
+                    </a>
+                </h1>
                 </div>
             </div>
         </section>
 
-        <section class="hero aos-fade" id="hero">
-            <img src="Assets/hero.png" alt="" class="hero__image">
-            <div class="hero__content">
-                <div class="hero__title headings">EMBRACE VISION</div>
-                <div class="hero__descriptiondiv">
-                    <p class="hero__description">Clever products for every corner</p>
+        <section id="hero"
+            class="relative w-full overflow-hidden
+                    flex justify-center items-center
+                    h-149.75 md:h-170
+                    lg:h-205 2xl:h-270
+                    aos-fade">
+            <img
+                src="Assets/hero.png"
+                alt=""
+                class="w-[200%] h-[200%]
+                    object-cover object-[65%_center]
+                    shrink-0
+                    lg:w-full lg:h-300
+                    lg:object-center"
+            >
+            <div class="absolute z-10 text-white text-center
+                        max-w-88
+                        top-[175.8px]
+                        md:top-auto
+                        2xl:mt-6.25">
+                <div class="headings
+                            text-[56px] md:text-[58px]
+                            lg:text-[68px] 2xl:text-[72px]
+                            leading-[76.8px] 2xl:leading-22.5
+                            font-normal">
+                EMBRACE VISION
                 </div>
-                <a href="#products" class="hero__button">EXPLORE NOW</a>
+                <div class="mt-3 mb-6
+                            2xl:mt-6.25 2xl:mb-8">
+                <p class="text-[18px] leading-7.5
+                            font-normal
+                            w-[82.4%]
+                            mx-[30.84px]
+                            lg:mx-[40.84px]
+                            md:max-w-88">
+                    Clever products for every corner
+                </p>
+                </div>
+                <a href="#products"
+                class="text-[16px] leading-6
+                        font-medium uppercase
+                        rounded-[5px]
+                        underline underline-offset-8">
+                EXPLORE NOW
+                </a>
             </div>
         </section>
 
-        <section class="products" id="products">
-            <div class="products__container">
+        <section class="w-full flex justify-center mt-11.75 lg:mt-[5.2%]" id="products">
+            <div class="w-[92%] max-w-[1410px] lg:w-[73.438%]">
                 <input type="radio" name="product-tab" id="tab-seating" checked>
                 <input type="radio" name="product-tab" id="tab-table">
                 <input type="radio" name="product-tab" id="tab-storage">
                 <input type="radio" name="product-tab" id="tab-lighting">
                 <input type="radio" name="product-tab" id="tab-decor">
 
-                <div class="products__header">
-                    <h2 class="products__title headings">Our picks for you</h2>
-                    <div class="products__tabs">
-                        <label class="products__tab" for="tab-seating">SEATING</label>
-                        <label class="products__tab" for="tab-table">TABLE</label>
-                        <label class="products__tab" for="tab-storage">STORAGE</label>
-                        <label class="products__tab" for="tab-lighting">LIGHTING</label>
-                        <label class="products__tab" for="tab-decor">DECOR</label>
+                <div class="flex flex-wrap items-center justify-between mb-9 lg:mb-10 gap-8 lg:gap-0">
+                    <h2 class="w-full lg:w-1/2 text-[28px] lg:text-[36px] leading-[38px] lg:leading-[48px] font-normal text-black text-center lg:text-left mx-[4.17%] lg:mx-0 headings">Our picks for you</h2>
+                    <div class="flex gap-7 overflow-x-auto no-scrollbar lg:overflow-visible lg:justify-end lg:w-1/2 mx-[4.17%] sm:mx-auto lg:mx-0 xl:gap-10">
+                        <label class="products__tab cursor-pointer text-[16px] uppercase" for="tab-seating">SEATING</label>
+                        <label class="products__tab cursor-pointer text-[16px] uppercase" for="tab-table">TABLE</label>
+                        <label class="products__tab cursor-pointer text-[16px] uppercase" for="tab-storage">STORAGE</label>
+                        <label class="products__tab cursor-pointer text-[16px] uppercase" for="tab-lighting">LIGHTING</label>
+                        <label class="products__tab cursor-pointer text-[16px] uppercase" for="tab-decor">DECOR</label>
                     </div>
                 </div>
 
-                <div class="products__grid products__grid--seating aos-fade">
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Oda Ottoman.jpg" alt="">
+                <div class="products__grid hidden gap-7 md:grid-cols-2 md:gap-x-[10px] md:gap-y-[29px] justify-center products__grid--seating aos-fade">
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up md:justify-self-end">
+                        <div class="relative flex flex-col justify-center">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Oda Ottoman.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">SOFA</span>
-                                <h3>Oda ottoman</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--selling">Selling fast!</span>
-                            <span class="products__tag products__tag--new">New</span>
-                            <div class="products__image">
-                                <img src="Assets/Ready Dining Chair.jpg" alt="">
-                            </div>
-                            <div class="products__info">
-                                <span class="type">DINING CHAIR</span>
-                                <h3>Ready dining chair</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Harbour side dining chair.jpg" alt="">
-                            </div>
-                            <div class="products__info harbour">
-                                <span class="type">DINING CHAIR</span>
-                                <h3>Harbour side dining chair</h3>
-                                <p>$999.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">SOFA</span>
+                                <h3 class="my-1 text-[16px] font-medium">Oda ottoman</h3>
+                                <p class="text-[16px]">$699.00</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--sale">-30%</span>
-                            <div class="products__image">
-                                <img src="Assets/Tearoom club chair.jpg" alt="">
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up md:justify-self-start">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 bg-black text-white text-[14px] font-bold px-[9px] py-[3px]">Selling fast!</span>
+                            <span class="absolute top-9 left-3 bg-[#054E4A] text-white text-[14px] font-bold px-[9px] py-[3px]">New</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Ready Dining Chair.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">SOFA</span>
-                                <h3>Tearoom club chair</h3>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DINING CHAIR</span>
+                                <h3 class="my-1 text-[16px] font-medium">Ready dining chair</h3>
+                                <p class="text-[16px]">$699.00</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Harbour side dining chair.jpg" alt="">
+                            </div>
+                            <div class="flex flex-col harbour">
+                                <span class="text-[14px] uppercase text-black/60">DINING CHAIR</span>
+                                <h3 class="my-1 text-[16px] font-medium">Harbour side dining chair</h3>
+                                <p class="text-[16px]">$999.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up md:justify-self-end">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 z-10 bg-[#A42003] text-white text-[14px] font-bold leading-[18px] px-[8.6px] py-[3px] md:py-[11px]">-30%</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Tearoom club chair.jpg" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">SOFA</span>
+                                <h3 class="my-1 text-[16px] font-medium">Tearoom club chair</h3>
                                 <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Co dining chair.jpg" alt="">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Co dining chair.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">DINING CHAIR</span>
-                                <h3>Co dining chair</h3>
-                                <p>$1,199.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Knitting louge chair.jpg" alt="">
-                            </div>
-                            <div class="products__info">
-                                <span class="type">SOFA</span>
-                                <h3>Knitting lounge chair</h3>
-                                <p>$999.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="products__grid products__grid--table aos-fade">
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Releve platter.png" alt="">
-                            </div>
-                            <div class="products__info">
-                                <span class="type">TABLE</span>
-                                <h3>Random new table</h3>
-                                <p>$699.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DINING CHAIR</span>
+                                <h3 class="my-1 text-[16px] font-medium">Co dining chair</h3>
+                                <p class="text-[16px]">$1,199.00</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--selling">Selling fast!</span>
-                            <span class="products__tag products__tag--new">New</span>
-                            <div class="products__image">
-                                <img src="Assets/Ready Dining Chair.jpg" alt="">
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up md:justify-self-start">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Knitting louge chair.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">DINING TABLE</span>
-                                <h3>Ready dining table</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Harbour side dining chair.jpg" alt="">
-                            </div>
-                            <div class="products__info harbour">
-                                <span class="type">DINING TABLE</span>
-                                <h3>Harbour side dining table</h3>
-                                <p>$999.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--sale">-30%</span>
-                            <div class="products__image">
-                                <img src="Assets/Tearoom club chair.jpg" alt="">
-                            </div>
-                            <div class="products__info">
-                                <span class="type">TABLE</span>
-                                <h3>Tearoom club table</h3>
-                                <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
-                            </div>
-                        </div>
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Co dining chair.jpg" alt="">
-                            </div>
-                            <div class="products__info">
-                                <span class="type">DINING TABLE</span>
-                                <h3>Co dining table</h3>
-                                <p>$1,199.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Knitting louge chair.jpg" alt="">
-                            </div>
-                            <div class="products__info">
-                                <span class="type">TABLE</span>
-                                <h3>Knitting lounge table</h3>
-                                <p>$999.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">SOFA</span>
+                                <h3 class="my-1 text-[16px] font-medium">Knitting lounge chair</h3>
+                                <p class="text-[16px]">$999.00</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="products__grid products__grid--storage aos-fade">
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Releve platter.png" alt="">
+                <div class="products__grid hidden gap-6 md:grid-cols-2 md:gap-x-[10px] md:gap-y-[29px] products__grid--table aos-fade">
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Releve platter.png" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">STORAGE</span>
-                                <h3>Random storage somewhere</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--selling">Selling fast!</span>
-                            <span class="products__tag products__tag--new">New</span>
-                            <div class="products__image">
-                                <img src="Assets/Spire tapered candle.png" alt="">
-                            </div>
-                            <div class="products__info">
-                                <span class="type">DINING STORAGE</span>
-                                <h3>Ready dining storage</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Harbour side dining chair.jpg" alt="">
-                            </div>
-                            <div class="products__info harbour">
-                                <span class="type">DINING STORAGE</span>
-                                <h3>Harbour side dining storage</h3>
-                                <p>$999.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">TABLE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Random new table</h3>
+                                <p class="text-[16px]">$699.00</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--sale">-30%</span>
-                            <div class="products__image">
-                                <img src="Assets/Tearoom club chair.jpg" alt="">
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 bg-black text-white text-[14px] font-bold px-[9px] py-[3px]">Selling fast!</span>
+                            <span class="absolute top-9 left-3 bg-[#054E4A] text-white text-[14px] font-bold px-[9px] py-[3px]">New</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Ready Dining Chair.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">STORAGE</span>
-                                <h3>Tearoom club storage</h3>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DINING TABLE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Ready dining table</h3>
+                                <p class="text-[16px]">$699.00</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Harbour side dining chair.jpg" alt="">
+                            </div>
+                            <div class="flex flex-col harbour">
+                                <span class="text-[14px] uppercase text-black/60">DINING TABLE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Harbour side dining table</h3>
+                                <p class="text-[16px]">$999.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 z-10 bg-[#A42003] text-white text-[14px] font-bold leading-[18px] px-[8.6px] py-[3px] md:py-[11px]">-30%</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Tearoom club chair.jpg" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">TABLE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Tearoom club table</h3>
                                 <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Co dining chair.jpg" alt="">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Co dining chair.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">STORAGE</span>
-                                <h3>Co dining storage</h3>
-                                <p>$1,199.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DINING TABLE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Co dining table</h3>
+                                <p class="text-[16px]">$1,199.00</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Knitting louge chair.jpg" alt="">
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Knitting louge chair.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">STORAGE</span>
-                                <h3>Knitting lounge storage</h3>
-                                <p>$999.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">TABLE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Knitting lounge table</h3>
+                                <p class="text-[16px]">$999.00</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="products__grid products__grid--lighting aos-fade">
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Releve platter.png" alt="">
+                <div class="products__grid hidden gap-6 md:grid-cols-2 md:gap-x-[10px] md:gap-y-[29px] products__grid--storage aos-fade">
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Releve platter.png" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">LIGHTING</span>
-                                <h3>Random lighting somewhere</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--selling">Selling fast!</span>
-                            <span class="products__tag products__tag--new">New</span>
-                            <div class="products__image">
-                                <img src="Assets/Spire tapered candle.png" alt="">
-                            </div>
-                            <div class="products__info">
-                                <span class="type">DINING LIGHTING</span>
-                                <h3>Ready dining lighting</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Umanoff platter.png" alt="">
-                            </div>
-                            <div class="products__info harbour">
-                                <span class="type">DINING Llighting</span>
-                                <h3>Harbour side dining lighting</h3>
-                                <p>$999.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">STORAGE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Random storage somewhere</h3>
+                                <p class="text-[16px]">$699.00</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--sale">-30%</span>
-                            <div class="products__image">
-                                <img src="Assets/Hashira pendant lamp cluster.png" alt="">
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 bg-black text-white text-[14px] font-bold px-[9px] py-[3px]">Selling fast!</span>
+                            <span class="absolute top-9 left-3 bg-[#054E4A] text-white text-[14px] font-bold px-[9px] py-[3px]">New</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Spire tapered candle.png" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">LIGHTING</span>
-                                <h3>Tearoom club lighting</h3>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DINING STORAGE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Ready dining storage</h3>
+                                <p class="text-[16px]">$699.00</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Harbour side dining chair.jpg" alt="">
+                            </div>
+                            <div class="flex flex-col harbour">
+                                <span class="text-[14px] uppercase text-black/60">DINING STORAGE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Harbour side dining storage</h3>
+                                <p class="text-[16px]">$999.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 z-10 bg-[#A42003] text-white text-[14px] font-bold leading-[18px] px-[8.6px] py-[3px] md:py-[11px]">-30%</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Tearoom club chair.jpg" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">STORAGE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Tearoom club storage</h3>
                                 <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Renovate your home.png" alt="">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Co dining chair.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">LIGHTING</span>
-                                <h3>Co dining lighting</h3>
-                                <p>$1,199.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">STORAGE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Co dining storage</h3>
+                                <p class="text-[16px]">$1,199.00</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Knitting louge chair.jpg" alt="">
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Knitting louge chair.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">LIGHTING</span>
-                                <h3>Knitting lounge lighting</h3>
-                                <p>$999.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">STORAGE</span>
+                                <h3 class="my-1 text-[16px] font-medium">Knitting lounge storage</h3>
+                                <p class="text-[16px]">$999.00</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="products__grid products__grid--decor aos-fade">
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Releve platter.png" alt="">
+                <div class="products__grid hidden gap-6 md:grid-cols-2 md:gap-x-[10px] md:gap-y-[29px] products__grid--lighting aos-fade">
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Releve platter.png" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">DECOR</span>
-                                <h3>Random decor somewhere</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--selling">Selling fast!</span>
-                            <span class="products__tag products__tag--new">New</span>
-                            <div class="products__image">
-                                <img src="Assets/Spire tapered candle.png" alt="">
-                            </div>
-                            <div class="products__info">
-                                <span class="type">DECOR</span>
-                                <h3>Ready dining decor</h3>
-                                <p>$699.00</p>
-                            </div>
-                        </div>
-
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Umanoff platter.png" alt="">
-                            </div>
-                            <div class="products__info harbour">
-                                <span class="type">DECOR</span>
-                                <h3>Harbour side dining decor</h3>
-                                <p>$999.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">LIGHTING</span>
+                                <h3 class="my-1 text-[16px] font-medium">Random lighting somewhere</h3>
+                                <p class="text-[16px]">$699.00</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="products__item products__item--tall aos-fade-up">
-                        <div class="products__card">
-                            <span class="products__tag products__tag--sale">-30%</span>
-                            <div class="products__image">
-                                <img src="Assets/Hashira pendant lamp cluster.png" alt="">
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 bg-black text-white text-[14px] font-bold px-[9px] py-[3px]">Selling fast!</span>
+                            <span class="absolute top-9 left-3 bg-[#054E4A] text-white text-[14px] font-bold px-[9px] py-[3px]">New</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Spire tapered candle.png" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">DECOR</span>
-                                <h3>Tearoom club decor</h3>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DINING LIGHTING</span>
+                                <h3 class="my-1 text-[16px] font-medium">Ready dining lighting</h3>
+                                <p class="text-[16px]">$699.00</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Umanoff platter.png" alt="">
+                            </div>
+                            <div class="flex flex-col harbour">
+                                <span class="text-[14px] uppercase text-black/60">DINING Llighting</span>
+                                <h3 class="my-1 text-[16px] font-medium">Harbour side dining lighting</h3>
+                                <p class="text-[16px]">$999.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 z-10 bg-[#A42003] text-white text-[14px] font-bold leading-[18px] px-[8.6px] py-[3px] md:py-[11px]">-30%</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Hashira pendant lamp cluster.png" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">LIGHTING</span>
+                                <h3 class="my-1 text-[16px] font-medium">Tearoom club lighting</h3>
                                 <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
                             </div>
                         </div>
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Renovate your home.png" alt="">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Renovate your home.png" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">DECOR</span>
-                                <h3>Co dining decor</h3>
-                                <p>$1,199.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">LIGHTING</span>
+                                <h3 class="my-1 text-[16px] font-medium">Co dining lighting</h3>
+                                <p class="text-[16px]">$1,199.00</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="products__item products__item--wide aos-fade-up">
-                        <div class="products__card">
-                            <div class="products__image">
-                                <img src="Assets/Elevate-your-home.png" alt="">
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Knitting louge chair.jpg" alt="">
                             </div>
-                            <div class="products__info">
-                                <span class="type">DECOR</span>
-                                <h3>Knitting lounge decor</h3>
-                                <p>$999.00</p>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">LIGHTING</span>
+                                <h3 class="my-1 text-[16px] font-medium">Knitting lounge lighting</h3>
+                                <p class="text-[16px]">$999.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__grid hidden gap-6 md:grid-cols-2 md:gap-x-[10px] md:gap-y-[29px] products__grid--decor aos-fade">
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Releve platter.png" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DECOR</span>
+                                <h3 class="my-1 text-[16px] font-medium">Random decor somewhere</h3>
+                                <p class="text-[16px]">$699.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 bg-black text-white text-[14px] font-bold px-[9px] py-[3px]">Selling fast!</span>
+                            <span class="absolute top-9 left-3 bg-[#054E4A] text-white text-[14px] font-bold px-[9px] py-[3px]">New</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Spire tapered candle.png" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DECOR</span>
+                                <h3 class="my-1 text-[16px] font-medium">Ready dining decor</h3>
+                                <p class="text-[16px]">$699.00</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Umanoff platter.png" alt="">
+                            </div>
+                            <div class="flex flex-col harbour">
+                                <span class="text-[14px] uppercase text-black/60">DECOR</span>
+                                <h3 class="my-1 text-[16px] font-medium">Harbour side dining decor</h3>
+                                <p class="text-[16px]">$999.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-[2.2%] md:gap-[1.43%] max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <span class="absolute top-3 left-3 z-10 bg-[#A42003] text-white text-[14px] font-bold leading-[18px] px-[8.6px] py-[3px] md:py-[11px]">-30%</span>
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Hashira pendant lamp cluster.png" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DECOR</span>
+                                <h3 class="my-1 text-[16px] font-medium">Tearoom club decor</h3>
+                                <p><span style="color: #D63A2F; line-height: 22.5px; font-size: 15px;">$699.00</span> <span style="text-decoration: line-through; color: #666666; line-height: 24px; font-size: 15px;">$999.00</span></p>
+                            </div>
+                        </div>
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[0.75] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Renovate your home.png" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DECOR</span>
+                                <h3 class="my-1 text-[16px] font-medium">Co dining decor</h3>
+                                <p class="text-[16px]">$1,199.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col max-w-[360px] md:max-w-[700px] aos-fade-up">
+                        <div class="relative flex flex-col">
+                            <div class="aspect-[700/460] overflow-hidden mb-4">
+                                <img class="w-full h-full object-fill block" src="Assets/Elevate-your-home.png" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[14px] uppercase text-black/60">DECOR</span>
+                                <h3 class="my-1 text-[16px] font-medium">Knitting lounge decor</h3>
+                                <p class="text-[16px]">$999.00</p>
                             </div>
                         </div>
                     </div>
@@ -509,159 +623,316 @@
             </div>
         </section>
 
-        <section class="product-slider">
-            <div class="products__container">
-                <div class="product-slider__heading headings">
-                    <h2>Discover unique items</h2>
+        <section class="product-slider w-full flex justify-center items-center mt-[45.3px]">
+            <div class="w-[92%] max-w-[1410px] lg:w-[73.438%]">
+                <div class="product-slider__heading mt-[5px] mb-[34px] xl:mt-[10px] xl:mb-[50px]">
+                    <h2 class="font-normal text-[28px] leading-[38.4px] text-center m-0
+                                xl:text-[36px] xl:leading-[48px] headings">
+                        Discover unique items
+                    </h2>
                 </div>
-
-                <div class="product-slider__track">
-                    <div class="product-slider__item">
-                        <div class="product-slider__image">
-                            <img src="Assets/Releve platter.png" alt="Releve platter">
+                <div class="product-slider__track
+                            flex gap-[10px] w-full
+                            overflow-x-auto scroll-smooth snap-x snap-mandatory
+                            pb-[10px]
+                            [scrollbar-width:none]
+                            [-ms-overflow-style:none]
+                            [&::-webkit-scrollbar]:hidden
+                            2xl:justify-center">
+                    <div class="product-slider__item
+                                flex-none snap-start relative
+                                w-[clamp(220px,70vw,265px)]
+                                sm:w-[35%]
+                                xl:w-[24%]
+                                2xl:w-[24.45%] 2xl:max-w-[345px]">
+                        <div class="product-slider__image
+                                    w-full aspect-[265/353]
+                                    overflow-hidden mb-[16px]
+                                    2xl:aspect-[345/460]">
+                            <img src="Assets/Releve platter.png"
+                                alt="Releve platter"
+                                class="w-full h-full object-cover block">
                         </div>
-                        <div class="products__info">
-                            <span class="type">DINING TABLE</span>
-                            <h3>Releve platter</h3>
-                            <p>$699.00</p>
+                        <div class="flex flex-col">
+                            <span class="text-[14px] uppercase text-black/60">DINING TABLE</span>
+                            <h3 class="my-1 text-[16px] font-medium">Releve platter</h3>
+                            <p class="text-[16px]">$699.00</p>
+                        </div>
+                    </div>
+                    <div class="product-slider__item
+                                flex-none snap-start relative
+                                w-[clamp(220px,70vw,265px)]
+                                sm:w-[35%]
+                                xl:w-[24%]
+                                2xl:w-[24.45%] 2xl:max-w-[345px]">
+                        <div class="product-slider__image
+                                    w-full aspect-[265/353]
+                                    overflow-hidden mb-[16px]
+                                    2xl:aspect-[345/460]">
+                            <img src="Assets/Spire tapered candle.png"
+                                alt="Spire tapered candle"
+                                class="w-full h-full object-cover block">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[14px] uppercase text-black/60">CANDLE</span>
+                            <h3 class="my-1 text-[16px] font-medium">Spire tapered candle</h3>
+                            <p class="text-[16px]">$699.00</p>
                         </div>
                     </div>
 
-                    <div class="product-slider__item">
-                        <div class="product-slider__image">
-                            <img src="Assets/Spire tapered candle.png" alt="Spire tapered candle">
+                    <div class="product-slider__item
+                                flex-none snap-start relative
+                                w-[clamp(220px,70vw,265px)]
+                                sm:w-[35%]
+                                xl:w-[24%]
+                                2xl:w-[24.45%] 2xl:max-w-[345px]">
+                        <span class="absolute top-3 left-3 bg-black text-white text-[14px] font-bold px-[9px] py-[3px]">
+                        Selling fast!
+                        </span>
+                        <span class="absolute top-9 left-3 bg-[#054E4A] text-white text-[14px] font-bold px-[9px] py-[3px]">
+                        New
+                        </span>
+                        <div class="product-slider__image
+                                    w-full aspect-[265/353]
+                                    overflow-hidden mb-[16px]
+                                    2xl:aspect-[345/460]">
+                            <img src="Assets/Umanoff platter.png"
+                                alt="Umanoff planter"
+                                class="w-full h-full object-cover block">
                         </div>
-                        <div class="products__info">
-                            <span class="type">CANDLE</span>
-                            <h3>Spire tapered candle</h3>
-                            <p>$699.00</p>
+                        <div class="flex flex-col">
+                            <span class="text-[14px] uppercase text-black/60">STORAGE</span>
+                            <h3 class="my-1 text-[16px] font-medium">Umanoff planter</h3>
+                            <p class="text-[16px]">$699.00</p>
                         </div>
                     </div>
 
-                    <div class="product-slider__item">
-                        <span class="products__tag products__tag--selling">Selling fast!</span>
-                        <span class="products__tag products__tag--new">New</span>
-                        <div class="product-slider__image">
-                            <img src="Assets/Umanoff platter.png" alt="Umanoff planter">
+                    <div class="product-slider__item
+                                flex-none snap-start relative
+                                w-[clamp(220px,70vw,265px)]
+                                sm:w-[35%]
+                                xl:w-[24%]
+                                2xl:w-[24.45%] 2xl:max-w-[345px]">
+                        <div class="product-slider__image
+                                    w-full aspect-[265/353]
+                                    overflow-hidden mb-[16px]
+                                    2xl:aspect-[345/460]">
+                            <img src="Assets/Hashira pendant lamp cluster.png"
+                                alt="Hashira pendant lamp cluster"
+                                class="w-full h-full object-cover block">
                         </div>
-                        <div class="products__info">
-                            <span class="type">STORAGE</span>
-                            <h3>Umanoff planter</h3>
-                            <p>$699.00</p>
-                        </div>
-                    </div>
-
-                    <div class="product-slider__item">
-                        <div class="product-slider__image">
-                            <img src="Assets/Hashira pendant lamp cluster.png" alt="Hashira pendant lamp cluster">
-                        </div>
-                        <div class="products__info">
-                            <span class="type">LANTERN</span>
-                            <h3>Hashira pendant lamp cluster</h3>
-                            <p>$1,199.00</p>
+                        <div class="flex flex-col">
+                            <span class="text-[14px] uppercase text-black/60">LANTERN</span>
+                            <h3 class="my-1 text-[16px] font-medium">Hashira pendant lamp cluster</h3>
+                            <p class="text-[16px]">$1,199.00</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="text-carousel">
-            <div class="text-carousel__container">
-                <div class="text-carousel__content headings">
-                    FIND INSPRATION
-                    <img src="Assets/star_black.svg" alt=""> 
-                    DESIGN FOR LIVING
-                    <img src="Assets/star_black.svg" alt="">
-                    UNIQUE FURNITURE
+        <section class="text-carousel w-full overflow-hidden">
+            <div class="text-carousel__container
+                        flex justify-center items-center
+                        h-[140px] overflow-hidden mt-[12px]
+                        xl:h-[248px]">
+                <div class="text-carousel__content headings
+                            flex items-center
+                            text-black opacity-20
+                            text-[60px] font-normal
+                            whitespace-nowrap
+                            gap-[48px]
+                            leading-[64px]
+                            animate-scrollText
+                            will-change-transform
+                            xl:text-[74px] xl:leading-[90px]">
+                FIND INSPRATION
+                <img src="Assets/star_black.svg"
+                    alt=""
+                    class="w-[30.84px] h-[32px] cursor-pointer p-0 border-0">
+                DESIGN FOR LIVING
+                <img src="Assets/star_black.svg"
+                    alt=""
+                    class="w-[30.84px] h-[32px] cursor-pointer p-0 border-0">
+                UNIQUE FURNITURE
                 </div>
             </div>
         </section>
 
-        <section class="sale-block">
-            <div class="products__container">
-                <div class="sale-block__container">
-                    <div class="sale-block__item aos-fade-up">
-                        <div class="sale-block__image">
-                            <img src="Assets/Bundle and save.jpg" alt="Sale Image 1">
+        <section class="sale-block
+                w-full max-w-[1920px]
+                flex justify-center items-center
+                mt-[19px] mb-[48px] mx-auto
+                lg:mb-[100px]">
+            <div class="w-[92%] max-w-[1410px] lg:w-[73.438%]">
+                <div class="sale-block__container
+                            flex justify-center gap-[24px] flex-wrap
+                            md:justify-between
+                            xl:mt-[1.5px]">
+                    <div class="sale-block__item aos-fade-up
+                                w-full max-w-[419.94px]
+                                aspect-[0.75]
+                                md:w-[29.78%]">
+                        <div class="sale-block__image w-full h-full overflow-hidden">
+                            <img src="Assets/Bundle and save.jpg"
+                                alt="Sale Image 1"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
+                    <div class="sale-block__item aos-fade-up
+                                w-full max-w-[419.94px]
+                                aspect-[0.75]
+                                md:w-[29.78%]">
+                        <div class="sale-block__content
+                                    w-full h-full
+                                    bg-[#6E331A] text-white
+                                    text-center
+                                    flex flex-col
+                                    xl:p-0">
+                            <div class="sale-block__inner
+                                        h-full m-[30px]
+                                        flex flex-col
+                                        justify-between
+                                        gap-[11%]">
 
-                    <div class="sale-block__item aos-fade-up">
-                        <div class="sale-block__content">
-                            <div class="sale-block__inner">
-                                <div class="sale-block__label">SEASON SALE COLLECTIONS</div>
+                                <div class="sale-block__label
+                                            text-[16px] leading-6
+                                            uppercase font-medium
+                                            mb-[12px]">
+                                SEASON SALE COLLECTIONS
+                                </div>
                                 <div class="sale-block__text">
-                                    <h3 class="headings">SALE 30% OFF</h3>
-                                    <div>
-                                        <p>Save extra on our sale collection</p>
-                                        <p>*Runs until 14:00pm PST</p>
+                                    <h3 class="headings
+                                                text-[46px] leading-[64px]
+                                                h-[128px] max-w-[200px]
+                                                flex items-center justify-center
+                                                mx-auto font-normal
+                                                max-[365px]:leading-[46px]
+
+                                                md:text-[26px] md:leading-[32px]
+                                                md:h-[25%] md:max-w-[120px]
+
+                                                lg:text-[32px] lg:leading-[32px]
+                                                lg:h-[40%] lg:max-w-[150px]
+
+                                                xl:text-[52px] xl:leading-[64px]
+                                                xl:h-[55%] xl:max-w-[220px]
+
+                                                2xl:text-[56px] 2xl:leading-[80px]
+                                                2xl:h-[144px] 2xl:max-w-[240px]">
+                                        SALE 30% OFF
+                                    </h3>
+                                    <div class="mt-[14px] 2xl:mt-[26px]">
+                                        <p class="text-[14px] m-0">
+                                        Save extra on our sale collection
+                                        </p>
+                                        <p class="text-[14px] m-0">
+                                        *Runs until 14:00pm PST
+                                        </p>
                                     </div>
                                 </div>
-                                <div style="height: 40px;"></div>
+                                <div class="h-[40px]"></div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="sale-block__item aos-fade-up">
-                        <div class="sale-block__image">
-                            <img src="Assets/Renovate your home.png" alt="Sale Image 3">
+                    <div class="sale-block__item aos-fade-up
+                                w-full max-w-[419.94px]
+                                aspect-[0.75]
+                                md:w-[29.78%]">
+                        <div class="sale-block__image w-full h-full overflow-hidden">
+                            <img src="Assets/Renovate your home.png"
+                                alt="Sale Image 3"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact-us aos-fade-up">
-            <div class="products__container">
-                <div class="contact-us__container">
-                    <div class="contact-us__heading">
-                        <div class="contact-us__title">
-                            <div class="contact-us__inner headings">
-                                <div class="contact-us__inner--1">Contact us to order and</div>
+        <section class="contact-us aos-fade-up
+                        w-full bg-[#F6F3EE]
+                        flex justify-center items-center">
+            <div class="w-[92%] max-w-[1410px] lg:w-[73.438%]">
+                <div class="contact-us__container
+                            flex justify-center items-center flex-wrap
+                            mt-[47.73px] mb-[63px]
+                            md:mt-[100px] md:mb-[56px]">
+                    <div class="contact-us__heading w-full">
+                        <div class="contact-us__title
+                                    w-[318px] mx-auto
+                                    max-[350px]:w-[280px]
+                                    md:w-[409px]">
+                            <div class="contact-us__inner headings
+                                        w-full text-center font-normal
+                                        text-[28px] leading-[38.4px]
+                                        max-[350px]:text-[18px]
+                                        max-[350px]:leading-[28.4px]
+                                        md:text-[36px] md:leading-[48px]">
+                                <div class="contact-us__inner--1
+                                            text-left
+                                            max-[350px]:text-center">Contact us to order and</div>
                                 <div class="contact-us__inner--2">receive purchase advice</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="contact-us__content">
-                        <form class="contact-us__form" id="contact-form" autocomplete="on" method="post" action="https://script.google.com/macros/s/AKfycbxaT6WO1DzUEA4cofWd7lTgQYZToU2tdpeI96PJtLXJYqgZ7L1lQ1tXY1U4598PGAk2ww/exec">
-                            <div class="contact-us__form-component--1 contact-us__form-row">
-                                <div class="contact-us__form-field">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Name" required autocomplete="name">
+                    <div class="contact-us__content w-full">
+                        <form class="contact-us__form flex flex-col gap-[16px] mt-[38.44px] md:mt-[60px]" id="contact-form" autocomplete="on" method="post" action="https://script.google.com/macros/s/AKfycbxaT6WO1DzUEA4cofWd7lTgQYZToU2tdpeI96PJtLXJYqgZ7L1lQ1tXY1U4598PGAk2ww/exec">
+                            <div class="contact-us__form-component--1 contact-us__form-row flex flex-col gap-[10px] md:flex-row md:gap-[3.5%]">
+                                <div class="contact-us__form-field flex flex-col md:w-1/2">
+                                    <label for="name" class="mb-[8px] text-[16px] leading-6 font-normal">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Name" required autocomplete="name" class="font-[Poppins] text-[16px] py-[12.5px] px-[16px] border border-[#E6E6E6] bg-white">
                                 </div>
-                                <div class="contact-us__form-field">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email" title="Vui lòng nhập vào địa chỉ email hợp lệ (e.g. name@example.com)">
+                                <div class="contact-us__form-field flex flex-col md:w-1/2">
+                                    <label for="email" class="mb-[8px] text-[16px] leading-6 font-normal">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email" title="Vui lòng nhập vào địa chỉ email hợp lệ (e.g. name@example.com)" class="font-[Poppins] text-[16px] py-[12.5px] px-[16px] border border-[#E6E6E6] bg-white">
                                 </div>
                             </div>
-                            <div class="contact-us__form-component--2 contact-us__form-row">
-                                <div class="contact-us__form-field">
-                                    <label for="phone">Phone</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="Phone" required autocomplete="tel" pattern="(\+84|0)[0-9]{8,15}" title="Vui lòng nhập số điện thoại hợp lệ (ví dụ: +84912345678 hoặc 0912345678)">
+                            <div class="contact-us__form-component--2 contact-us__form-row flex flex-col gap-[10px] md:flex-row md:gap-[3.5%]">
+                                <div class="contact-us__form-field flex flex-col md:w-1/2">
+                                    <label for="phone" class="mb-[8px] text-[16px] leading-6 font-normal">Phone</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone" required autocomplete="tel" pattern="(\+84|0)[0-9]{8,15}" title="Vui lòng nhập số điện thoại hợp lệ (ví dụ: +84912345678 hoặc 0912345678)" class="font-[Poppins] text-[16px] py-[12.5px] px-[16px] border border-[#E6E6E6] bg-white">
                                 </div>
-                                <div class="contact-us__form-field">
-                                    <label for="address">Address</label>
-                                    <input type="text" id="address" name="address" placeholder="Address" autocomplete="address-level1">
+                                <div class="contact-us__form-field flex flex-col md:w-1/2">
+                                    <label for="address" class="mb-[8px] text-[16px] leading-6 font-normal">Address</label>
+                                    <input type="text" id="address" name="address" placeholder="Address" autocomplete="address-level1" class="font-[Poppins] text-[16px] py-[12.5px] px-[16px] border border-[#E6E6E6] bg-white">
                                 </div>
                             </div>
                             <div class="contact-us__form-component--3">
-                                <div class="contact-us__form-field">
-                                    <label for="message">Your message</label>
-                                    <textarea id="message" name="message" rows="5" placeholder="Example: I want to buy 6 chairs and a table brand Oda ottoman..."></textarea>
+                                <div class="contact-us__form-field flex flex-col">
+                                    <label for="message" class="mb-[8px] text-[16px] leading-6 font-normal">Your message</label>
+                                    <textarea class="font-[Poppins]
+                                                    text-[16px] leading-6
+                                                    h-[204px] md:h-[180px]
+                                                    px-[16px] py-[10px]
+                                                    border border-[#E6E6E6] bg-white
+                                                    resize-none"
+                                    id="message" name="message" rows="5" placeholder="Example: I want to buy 6 chairs and a table brand Oda ottoman..."></textarea>
                                 </div>
                             </div>
                             <div 
-                                class="g-recaptcha"
+                                class="g-recaptcha flex justify-center items-center"
                                 data-sitekey="6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY"
                                 id="recaptcha-contact">
                             </div>
-                            <div id="recaptcha-error-message-contact" class="contact-us__form--error">
+                            <div id="recaptcha-error-message-contact" class="contact-us__form--error text-red-600 text-[12px] mt-[5px] hidden justify-center">
                                 Please complete the CAPTCHA.
                             </div>
-                            <div class="contact-us__form-component--4">
-                                <button type="submit" class="contact-us__submit headings">SUBMIT NOW</button>
-                                <div class="contact-us__required">* Required</div>
+                            <div class="contact-us__form-component--4 mt-[18px] md:mt-[6px] md:mx-auto md:w-[219px]">
+                                <button type="submit" class="contact-us__submit headings
+                                                            w-full
+                                                            py-[9px] px-[24px]
+                                                            bg-black text-white
+                                                            text-[16px] leading-[30px]
+                                                            font-medium uppercase
+                                                            tracking-[1.2px]
+                                                            border-0 cursor-pointer">SUBMIT NOW</button>
+                                <div class="contact-us__required
+                                            mt-[20px]
+                                            text-[16px] leading-6
+                                            text-center font-normal">
+                                * Required
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -669,49 +940,64 @@
             </div>
         </section>
 
-        <section class="inspiration aos-fade-up">
-            <div class="products__container">
-                <div class="inspiration__container">
-                    <div class="inspiration__header">
-                        <div class="inspiration__title headings">
+        <section class="inspiration aos-fade-up w-full flex justify-center items-center mt-[17px] xl:mt-[20px]">
+            <div class="w-[92%] max-w-[1410px] lg:w-[73.438%]">
+                <div class="inspiration__container
+                            flex justify-center items-center flex-wrap
+                            gap-[50px]
+                            mt-[30px]
+                            xl:gap-[60px] xl:mt-[80px]">
+                    <div class="inspiration__header w-full min-[492px]:w-[80%] md:w-[60%] xl:w-[40%]">
+                        <div class="inspiration__title headings w-full text-center font-normal  text-[28px] leading-[38.4px]  xl:text-[36px] xl:leading-[48px]">
                             Change the look of your house, change the perspective of others
                         </div>
                     </div>
-                    <div class="inspiration__content">
-                        <div class="inspiration__block aos-fade">
+                    <div class="inspiration__content
+                                flex justify-start
+                                flex-nowrap
+                                gap-[24px]
+                                w-full
+                                overflow-x-auto overflow-y-hidden
+                                scroll-smooth
+                                snap-x snap-mandatory
+                                [-webkit-overflow-scrolling:touch]
+                                [scrollbar-width:none]
+                                xl:justify-center
+                                xl:gap-[5.8%]">
+                        <div class="inspiration__block aos-fade w-[265px] flex-[0_0_265px] snap-start flex flex-col justify-center items-center text-center xl:w-[20.64%] xl:flex-[0_0_20.64%] xl:max-w-[291px]">
                             <div class="inspiration__image">
-                                <img src="Assets/Showroom.png" alt="Showroom">
+                                <img src="Assets/Showroom.png" alt="Showroom" class="w-full h-auto object-cover block">
                             </div>
                             <div class="inspiration__info">
-                                <div class="inspiration__info-title headings">Showroom</div>
-                                <div class="inspiration__info-content">Experience design for living at our flagship showroom located in Boston’s South End.</div>
+                                <div class="inspiration__info-title headings text-left font-normal text-[20px] leading-[30.4px] mt-[21px] mb-[3px] xl:text-[24px] xl:leading-[38px] xl:mt-[16px] xl:mb-[8px]">Showroom</div>
+                                <div class="inspiration__info-content text-left font-normal text-[14px] leading-6 xl:text-[16px]">Experience design for living at our flagship showroom located in Boston’s South End.</div>
                             </div>
                         </div>
-                        <div class="inspiration__block aos-fade">
+                        <div class="inspiration__block aos-fade w-[265px] flex-[0_0_265px] snap-start flex flex-col justify-center items-center text-center xl:w-[20.64%] xl:flex-[0_0_20.64%] xl:max-w-[291px]">
                             <div class="inspiration__image">
-                                <img src="Assets/Interior work.png" alt="Interior work">
+                                <img src="Assets/Interior work.png" alt="Interior work" class="w-full h-auto object-cover block">
                             </div>
                             <div class="inspiration__info">
-                                <div class="inspiration__info-title headings">Interior work</div>
-                                <div class="inspiration__info-content">Crafting spaces through meticulous planning, material selection, and creative execution, enhancing aesthetics and functionality.</div>
+                                <div class="inspiration__info-title headings text-left font-normal text-[20px] leading-[30.4px] mt-[21px] mb-[3px] xl:text-[24px] xl:leading-[38px] xl:mt-[16px] xl:mb-[8px]">Interior work</div>
+                                <div class="inspiration__info-content text-left font-normal text-[14px] leading-6 xl:text-[16px]">Crafting spaces through meticulous planning, material selection, and creative execution, enhancing aesthetics and functionality.</div>
                             </div>
                         </div>
-                        <div class="inspiration__block aos-fade">
+                        <div class="inspiration__block aos-fade w-[265px] flex-[0_0_265px] snap-start flex flex-col justify-center items-center text-center xl:w-[20.64%] xl:flex-[0_0_20.64%] xl:max-w-[291px]">
                             <div class="inspiration__image">
-                                <img src="Assets/Authentic Design.jpg" alt="Authentic Design">
+                                <img src="Assets/Authentic Design.jpg" alt="Authentic Design" class="w-full h-auto object-cover block">
                             </div>
                             <div class="inspiration__info">
-                                <div class="inspiration__info-title headings">Authentic design</div>
-                                <div class="inspiration__info-content">We only carry designs we believe in ethically and aesthetically – original, authentic pieces that are made to last.</div>
+                                <div class="inspiration__info-title headings text-left font-normal text-[20px] leading-[30.4px] mt-[21px] mb-[3px] xl:text-[24px] xl:leading-[38px] xl:mt-[16px] xl:mb-[8px]">Authentic design</div>
+                                <div class="inspiration__info-content text-left font-normal text-[14px] leading-6 xl:text-[16px]">We only carry designs we believe in ethically and aesthetically – original, authentic pieces that are made to last.</div>
                             </div>
                         </div>
-                        <div class="inspiration__block aos-fade">
+                        <div class="inspiration__block aos-fade w-[265px] flex-[0_0_265px] snap-start flex flex-col justify-center items-center text-center xl:w-[20.64%] xl:flex-[0_0_20.64%] xl:max-w-[291px]">
                             <div class="inspiration__image">
-                                <img src="Assets/Custom additions.png" alt="Custom additions">
+                                <img src="Assets/Custom additions.png" alt="Custom additions" class="w-full h-auto object-cover block">
                             </div>
                             <div class="inspiration__info">
-                                <div class="inspiration__info-title headings">Custom additions</div>
-                                <div class="inspiration__info-content">Tailoring unique elements to spaces, elevating interiors with personalized craftsmanship and design solutions.</div>
+                                <div class="inspiration__info-title headings text-left font-normal text-[20px] leading-[30.4px] mt-[21px] mb-[3px] xl:text-[24px] xl:leading-[38px] xl:mt-[16px] xl:mb-[8px]">Custom additions</div>
+                                <div class="inspiration__info-content text-left font-normal text-[14px] leading-6 xl:text-[16px]">Tailoring unique elements to spaces, elevating interiors with personalized craftsmanship and design solutions.</div>
                             </div>
                         </div>
                     </div>
@@ -719,125 +1005,325 @@
             </div>
         </section>
         
-        <section class="faqs">
-            <div class="products__container">
+        <section class="faqs w-full flex justify-center items-center mt-[61px] md:mt-[100px]">
+            <div class="w-[92%] max-w-[1410px] lg:w-[73.438%]">
                 <div class="faqs__container">
-                    <div class="faqs__header">
-                        <div class="faqs__title headings">Discover more in our FAQs</div>
+                    <div class="faqs__header flex justify-center items-center mb-[30px]">
+                        <div class="faqs__title headings text-[28px] leading-[38.4px] max-w-[198px]  text-center font-normal md:text-[36px] md:leading-[48px] md:max-w-[449px]">Discover more in our FAQs</div>
                     </div>
-                    <div class="faqs__content">
+                    <div class="faqs__content flex flex-col gap-5 md:gap-[11px]">
 
                         <input type="radio" name="faq" id="faq-1" checked hidden>
                         <div class="faqs__item">
-                            <label for="faq-1" class="faqs__question"><span class="faqs__question-content headings">How long does shipping take?</span><span class="faqs__mark"></span></label>
-                            <div class="faqs__answer">Your sales managers will go into the field feeling energized, excited, and inspired. We are a full service business development group – we build strategies and systems.</div>
+                            <label for="faq-1" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-[#EDEDED] py-[19.8px] gap-5 md:pt-[31px] md:pb-[17px]"><span class="faqs__question-content headings text-[20px] leading-[30.4px] font-normal md:text-[26px] md:leading-[38px]">How long does shipping take?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
+                            <div class="faqs__answer text-[16px] leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-[400ms] ease-in-out">Your sales managers will go into the field feeling energized, excited, and inspired. We are a full service business development group – we build strategies and systems.</div>
                         </div>
 
                         <input type="radio" name="faq" id="faq-2" hidden>
                         <div class="faqs__item">
-                            <label for="faq-2" class="faqs__question"><span class="faqs__question-content headings">Does my piece come in any packaging?</span><span class="faqs__mark"></span></label>
-                            <div class="faqs__answer">Yes, all our products come in protective and aesthetically pleasing packaging to ensure they arrive in perfect condition. Each product is securely wrapped, and we use eco-friendly materials whenever possible. Additionally, many of our products come in recyclable containers to support sustainability.</div>
+                            <label for="faq-2" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-[#EDEDED] py-[19.8px] gap-5 md:pt-[31px] md:pb-[17px]"><span class="faqs__question-content headings text-[20px] leading-[30.4px] font-normal md:text-[26px] md:leading-[38px]">Does my piece come in any packaging?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
+                            <div class="faqs__answer text-[16px] leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-[400ms] ease-in-out">Yes, all our products come in protective and aesthetically pleasing packaging to ensure they arrive in perfect condition. Each product is securely wrapped, and we use eco-friendly materials whenever possible. Additionally, many of our products come in recyclable containers to support sustainability.</div>
                         </div>
 
                         <input type="radio" name="faq" id="faq-3" hidden>
                         <div class="faqs__item">
-                            <label for="faq-3" class="faqs__question"><span class="faqs__question-content headings">Do you ship internationally?</span><span class="faqs__mark"></span></label>
-                            <div class="faqs__answer">Yes, we do ship internationally! We offer worldwide shipping to ensure customers around the globe can enjoy our products. Please note that shipping times and costs may vary depending on the destination country. International customers may also be subject to customs fees or import duties imposed by their country's customs authorities.</div>
+                            <label for="faq-3" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-[#EDEDED] py-[19.8px] gap-5 md:pt-[31px] md:pb-[17px]"><span class="faqs__question-content headings text-[20px] leading-[30.4px] font-normal md:text-[26px] md:leading-[38px]">Do you ship internationally?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
+                            <div class="faqs__answer text-[16px] leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-[400ms] ease-in-out">Yes, we do ship internationally! We offer worldwide shipping to ensure customers around the globe can enjoy our products. Please note that shipping times and costs may vary depending on the destination country. International customers may also be subject to customs fees or import duties imposed by their country's customs authorities.</div>
                         </div>
 
                         <input type="radio" name="faq" id="faq-4" hidden>
                         <div class="faqs__item">
-                            <label for="faq-4" class="faqs__question"><span class="faqs__question-content headings">What payment methods do you accept?</span><span class="faqs__mark"></span></label>
-                            <div class="faqs__answer">We accept a variety of payment methods to make your shopping experience convenient. These include credit cards (Visa, Mastercard, American Express), PayPal, and, in some regions, alternative payment methods such as Apple Pay or Google Pay. Rest assured, your payment information is secure and protected during the checkout process.</div>
+                            <label for="faq-4" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-[#EDEDED] py-[19.8px] gap-5 md:pt-[31px] md:pb-[17px]"><span class="faqs__question-content headings text-[20px] leading-[30.4px] font-normal md:text-[26px] md:leading-[38px]">What payment methods do you accept?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
+                            <div class="faqs__answer text-[16px] leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-[400ms] ease-in-out">We accept a variety of payment methods to make your shopping experience convenient. These include credit cards (Visa, Mastercard, American Express), PayPal, and, in some regions, alternative payment methods such as Apple Pay or Google Pay. Rest assured, your payment information is secure and protected during the checkout process.</div>
                         </div>
 
                         <input type="radio" name="faq" id="faq-5" hidden>
                         <div class="faqs__item">
-                            <label for="faq-5" class="faqs__question"><span class="faqs__question-content headings">What should I do if my order is not placed?</span><span class="faqs__mark"></span></label>
-                            <div class="faqs__answer">We’re sorry to hear that you’re unable to place an order. Please contact Customer Service and we will work on resolving the issue as quickly as possible</div>
+                            <label for="faq-5" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-[#EDEDED] py-[19.8px] gap-5 md:pt-[31px] md:pb-[17px]"><span class="faqs__question-content headings text-[20px] leading-[30.4px] font-normal md:text-[26px] md:leading-[38px]">What should I do if my order is not placed?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
+                            <div class="faqs__answer text-[16px] leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-[400ms] ease-in-out">We’re sorry to hear that you’re unable to place an order. Please contact Customer Service and we will work on resolving the issue as quickly as possible</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="single-banner aos-fade">
+        <section class="single-banner aos-fade relative w-full h-[600px] mt-[26px] overflow-hidden md:h-[349px] md:mt-[100px]">
             <picture>
                 <source srcset="Assets/image-2.png" media="(max-width: 450px)">
-                <img src="Assets/Elevate-your-home.png" alt="Single-banner" class="single-banner__image" id="banner-cshop__img--2">
+                <img src="Assets/Elevate-your-home.png" alt="Single-banner" class="single-banner__image w-full h-full object-cover object-center block" id="banner-cshop__img--2">
             </picture>
-            
-            <div class="single-banner__content">
-                <h2 class="single-banner__title headings">Elevate Your Home</h2>
-                <p class="single-banner__description">Clever products for every corner</p>
+            <div class="absolute inset-0
+              bg-black/35 opacity-50
+              pointer-events-none z-[1]
+              md:bg-black/50 md:opacity-100">
+            </div>    
+            <div class="single-banner__content
+                        absolute z-[2]
+                        top-1/2 left-1/2
+                        -translate-x-1/2 -translate-y-1/2
+                        text-center text-white
+                        px-[20px]
+                        [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]
+                        md:top-[53%]
+                        md:flex md:flex-col md:gap-[24px]">
+                <h2 class="single-banner__title headings
+                        text-[48px] leading-[64px]
+                        font-normal
+                        w-[338px]
+                        px-[44px]
+                        mt-[90px] mb-[12px]
+
+                        md:text-[56px]
+                        md:leading-[80px]
+                        md:w-full
+                        md:px-0
+                        md:m-0">Elevate Your Home</h2>
+                <p class="single-banner__description text-[16px] leading-6 font-normal m-0">Clever products for every corner</p>
             </div>
         </section>
 
-        <section class="service aos-fade-up">
-            <div class="products__container">
-                <div class="service__container">
-                    <div class="service__box">
+        <section class="service aos-fade-up w-full flex justify-center items-center my-[48px] 2xl:my-[80px]">
+            <div class="w-[92%] max-w-[1410px] lg:w-[73.438%]">
+                <div class="service__container
+                            flex flex-wrap
+                            justify-between
+                            gap-[24px]
+
+                            md:justify-evenly
+                            lg:gap-[10px]
+                            2xl:justify-between">
+                          <div class="service__box
+                                    w-full
+                                    h-[77.5px]
+                                    flex flex-row justify-start
+                                    gap-[16px]
+
+                                    md:w-[21.8%]
+                                    md:min-w-[300px]
+                                    md:h-[184px]
+
+                                    lg:flex-col
+                                    lg:min-w-[360px]
+
+                                    2xl:min-w-[184px]
+                                    2xl:gap-5">
                         <div class="service__image">
-                            <img src="Assets/Free and Fast delivery.png" alt="">
+                            <img src="Assets/Free and Fast delivery.png" alt="" class="w-[40px] h-[40px] object-cover md:w-[72px] md:h-[72px]">
                         </div>
-                        <div class="service__info">
-                            <div class="service__heading headings">Free & fast delivery</div>
-                            <div class="service__content">We offer free shipping with ground delivery to the lower 48 states.</div>
+                        <div class="service__info flex flex-col gap-[4px] 2xl:gap-[8px]">
+                            <div class="service__heading headings
+                                      text-black
+                                        text-[20px]
+                                        leading-[25.6px]
+                                        font-normal
+                                        md:leading-[32px]">Free & fast delivery</div>
+                            <div class="service__content
+                                      text-black
+                                        text-[14px]
+                                        leading-6
+                                        font-normal
+                                        md:text-[16px]">We offer free shipping with ground delivery to the lower 48 states.</div>
                         </div>
                     </div>
-                    <div class="service__box">
+                          <div class="service__box
+                                    w-full
+                                    h-[77.5px]
+                                    flex flex-row justify-start
+                                    gap-[16px]
+
+                                    md:w-[21.8%]
+                                    md:min-w-[300px]
+                                    md:h-[184px]
+
+                                    lg:flex-col
+                                    lg:min-w-[360px]
+
+                                    2xl:min-w-[184px]
+                                    2xl:gap-5">
                         <div class="service__image">
-                            <img src="Assets/Online Support.png" alt="">
+                            <img src="Assets/Online Support.png" alt="" class="w-[40px] h-[40px] object-cover md:w-[72px] md:h-[72px]">
                         </div>
-                        <div class="service__info">
-                            <div class="service__heading headings">Online support</div>
-                            <div class="service__content">Online Support24 hours a day<br> 7 days a week</div>
+                        <div class="service__info flex flex-col gap-[4px] 2xl:gap-[8px]">
+                            <div class="service__heading headings
+                                      text-black
+                                        text-[20px]
+                                        leading-[25.6px]
+                                        font-normal
+                                        md:leading-[32px]">Online support</div>
+                            <div class="service__content
+                                      text-black
+                                        text-[14px]
+                                        leading-6
+                                        font-normal
+                                        md:text-[16px]">Online Support24 hours a day<br> 7 days a week</div>
                         </div>
                     </div>
-                    <div class="service__box">
+                          <div class="service__box
+                                    w-full
+                                    h-[77.5px]
+                                    flex flex-row justify-start
+                                    gap-[16px]
+
+                                    md:w-[21.8%]
+                                    md:min-w-[300px]
+                                    md:h-[184px]
+
+                                    lg:flex-col
+                                    lg:min-w-[360px]
+
+                                    2xl:min-w-[184px]
+                                    2xl:gap-5">
                         <div class="service__image">
-                            <img src="Assets/30 Days Return.png" alt="">
+                            <img src="Assets/30 Days Return.png" alt="" class="w-[40px] h-[40px] object-cover md:w-[72px] md:h-[72px]">
                         </div>
-                        <div class="service__info">
-                            <div class="service__heading headings">30 Days return</div>
-                            <div class="service__content">Exchange or return items free of charge within 30 days.</div>
+                        <div class="service__info flex flex-col gap-[4px] 2xl:gap-[8px]">
+                            <div class="service__heading headings
+                                      text-black
+                                        text-[20px]
+                                        leading-[25.6px]
+                                        font-normal
+                                        md:leading-[32px]">30 Days return</div>
+                            <div class="service__content
+                                      text-black
+                                        text-[14px]
+                                        leading-6
+                                        font-normal
+                                        md:text-[16px]">Exchange or return items free of charge within 30 days.</div>
                         </div>
                     </div>
-                    <div class="service__box">
+                          <div class="service__box
+                                    w-full
+                                    h-[77.5px]
+                                    flex flex-row justify-start
+                                    gap-[16px]
+
+                                    md:w-[21.8%]
+                                    md:min-w-[300px]
+                                    md:h-[184px]
+
+                                    lg:flex-col
+                                    lg:min-w-[360px]
+
+                                    2xl:min-w-[184px]
+                                    2xl:gap-5">
                         <div class="service__image">
-                            <img src="Assets/Payment.png" alt="">
+                            <img src="Assets/Payment.png" alt="" class="w-[40px] h-[40px] object-cover md:w-[72px] md:h-[72px]">
                         </div>
-                        <div class="service__info">
-                            <div class="service__heading headings">Flexible payment</div>
-                            <div class="service__content">Pay conveniently using multiple credit cards for added flexibility.</div>
+                        <div class="service__info flex flex-col gap-[4px] 2xl:gap-[8px]">
+                            <div class="service__heading headings
+                                      text-black
+                                        text-[20px]
+                                        leading-[25.6px]
+                                        font-normal
+                                        md:leading-[32px]">Flexible payment</div>
+                            <div class="service__content
+                                      text-black
+                                        text-[14px]
+                                        leading-6
+                                        font-normal
+                                        md:text-[16px]">Pay conveniently using multiple credit cards for added flexibility.</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="cshop">
-            <div class="cshop__all">
-                <div class="products__container">
-                    <div class="cshop__container">
-                        <div class="cshop__content-container--1">
-                            <div class="cshop__image-stage cshop__image-stage--top">
-                                <img class="cshop__img--1" src="Assets/Layered Image table.png" alt="">
-                                <img class="cshop__img--2" src="Assets/Layer Image Chair.png" alt="">
-                                <img class="cshop__img--3" src="Assets/Layer Image Accessories.png" alt="">
+        <section class="cshop
+                        w-full
+                        bg-[#F6F2EE]
+                        mx-auto
+                        flex justify-center items-center
+                        lg:aspect-[120/47]
+                        lg:max-h-[752px]">
+            <div class="cshop__all w-full flex justify-center items-center my-[45px]">
+                <div class="w-[92%] max-w-[1410px] lg:w-[73.438%]">
+                    <div class="cshop__container
+                                flex flex-col items-center
+                                gap-[24px] w-full
+                                lg:flex-row
+                                lg:justify-center
+                                lg:items-center
+                                lg:h-full">
+                        <div class="cshop__content-container--1 w-full relative flex justify-center items-center lg:w-[30%]">
+                            <div class="cshop__image-stage cshop__image-stage--top
+                                        relative w-full
+                                        max-w-[390px]
+                                        mx-auto
+                                        origin-center
+                                        aspect-[390/182.38]
+
+                                        lg:max-w-[520px]
+                                        lg:scale-[1.15]
+                                        2xl:scale-[1.3]
+                                        min-[1700px]:scale-[1.45]">
+                                <img class="cshop__img--1 absolute max-w-none w-[30%] top-[30%] left-0 z-[3] lg:w-[31%] lg:top-[19%] lg:left-[9%]" src="Assets/Layered Image table.png" alt="">
+                                <img class="cshop__img--2 absolute max-w-none w-[30%] top-[-9%] left-[27%] lg:w-[52.5%] lg:top-[-67%] lg:left-[20%]" src="Assets/Layer Image Chair.png" alt="">
+                                <img class="cshop__img--3 absolute max-w-none w-[30%] bottom-[1%] left-[70%] lg:w-[37%] lg:bottom-[-58%] lg:left-[45%]" src="Assets/Layer Image Accessories.png" alt="">
                             </div>
                         </div>
-                        <div class="cshop__content-container--2">
-                            <div class="cshop__headlabel">RENOVATE YOUR HOME AT</div>
-                            <h2 class="headings">78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi</h2>
+                        <div class="cshop__content-container--2
+                                    w-full relative
+                                    flex flex-col items-center
+                                    text-center gap-[6px]
+                                    lg:w-[40%]
+                                    lg:justify-between">
+                            <div class="cshop__headlabel
+                                        font-medium
+                                        text-[16px]
+                                        uppercase
+                                        text-black
+                                        lg:w-[30.3%]">RENOVATE YOUR HOME AT</div>
+                            <h2 class="headings
+                                        text-[32px]
+                                        leading-[56px]
+                                        font-normal
+                                        w-[82%]
+                                        max-w-[370px]
+                                        mt-[6px]
+                                        text-black
+                                        lg:mt-[18px]">78 Trung Kinh, Yen Hoa, Cau Giay, Hanoi</h2>
                             <div class="cshop__link">
-                                <a href="https://instagram.com/ugmonk">@ORANGY</a>
+                                <a href="https://instagram.com/ugmonk"
+                                class="inline-block
+                                        mt-[20px]
+                                        px-[40px] py-[8px]
+                                        border border-[#D1CECA]
+                                        text-black
+                                        text-[16px]
+                                        font-medium
+                                        no-underline">@ORANGY</a>
                             </div>
                         </div>
-                        <div class="cshop__content-container--3">
-                            <div class="cshop__image-stage cshop__image-stage--bottom">
-                                <img class="cshop__img--1" src="Assets/Layer Image Sitting.png" alt="">
-                                <img class="cshop__img--2" src="Assets/Layer Image Decor.png" alt="">
+                        <div class="cshop__content-container--3 w-full relative flex justify-center items-center lg:w-[30%]">
+                            <div class="cshop__image-stage cshop__image-stage--bottom
+                                        relative w-full
+                                        max-w-[390px]
+                                        mx-auto
+                                        origin-center
+                                        aspect-[390/109.19]
+
+                                        lg:max-w-[520px]
+                                        lg:scale-[1.15]
+                                        2xl:scale-[1.3]
+                                        min-[1700px]:scale-[1.45]">
+                                <img class="cshop__img--1 absolute max-w-none
+                                            w-[30%]
+                                            top-[19%]
+                                            right-[63%]
+
+                                            lg:w-[55%]
+                                            lg:top-[-133%]
+                                            lg:right-[10%]"
+                                            src="Assets/Layer Image Sitting.png" alt="">
+                                <img class="cshop__img--2 absolute max-w-none
+                                            w-[30%]
+                                            bottom-[-14%]
+                                            right-[8%]
+
+                                            lg:w-[42%]
+                                            lg:bottom-[-118%]
+                                            lg:right-[40%]"
+                                            src="Assets/Layer Image Decor.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -845,92 +1331,122 @@
             </div>
         </section>
 
-        <section class="footer">
-            <div class="products__container">
-                <div class="footer__container">
-                    <div class="footer__email">
-                        <div class="footer__header">
-                            <div class="footer__title headings">Subscribe to get 10% OFF</div>
-                            <div class="footer__content">Subscribe for store updates and discounts.</div>
+        <section class="footer bg-black text-white flex flex-col justify-center items-center text-center">
+            <div class="w-[92%] max-w-[1410px] lg:w-[73.438%]">
+                <div class="footer__container flex flex-col items-center mt-[30px] mb-[10px] min-[492px]:mt-[50px]">
+                    <div class="footer__email w-full text-center min-[492px]:w-[465px]">
+                        <div class="footer__header mb-[22px]">
+                            <div class="footer__title headings
+                                        font-normal
+                                        text-[24px]
+                                        leading-[33.6px]
+                                        text-left text-white
+
+                                        min-[492px]:text-[32px]
+                                        min-[492px]:leading-[42px]
+                                        min-[492px]:text-center">Subscribe to get 10% OFF</div>
+                            <div class="footer__content
+                                        font-normal
+                                        text-[16px]
+                                        leading-6
+                                        text-left
+                                        mt-[11px] mb-[20px]
+                                        min-[492px]:text-center">Subscribe for store updates and discounts.</div>
                         </div>
                         <form class="footer__form" id="newsletter-form" method="post" action="https://script.google.com/macros/s/AKfycbwlnruolAEFek8x1wUYLxocHdIuwHWrHYXSfzSXZSygslzejM-ppDe76EuK8jkKWyB4/exec">
-                            <div class="footer__input">
-                                <input name="email" id="footer-email" type="email" placeholder="Email" required autocomplete="email" title="Vui lòng nhập vào địa chỉ email hợp lệ (e.g. name@example.com)">
-                                <button class="footer__send" type="submit" aria-label="Send"></button>
+                            <div class="footer__input flex justify-between items-center w-full relative">
+                                <input name="email" id="footer-email" type="email" placeholder="Email" required autocomplete="email" title="Vui lòng nhập vào địa chỉ email hợp lệ (e.g. name@example.com)" class="w-full p-[16px] text-[16px] text-black bg-white">
+                                <button class="footer__send
+                                                absolute
+                                                right-[20px]
+                                                top-[19px]
+                                                w-[6.25px]
+                                                h-[12.5px]
+                                                bg-no-repeat
+                                                bg-contain
+                                                bg-center
+                                                border-none
+                                                cursor-pointer
+                                                [background-image:url('../Assets/send-button.svg')]"
+                                                type="submit" aria-label="Send"></button>
                             </div>
 
                             <div 
-                                class="g-recaptcha"
+                                class="g-recaptcha mt-[10px] flex items-center justify-start min-[492px]:justify-center"
                                 data-sitekey="6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY"
                                 id="recaptcha-newsletter">
                             </div>
-                            <div id="recaptcha-error-message" class="footer__form--error">
+                            <div id="recaptcha-error-message" class="footer__form--error text-red-500 text-[12px] mt-[5px] hidden min-[492px]:text-center">
                                 Please complete the CAPTCHA.
                             </div>
                         </form>
-                        <div class="footer__media">
-                            <a href="https://facebook.com/ugmonk">
-                                <img src="Assets/fb.png" alt="" style="width: 16.99px; height: 16.89px;">
+                        <div class="footer__media flex gap-[16px] mt-[16px] justify-start min-[492px]:justify-center">
+                            <a class="w-[24px] h-[24px]" href="https://facebook.com/ugmonk">
+                                <img src="Assets/fb.png" alt="" class="object-contain w-[16.99px] h-[16.89px]">
                             </a>
-                            <a href="https://twitter.com/ugmonk">
-                                <img src="Assets/x.png" alt="" style="width: 20.31px; height: 20.21px;">
+                            <a class="w-[24px] h-[24px]" href="https://twitter.com/ugmonk">
+                                <img src="Assets/x.png" alt="" class="object-contain w-[20.31px] h-[20.21px]">
                             </a>
-                            <a href="https://instagram.com/ugmonk">
-                                <img src="Assets/instagram.png" alt="" style="width: 20.45px; height: 20.45px;">
+                            <a class="w-[24px] h-[24px]" href="https://instagram.com/ugmonk">
+                                <img src="Assets/instagram.png" alt="" class="object-contain w-[20.45px] h-[20.45px]">
                             </a>
-                            <a href="https://twitter.com/ugmonk">
-                                <img src="Assets/tiktok.png" alt="" style="width: 14.55px; height: 16px;">
+                            <a class="w-[24px] h-[24px]" href="https://twitter.com/ugmonk">
+                                <img src="Assets/tiktok.png" alt="" class="object-contain w-[14.55px] h-[16px]">
                             </a>
-                            <a href="https://twitter.com/ugmonk">
-                                <img src="Assets/yt.png" alt="" style="width: 20px; height: 14px;">
+                            <a class="w-[24px] h-[24px]" href="https://twitter.com/ugmonk">
+                                <img src="Assets/yt.png" alt="" class="object-contain w-[20px] h-[14px]">
                             </a>
-                            <a href="https://twitter.com/ugmonk">
-                                <img src="Assets/vimeo.png" alt="" style="width: 16px; height: 13.85px;">
+                            <a class="w-[24px] h-[24px]" href="https://twitter.com/ugmonk">
+                                <img src="Assets/vimeo.png" alt="" class="object-contain w-[16px] h-[13.85px]">
                             </a>
                         </div>
-                        <div class="footer__copyright"><span>© 2024</span>&nbsp;<span class="footer__underline">ORANGY</span></div>
+                        <div class="footer__copyright flex items-center mt-[20px] justify-start min-[492px]:justify-center">
+                            <span class="font-normal text-[16px] leading-6 text-white/80">© 2024</span>&nbsp;
+                            <span class="footer__underline font-normal text-[16px] leading-6 text-white/80 min-[492px]:underline">ORANGY</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
     <input type="checkbox" id="discount-toggle" hidden checked>
-    <div id="popup-discount" class="popup popup__discount">
-        <label for="discount-toggle" class="popup__overlay"></label>
-        <div class="popup__content">
-            <div class="popup__image"></div>
-            <label for="discount-toggle" class="popup__close"></label>
-            <div class="popup__text">
-                <div class="popup__sale-container headings">
-                    <div class="popup__sale-content">Big Sale</div>
-                    <p class="popup__sale-50">Up to 50% Off</p>
-                    <p class="popup__sale-date">Black Friday</p>
+    <div id="popup-discount" class="popup popup__discount hidden flex fixed inset-0 bg-black/65 justify-center items-center z-[10000]">
+        <label for="discount-toggle" class="popup__overlay fixed inset-0 cursor-pointer"></label>
+        <div class="popup__content flex flex-col bg-white w-full max-w-[300px] relative text-center md:flex-row md:text-left md:max-w-[880px] md:mx-[20px]">
+            <div class="popup__image w-full h-[180px] bg-cover bg-[position:center_79%] [background-image:url('../Assets/Popup-image.jpg.png')] md:max-w-[420px] md:h-[396px]"></div>
+            <label for="discount-toggle" class="popup__close absolute top-[12px] right-[8px] w-[32px] h-[32px] bg-no-repeat bg-contain bg-center cursor-pointer [background-image:url('../Assets/Button-Close.svg')] md:right-[12px] md:w-[48px] md:h-[48px]"></label>
+            <div class="popup__text p-[24.5px_27.6px] md:h-[396px] md:max-w-[460px] md:min-w-[388px] md:w-[55%] md:p-[9.2%] text-center">
+                <div class="popup__sale-container headings my-[3px] mb-[14px]">
+                    <div class="popup__sale-content text-[24px] leading-[42px] font-normal md:text-[32px] md:leading-[56px] text-center">Big Sale</div>
+                    <p class="popup__sale-50 text-[32px] leading-[42px] md:text-[36px] md:leading-[56px]">Up to 50% Off</p>
+                    <p class="popup__sale-date popup__sale-50 text-[32px] leading-[42px] md:text-[36px] md:leading-[56px]">Black Friday</p>
                 </div>
-                <div class="popup__sale-app">
-                    <p>Applicable to all products from Nov 25 to Nov 29</p>
+                <div class="popup__sale-app flex justify-center items-center">
+                    <p class="text-[14px] leading-[24px] max-w-[210px]">Applicable to all products from Nov 25 to Nov 29</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <input type="checkbox" id="success-toggle" hidden checked>
-    <div id="popup-success" class="popup" style="display:none;">
-        <label for="discount-toggle" class="popup__overlay"></label>
-        <div class="popup__content">
-            <label for="discount-toggle" class="popup__close"></label>
-            <div class="popup__sale-message headings">
+    <input type="checkbox" id="success-toggle" hidden>
+    <div id="popup-success" class="popup fixed inset-0 bg-black/65 hidden justify-center items-center z-[10000]">
+
+        <label for="success-toggle" class="popup__overlay fixed inset-0 cursor-pointer"></label>
+        <div class="popup__content flex flex-col bg-white w-full max-w-[300px] relative text-center md:flex-row md:text-left md:max-w-[880px] md:mx-[20px]">
+            <label for="success-toggle" class="popup__close absolute top-[12px] right-[8px] w-[32px] h-[32px] bg-no-repeat bg-contain bg-center cursor-pointer [background-image:url('../Assets/Button-Close.svg')] md:right-[12px] md:w-[48px] md:h-[48px]"></label>
+            <div class="popup__sale-message headings py-[40px] mx-auto text-[24px] leading-[42px] md:text-[32px] md:leading-[56px] text-center">
                 <p>Thank you!</p>
                 <p>Data has been sent successfully.</p>
             </div>
         </div>
     </div>
 
-    <input type="checkbox" id="error-toggle" hidden checked>
-    <div id="popup-error" class="popup" style="display:none;">
-        <label for="discount-toggle" class="popup__overlay"></label>
-        <div class="popup__content error">
-            <label for="discount-toggle" class="popup__close"></label>
-            <div class="popup__sale-message headings">
+    <input type="checkbox" id="error-toggle" hidden>
+    <div id="popup-error" class="popup fixed inset-0 bg-black/65 hidden justify-center items-center z-[10000]">
+        <label for="error-toggle" class="popup__overlay fixed inset-0 cursor-pointer"></label>
+        <div class="popup__content error md:max-w-[782px] flex flex-col bg-white w-full max-w-[300px] relative text-center md:flex-row md:text-left md:max-w-[880px] md:mx-[20px]">
+            <label for="error-toggle" class="popup__close absolute top-[12px] right-[8px] w-[32px] h-[32px] bg-no-repeat bg-contain bg-center cursor-pointer [background-image:url('../Assets/Button-Close.svg')] md:right-[12px] md:w-[48px] md:h-[48px]"></label>
+            <div class="popup__sale-message headings py-[40px] mx-auto text-[24px] leading-[42px] md:text-[32px] md:leading-[56px] text-center">
                 <p>Oops! An error occurred.</p>
                 <p>Please check your information and try again.</p>
             </div>
