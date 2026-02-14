@@ -544,6 +544,9 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
+  .min-h-\[77\.5px\] {
+    min-height: 77.5px;
+  }
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
@@ -1479,11 +1482,6 @@
       max-width: 782px;
     }
   }
-  .md\:max-w-\[800px\] {
-    @media (width >= 48rem) {
-      max-width: 800px;
-    }
-  }
   .md\:max-w-\[880px\] {
     @media (width >= 48rem) {
       max-width: 880px;
@@ -1492,6 +1490,11 @@
   .md\:min-w-60 {
     @media (width >= 48rem) {
       min-width: calc(var(--spacing) * 60);
+    }
+  }
+  .md\:min-w-\[280px\] {
+    @media (width >= 48rem) {
+      min-width: 280px;
     }
   }
   .md\:min-w-\[300px\] {
@@ -2050,6 +2053,11 @@
       max-width: 291px;
     }
   }
+  .xl\:min-w-\[184px\] {
+    @media (width >= 80rem) {
+      min-width: 184px;
+    }
+  }
   .xl\:flex-\[0_0_20\.64\%\] {
     @media (width >= 80rem) {
       flex: 0 0 20.64%;
@@ -2058,6 +2066,11 @@
   .xl\:justify-center {
     @media (width >= 80rem) {
       justify-content: center;
+    }
+  }
+  .xl\:gap-5 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 5);
     }
   }
   .xl\:gap-10 {
@@ -2246,6 +2259,40 @@ html {
 }
 .headings {
   font-family: "Lora", serif;
+}
+@media (prefers-reduced-motion: no-preference) {
+  [class*=aos-] {
+    opacity: 0;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+  }
+}
+.aos-fade {
+  animation-name: aosFade;
+}
+@keyframes aosFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.aos-fade-up {
+  animation-name: aosFadeUp;
+}
+@keyframes aosFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 #cookie-toggle:not(:checked) ~ #cookie-consent {
   display: none;

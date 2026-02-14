@@ -16,7 +16,7 @@ html {
 .headings {
   font-family: "Lora", serif;
 }
-/* 
+
 @media (prefers-reduced-motion: no-preference) {
   [class*=aos-] {
     opacity: 0;
@@ -52,7 +52,7 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
-} */
+}
 
 #cookie-toggle:not(:checked) ~ #cookie-consent {
   display: none;
