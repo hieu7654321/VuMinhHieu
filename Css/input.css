@@ -1,20 +1,208 @@
 @import "tailwindcss";
 
 @theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-lora: "Lora", serif;
+
+  --color-tag-new: #054E4A;
+  --color-30-off: #A42003;
+  --color-price-discount: #D63A2F;
+  --color-price-original: #666666;
+  --color-saleblock-content: #6E331A;
+  --color-contactus-background: #F6F3EE;
+  --color-input-border: #E6E6E6;
+  --color-faq-border: #EDEDED;
+  --color-cshop-bg: #F6F2EE;
+  --color-cshop-border: #D1CECA;
+
+  --spacing-cookie-px: 19.61px;
+  --spacing-hero-img: 200%;
+  --spacing-hero-top: 175.8px;
+  --spacing-hero-leading: 76.8px;
+  --spacing-hero-w: 82.4%;
+  --spacing-hero-mx: 30.84px;
+  --spacing-hero-lgmx: 40.84px;
+  --spacing-products-lgmt: 5.2%;
+  --spacing-container-sm: 92.31%;
+  --spacing-container-lg: 73.438%;
+  --spacing-417-mx: 4.17%;
+  --spacing-86-px: 8.6px;
+  --spacing-22p-gap: 2.2%;
+  --spacing-143p-gap: 1.43%;
+  --spacing-productslider-mt: 45.3px;
+  --spacing-sliderw-sm: 35%;
+  --spacing-sliderw-xl: 24%;
+  --spacing-sliderw-2xl: 24.45%;
+  --spacing-star-3084: 30.84px;
+
   --breakpoint-2xl: 120rem;
+
+  --text-12px: 12px;
+  --text-14px: 14px;
+  --text-15px: 15px;
+  --text-16px: 16px;
+  --text-18px: 18px;
+  --text-20px: 20px;
+  --text-24px: 24px;
+  --text-26px: 26px;
+  --text-28px: 28px;
+  --text-32px: 32px;
+  --text-36px: 36px;
+  --text-46px: 46px;
+  --text-48px: 48px;
+  --text-52px: 52px;
+  --text-56px: 56px;
+  --text-58px: 58px;
+  --text-60px: 60px;
+  --text-68px: 68px;
+  --text-72px: 72px;
+  --text-74px: 74px;
+
+  --leading-discount-225px: 22.5px;
+  --leading-slider-384: 38.4px;
+
+  --aspect-cshop: 120 / 47;
+  --aspect-cstop: 390 / 182.38;
+  --aspect-csbot: 390 / 109.19;
+}
+
+@layer utilities {
+  .object-62-center {
+    object-position: 62% center;
+  }
+}
+
+@layer components {
+  .headings {
+    font-family: var(--font-lora);
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .global-container {
+    @apply w-container-sm max-w-352.5 lg:w-container-lg;
+  }
+
+  .cookie-btn {
+    @apply px-cookie-px py-1.25 text-16px leading-6 font-bold uppercase cursor-pointer;
+  }
+
+  .header__nav--prev {
+    @apply absolute z-20 left-3.75 top-1/2 -translate-y-1/2 w-1.25 h-2.5 bg-no-repeat bg-center bg-contain bg-[url('../Assets/Prev-Button.svg')];
+  }
+
+  .header__nav--next {
+    @apply absolute z-20 right-3.75 top-1/2 -translate-y-1/2 w-1.25 h-2.5 bg-no-repeat bg-center bg-contain bg-[url('../Assets/next-button.svg')];
+  }
+
+  .header__slide {
+    @apply absolute inset-0 flex items-center justify-center text-center opacity-0 pointer-events-none transition-opacity duration-350 md:static md:opacity-100 md:pointer-events-auto;
+
+      span {
+        @apply w-full font-normal text-14px leading-6;
+      }
+  }
+
+  .products__tab {
+    @apply cursor-pointer text-16px uppercase;
+  }
+
+  .products__grid {
+    @apply hidden gap-7 md:grid-cols-2 md:gap-x-2.5 md:gap-y-7.25 justify-center;
+  }
+
+  .products__item {
+    @apply flex flex-col max-w-90 md:max-w-175;
+  }
+
+  .products__card {
+    @apply relative flex flex-col;
+  }
+
+  .products__img--wide {
+    @apply aspect-700/460 overflow-hidden mb-4;
+
+      img {
+        @apply w-full h-full object-fill block;
+      }
+  }
+
+  .products__info {
+    @apply flex flex-col;
+      span {
+        @apply text-14px uppercase text-black/60;
+      }
+
+      h3 {
+        @apply my-1 text-16px font-medium;
+      }
+
+      p {
+        @apply text-16px;
+      }
+  }
+
+  .products__info--discount {
+    @apply flex flex-col;
+      span {
+        @apply text-14px uppercase text-black/60;
+      }
+
+      h3 {
+        @apply my-1 text-16px font-medium;
+      }
+  }
+
+  .tag__sellingfast {
+    @apply absolute top-3 left-3 bg-black text-white text-14px font-bold px-2.25 py-0.75;
+  }
+
+  .tag__new {
+    @apply absolute top-9.75 left-3 bg-tag-new text-white text-14px font-bold px-2.25 py-0.75;
+  }
+
+  .tag__30off {
+    @apply absolute top-3 left-3 z-10 bg-30-off text-white text-14px font-bold leading-4.5 px-86-px py-0.75 md:py-2.75;
+  }
+
+  .products__item--tall {
+    @apply grid grid-cols-2 gap-22p-gap md:gap-143p-gap max-w-90 md:max-w-175;
+  }
+
+  .products__img--tall {
+    @apply aspect-3/4 overflow-hidden mb-4;
+
+      img {
+        @apply w-full h-full object-fill block;
+      }
+  }
+
+  .product-slider__item {
+    @apply flex-none snap-start relative w-[clamp(220px,70vw,265px)] sm:w-sliderw-sm xl:w-sliderw-xl 2xl:w-sliderw-2xl 2xl:max-w-86.25;
+
+      .product-slider__image {
+        @apply w-full aspect-265/353 overflow-hidden mb-4 2xl:aspect-345/460;
+
+          img {
+            @apply w-full h-full object-cover block;
+          }
+      }
+  }
+
+  .carousel__star {
+    @apply w-star-3084 h-8 cursor-pointer p-0 border-0;
+  }
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins);
 }
 
 html {
   scroll-behavior: smooth;
   overflow-y: auto;
-}
-
-.headings {
-  font-family: "Lora", serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -46,7 +234,7 @@ html {
 @keyframes aosFadeUp {
   from {
     opacity: 0;
-    transform: translateY(60px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -58,20 +246,6 @@ html {
   display: none;
 }
 
-.header__nav--prev {
-  background-image: url("../Assets/Prev-Button.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.header__nav--next {
-  background-image: url("../Assets/next-button.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
 #slide-1:checked ~ .header__slider .header__slide--phone {
   opacity: 1;
   pointer-events: auto;
@@ -80,10 +254,6 @@ html {
 #slide-2:checked ~ .header__slider .header__slide--address {
   opacity: 1;
   pointer-events: auto;
-}
-
-.header__slide {
-  pointer-events: none;
 }
 
 #slide-1:checked ~ .header__nav--group-1 { display: block; }
@@ -113,10 +283,6 @@ html {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-.products__grid {
-  display: none;
 }
 
 #tab-seating:checked ~ .flex .products__tab[for="tab-seating"],
