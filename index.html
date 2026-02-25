@@ -152,7 +152,7 @@
                 src="Assets/hero.png"
                 alt=""
                 class="w-hero-img h-hero-img
-                    object-cover object-62-center
+                    object-cover object-pos-hero
                     shrink-0
                     lg:w-full lg:h-300
                     lg:object-center"
@@ -600,7 +600,7 @@
         <section class="product-slider w-full flex-center mt-productslider-mt">
             <div class="global-container">
                 <div class="product-slider__heading mt-1.25 mb-8.5 xl:mt-2.5 xl:mb-12.5">
-                    <h2 class="font-normal text-28px leading-slider-384 text-center m-0
+                    <h2 class="font-normal text-28px leading-c384 text-center m-0
                                 xl:text-36px xl:leading-12 headings">
                         Discover unique items
                     </h2>
@@ -609,9 +609,7 @@
                             flex gap-2.5 w-full
                             overflow-x-auto scroll-smooth snap-x snap-mandatory
                             pb-2.5
-                            [scrollbar-width:none]
-                            [-ms-overflow-style:none]
-                            [&::-webkit-scrollbar]:hidden
+                            no-scrollbar
                             2xl:justify-center">
                     <div class="product-slider__item">
                         <div class="product-slider__image">
@@ -703,21 +701,15 @@
                 <div class="sale-block__container
                             flex justify-center gap-6 flex-wrap
                             md:justify-between
-                            xl:mt-[1.5px]">
-                    <div class="sale-block__item aos-fade-up
-                                w-full max-w-[419.94px]
-                                aspect-3/4
-                                md:w-[29.78%]">
+                            xl:mt-saleblock-xlmt">
+                    <div class="sale-block__item aos-fade-up">
                         <div class="sale-block__image w-full h-full overflow-hidden">
                             <img src="Assets/Bundle and save.jpg"
                                 alt="Sale Image 1"
                                 class="w-full h-full object-cover">
                         </div>
                     </div>
-                    <div class="sale-block__item aos-fade-up
-                                w-full max-w-[419.94px]
-                                aspect-3/4
-                                md:w-[29.78%]">
+                    <div class="sale-block__item aos-fade-up">
                         <div class="sale-block__content
                                     w-full h-full
                                     bg-saleblock-content text-white
@@ -728,7 +720,7 @@
                                         h-full m-7.5
                                         flex flex-col
                                         justify-between
-                                        gap-[11%]">
+                                        gap-saleblock-gap">
 
                                 <div class="sale-block__label
                                             text-16px leading-6
@@ -738,20 +730,20 @@
                                 </div>
                                 <div class="sale-block__text">
                                     <h3 class="headings
-                                                text-46px leading-16
+                                                text-46px leading-11.5
                                                 h-32 max-w-50
                                                 flex-center
                                                 mx-auto font-normal
-                                                max-[365px]:leading-11.5
+                                                w365:leading-16
 
                                                 md:text-26px md:leading-8
-                                                md:h-[25%] md:max-w-30
+                                                md:h-saleblock-mdh md:max-w-30
 
                                                 lg:text-32px lg:leading-8
-                                                lg:h-[40%] lg:max-w-37.5
+                                                lg:h-c40p lg:max-w-37.5
 
                                                 xl:text-52px xl:leading-16
-                                                xl:h-[55%] xl:max-w-55
+                                                xl:h-c55p xl:max-w-55
 
                                                 2xl:text-56px 2xl:leading-20
                                                 2xl:h-36 2xl:max-w-60">
@@ -770,10 +762,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sale-block__item aos-fade-up
-                                w-full max-w-[419.94px]
-                                aspect-3/4
-                                md:w-[29.78%]">
+                    <div class="sale-block__item aos-fade-up">
                         <div class="sale-block__image w-full h-full overflow-hidden">
                             <img src="Assets/Renovate your home.png"
                                 alt="Sale Image 3"
@@ -790,18 +779,18 @@
             <div class="global-container">
                 <div class="contact-us__container
                             flex-center flex-wrap
-                            mt-[47.73px] mb-15.75
+                            mt-contactus-mt mb-15.75
                             md:mt-25 md:mb-14">
                     <div class="contact-us__heading w-full">
                         <div class="contact-us__title
-                                    w-79.5 mx-auto
-                                    max-[350px]:w-70
+                                    w-70 mx-auto
+                                    w350:w-79.5
                                     md:w-102.25">
                             <div class="contact-us__inner headings
                                         w-full text-center font-normal
-                                        text-28px leading-[38.4px]
-                                        max-[350px]:text-18px
-                                        max-[350px]:leading-[28.4px]
+                                        text-18px leading-c284
+                                        w350:text-28px
+                                        w350:leading-c384
                                         md:text-36px md:leading-12">
                                 <div class="contact-us__inner--1">Contact us to order and</div>
                                 <div class="contact-us__inner--2">receive purchase advice</div>
@@ -810,25 +799,25 @@
                     </div>
 
                     <div class="contact-us__content w-full">
-                        <form class="contact-us__form flex flex-col gap-4 mt-[38.44px] md:mt-15" id="contact-form" autocomplete="on" method="post" action="https://script.google.com/macros/s/AKfycbxaT6WO1DzUEA4cofWd7lTgQYZToU2tdpeI96PJtLXJYqgZ7L1lQ1tXY1U4598PGAk2ww/exec">
-                            <div class="contact-us__form-component--1 contact-us__form-row flex flex-col gap-2.5 md:flex-row md:gap-[3.5%]">
-                                <div class="contact-us__form-field flex flex-col md:w-1/2">
-                                    <label for="name" class="mb-2 text-16px leading-6 font-normal">Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Name" required autocomplete="name" class="font-poppins text-16px py-[12.5px] px-4 border border-input-border bg-white">
+                        <form class="contact-us__form flex flex-col gap-4 mt-c3844 md:mt-15" id="contact-form" autocomplete="on" method="post" action="https://script.google.com/macros/s/AKfycbxaT6WO1DzUEA4cofWd7lTgQYZToU2tdpeI96PJtLXJYqgZ7L1lQ1tXY1U4598PGAk2ww/exec">
+                            <div class="contact-us__form-component--1 contact-us__form-row">
+                                <div class="contact-us__form-field">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Name" required autocomplete="name">
                                 </div>
-                                <div class="contact-us__form-field flex flex-col md:w-1/2">
-                                    <label for="email" class="mb-2 text-16px leading-6 font-normal">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email" title="Vui lòng nhập vào địa chỉ email hợp lệ (e.g. name@example.com)" class="font-poppins text-16px py-[12.5px] px-4 border border-input-border bg-white">
+                                <div class="contact-us__form-field">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email" title="Vui lòng nhập vào địa chỉ email hợp lệ (e.g. name@example.com)">
                                 </div>
                             </div>
-                            <div class="contact-us__form-component--2 contact-us__form-row flex flex-col gap-2.5 md:flex-row md:gap-[3.5%]">
-                                <div class="contact-us__form-field flex flex-col md:w-1/2">
-                                    <label for="phone" class="mb-2 text-16px leading-6 font-normal">Phone</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="Phone" required autocomplete="tel" pattern="(\+84|0)[0-9]{8,15}" title="Vui lòng nhập số điện thoại hợp lệ (ví dụ: +84912345678 hoặc 0912345678)" class="font-poppins text-16px py-[12.5px] px-4 border border-input-border bg-white">
+                            <div class="contact-us__form-component--2 contact-us__form-row">
+                                <div class="contact-us__form-field">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone" required autocomplete="tel" pattern="(\+84|0)[0-9]{8,15}" title="Vui lòng nhập số điện thoại hợp lệ (ví dụ: +84912345678 hoặc 0912345678)">
                                 </div>
-                                <div class="contact-us__form-field flex flex-col md:w-1/2">
-                                    <label for="address" class="mb-2 text-16px leading-6 font-normal">Address</label>
-                                    <input type="text" id="address" name="address" placeholder="Address" autocomplete="address-level1" class="font-poppins text-16px py-[12.5px] px-4 border border-input-border bg-white">
+                                <div class="contact-us__form-field">
+                                    <label for="address">Address</label>
+                                    <input type="text" id="address" name="address" placeholder="Address" autocomplete="address-level1">
                                 </div>
                             </div>
                             <div class="contact-us__form-component--3">
@@ -858,7 +847,7 @@
                                                             bg-black text-white
                                                             text-16px leading-7.5
                                                             font-medium uppercase
-                                                            tracking-[1.2px]
+                                                            tracking-c12
                                                             border-0 cursor-pointer">SUBMIT NOW</button>
                                 <div class="contact-us__required
                                             mt-5
@@ -880,8 +869,8 @@
                             gap-12.5
                             mt-7.5
                             xl:gap-15 xl:mt-20">
-                    <div class="inspiration__header w-full min-[492px]:w-[80%] md:w-[60%] xl:w-[40%]">
-                        <div class="inspiration__title headings w-full text-center font-normal  text-28px leading-[38.4px]  xl:text-36px xl:leading-12">
+                    <div class="inspiration__header w-full w492:w-c80p md:w-c60p xl:w-c40p">
+                        <div class="inspiration__title headings w-full text-center font-normal text-28px leading-c384 xl:text-36px xl:leading-12">
                             Change the look of your house, change the perspective of others
                         </div>
                     </div>
@@ -893,44 +882,43 @@
                                 overflow-x-auto overflow-y-hidden
                                 scroll-smooth
                                 snap-x snap-mandatory
-                                [-webkit-overflow-scrolling:touch]
-                                [scrollbar-width:none]
+                                disable-scrollbar
                                 xl:justify-center
-                                xl:gap-[5.8%]">
-                        <div class="inspiration__block aos-fade w-66.25 flex-[0_0_265px] snap-start flex-center flex-col text-center xl:w-[20.64%] xl:flex-[0_0_20.64%] xl:max-w-72.75">
+                                xl:gap-c5c8p">
+                        <div class="inspiration__block aos-fade">
                             <div class="inspiration__image">
-                                <img src="Assets/Showroom.png" alt="Showroom" class="w-full h-auto object-cover block">
+                                <img src="Assets/Showroom.png" alt="Showroom">
                             </div>
                             <div class="inspiration__info">
-                                <div class="inspiration__info-title headings text-left font-normal text-20px leading-[30.4px] mt-5.25 mb-0.75 xl:text-24px xl:leading-9.5 xl:mt-4 xl:mb-2">Showroom</div>
-                                <div class="inspiration__info-content text-left font-normal text-14px leading-6 xl:text-16px">Experience design for living at our flagship showroom located in Boston’s South End.</div>
+                                <div class="inspiration__info-title headings">Showroom</div>
+                                <div class="inspiration__info-content">Experience design for living at our flagship showroom located in Boston’s South End.</div>
                             </div>
                         </div>
-                        <div class="inspiration__block aos-fade w-66.25 flex-[0_0_265px] snap-start flex-center flex-col text-center xl:w-[20.64%] xl:flex-[0_0_20.64%] xl:max-w-72.75">
+                        <div class="inspiration__block aos-fade">
                             <div class="inspiration__image">
-                                <img src="Assets/Interior work.png" alt="Interior work" class="w-full h-auto object-cover block">
+                                <img src="Assets/Interior work.png" alt="Interior work">
                             </div>
                             <div class="inspiration__info">
-                                <div class="inspiration__info-title headings text-left font-normal text-20px leading-[30.4px] mt-5.25 mb-0.75 xl:text-24px xl:leading-9.5 xl:mt-4 xl:mb-2">Interior work</div>
-                                <div class="inspiration__info-content text-left font-normal text-14px leading-6 xl:text-16px">Crafting spaces through meticulous planning, material selection, and creative execution, enhancing aesthetics and functionality.</div>
+                                <div class="inspiration__info-title headings">Interior work</div>
+                                <div class="inspiration__info-content">Crafting spaces through meticulous planning, material selection, and creative execution, enhancing aesthetics and functionality.</div>
                             </div>
                         </div>
-                        <div class="inspiration__block aos-fade w-66.25 flex-[0_0_265px] snap-start flex-center flex-col text-center xl:w-[20.64%] xl:flex-[0_0_20.64%] xl:max-w-72.75">
+                        <div class="inspiration__block aos-fade">
                             <div class="inspiration__image">
-                                <img src="Assets/Authentic Design.jpg" alt="Authentic Design" class="w-full h-auto object-cover block">
+                                <img src="Assets/Authentic Design.jpg" alt="Authentic Design">
                             </div>
                             <div class="inspiration__info">
-                                <div class="inspiration__info-title headings text-left font-normal text-20px leading-[30.4px] mt-5.25 mb-0.75 xl:text-24px xl:leading-9.5 xl:mt-4 xl:mb-2">Authentic design</div>
-                                <div class="inspiration__info-content text-left font-normal text-14px leading-6 xl:text-16px">We only carry designs we believe in ethically and aesthetically – original, authentic pieces that are made to last.</div>
+                                <div class="inspiration__info-title headings">Authentic design</div>
+                                <div class="inspiration__info-content">We only carry designs we believe in ethically and aesthetically – original, authentic pieces that are made to last.</div>
                             </div>
                         </div>
-                        <div class="inspiration__block aos-fade w-66.25 flex-[0_0_265px] snap-start flex-center flex-col text-center xl:w-[20.64%] xl:flex-[0_0_20.64%] xl:max-w-72.75">
+                        <div class="inspiration__block aos-fade">
                             <div class="inspiration__image">
-                                <img src="Assets/Custom additions.png" alt="Custom additions" class="w-full h-auto object-cover block">
+                                <img src="Assets/Custom additions.png" alt="Custom additions">
                             </div>
                             <div class="inspiration__info">
-                                <div class="inspiration__info-title headings text-left font-normal text-20px leading-[30.4px] mt-5.25 mb-0.75 xl:text-24px xl:leading-9.5 xl:mt-4 xl:mb-2">Custom additions</div>
-                                <div class="inspiration__info-content text-left font-normal text-14px leading-6 xl:text-16px">Tailoring unique elements to spaces, elevating interiors with personalized craftsmanship and design solutions.</div>
+                                <div class="inspiration__info-title headings">Custom additions</div>
+                                <div class="inspiration__info-content">Tailoring unique elements to spaces, elevating interiors with personalized craftsmanship and design solutions.</div>
                             </div>
                         </div>
                     </div>
@@ -942,38 +930,38 @@
             <div class="global-container">
                 <div class="faqs__container">
                     <div class="faqs__header flex-center mb-7.5">
-                        <div class="faqs__title headings text-28px leading-[38.4px] max-w-49.5  text-center font-normal md:text-36px md:leading-12 md:max-w-112.25">Discover more in our FAQs</div>
+                        <div class="faqs__title headings text-28px leading-c384 max-w-49.5 text-center font-normal md:text-36px md:leading-12 md:max-w-112.25">Discover more in our FAQs</div>
                     </div>
                     <div class="faqs__content flex flex-col gap-5 md:gap-2.75">
 
                         <input type="radio" name="faq" id="faq-1" checked hidden>
                         <div class="faqs__item">
-                            <label for="faq-1" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-faq-border py-[19.8px] gap-5 md:pt-7.75 md:pb-4.25"><span class="faqs__question-content headings text-20px leading-[30.4px] font-normal md:text-26px md:leading-9.5">How long does shipping take?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
-                            <div class="faqs__answer text-16px leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-400 ease-in-out">Your sales managers will go into the field feeling energized, excited, and inspired. We are a full service business development group – we build strategies and systems.</div>
+                            <label for="faq-1" class="faqs__question"><span class="faqs__question-content headings">How long does shipping take?</span><span class="faqs__mark"></span></label>
+                            <div class="faqs__answer">Your sales managers will go into the field feeling energized, excited, and inspired. We are a full service business development group – we build strategies and systems.</div>
                         </div>
 
                         <input type="radio" name="faq" id="faq-2" hidden>
                         <div class="faqs__item">
-                            <label for="faq-2" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-faq-border py-[19.8px] gap-5 md:pt-7.75 md:pb-4.25"><span class="faqs__question-content headings text-20px leading-[30.4px] font-normal md:text-26px md:leading-9.5">Does my piece come in any packaging?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
-                            <div class="faqs__answer text-16px leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-400 ease-in-out">Yes, all our products come in protective and aesthetically pleasing packaging to ensure they arrive in perfect condition. Each product is securely wrapped, and we use eco-friendly materials whenever possible. Additionally, many of our products come in recyclable containers to support sustainability.</div>
+                            <label for="faq-2" class="faqs__question"><span class="faqs__question-content headings">Does my piece come in any packaging?</span><span class="faqs__mark"></span></label>
+                            <div class="faqs__answer">Yes, all our products come in protective and aesthetically pleasing packaging to ensure they arrive in perfect condition. Each product is securely wrapped, and we use eco-friendly materials whenever possible. Additionally, many of our products come in recyclable containers to support sustainability.</div>
                         </div>
 
                         <input type="radio" name="faq" id="faq-3" hidden>
                         <div class="faqs__item">
-                            <label for="faq-3" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-faq-border py-[19.8px] gap-5 md:pt-7.75 md:pb-4.25"><span class="faqs__question-content headings text-20px leading-[30.4px] font-normal md:text-26px md:leading-9.5">Do you ship internationally?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
-                            <div class="faqs__answer text-16px leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-400 ease-in-out">Yes, we do ship internationally! We offer worldwide shipping to ensure customers around the globe can enjoy our products. Please note that shipping times and costs may vary depending on the destination country. International customers may also be subject to customs fees or import duties imposed by their country's customs authorities.</div>
+                            <label for="faq-3" class="faqs__question"><span class="faqs__question-content headings">Do you ship internationally?</span><span class="faqs__mark"></span></label>
+                            <div class="faqs__answer">Yes, we do ship internationally! We offer worldwide shipping to ensure customers around the globe can enjoy our products. Please note that shipping times and costs may vary depending on the destination country. International customers may also be subject to customs fees or import duties imposed by their country's customs authorities.</div>
                         </div>
 
                         <input type="radio" name="faq" id="faq-4" hidden>
                         <div class="faqs__item">
-                            <label for="faq-4" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-faq-border py-[19.8px] gap-5 md:pt-7.75 md:pb-4.25"><span class="faqs__question-content headings text-20px leading-[30.4px] font-normal md:text-26px md:leading-9.5">What payment methods do you accept?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
-                            <div class="faqs__answer text-16px leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-400 ease-in-out">We accept a variety of payment methods to make your shopping experience convenient. These include credit cards (Visa, Mastercard, American Express), PayPal, and, in some regions, alternative payment methods such as Apple Pay or Google Pay. Rest assured, your payment information is secure and protected during the checkout process.</div>
+                            <label for="faq-4" class="faqs__question"><span class="faqs__question-content headings">What payment methods do you accept?</span><span class="faqs__mark"></span></label>
+                            <div class="faqs__answer">We accept a variety of payment methods to make your shopping experience convenient. These include credit cards (Visa, Mastercard, American Express), PayPal, and, in some regions, alternative payment methods such as Apple Pay or Google Pay. Rest assured, your payment information is secure and protected during the checkout process.</div>
                         </div>
 
                         <input type="radio" name="faq" id="faq-5" hidden>
                         <div class="faqs__item">
-                            <label for="faq-5" class="faqs__question cursor-pointer flex justify-between items-center  border-b border-faq-border py-[19.8px] gap-5 md:pt-7.75 md:pb-4.25"><span class="faqs__question-content headings text-20px leading-[30.4px] font-normal md:text-26px md:leading-9.5">What should I do if my order is not placed?</span><span class="faqs__mark relative w-[18px] h-[18px]"></span></label>
-                            <div class="faqs__answer text-16px leading-6 font-normal overflow-hidden max-h-0 opacity-0 transition-all duration-400 ease-in-out">We’re sorry to hear that you’re unable to place an order. Please contact Customer Service and we will work on resolving the issue as quickly as possible</div>
+                            <label for="faq-5" class="faqs__question"><span class="faqs__question-content headings">What should I do if my order is not placed?</span><span class="faqs__mark"></span></label>
+                            <div class="faqs__answer">We’re sorry to hear that you’re unable to place an order. Please contact Customer Service and we will work on resolving the issue as quickly as possible</div>
                         </div>
                     </div>
                 </div>
@@ -996,8 +984,8 @@
                         -translate-x-1/2 -translate-y-1/2
                         text-center text-white
                         px-5
-                        [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]
-                        md:top-[53%]
+                        text-shadow-singlebanner
+                        md:top-c53p
                         md:flex md:flex-col md:gap-6">
                 <h2 class="single-banner__title headings
                         text-48px leading-16
@@ -1025,136 +1013,40 @@
                             md:justify-evenly
                             lg:gap-2.5
                             2xl:justify-between">
-                          <div class="service__box
-                                    w-full
-                                    h-[77.5px]
-                                    flex flex-row justify-start
-                                    gap-4
-
-                                    md:w-[21.8%]
-                                    md:min-w-75
-                                    md:h-46
-
-                                    lg:flex-col
-                                    lg:min-w-90
-
-                                    xl:min-w-46
-                                    xl:gap-5">
+                    <div class="service__box">
                         <div class="service__image">
-                            <img src="Assets/Free and Fast delivery.png" alt="" class="w-[40px] h-[40px] object-cover md:w-[72px] md:h-[72px] shrink-0 max-w-none">
+                            <img src="Assets/Free and Fast delivery.png" alt="">
                         </div>
-                        <div class="service__info flex flex-col gap-1 2xl:gap-2">
-                            <div class="service__heading headings
-                                      text-black
-                                        text-20px
-                                        leading-[25.6px]
-                                        font-normal
-                                        md:leading-8">Free & fast delivery</div>
-                            <div class="service__content
-                                      text-black
-                                        text-14px
-                                        leading-6
-                                        font-normal
-                                        md:text-16px">We offer free shipping with ground delivery to the lower 48 states.</div>
+                        <div class="service__info">
+                            <div class="service__heading headings">Free & fast delivery</div>
+                            <div class="service__content">We offer free shipping with ground delivery to the lower 48 states.</div>
                         </div>
                     </div>
-                          <div class="service__box
-                                    w-full
-                                    h-[77.5px]
-                                    flex flex-row justify-start
-                                    gap-4
-
-                                    md:w-[21.8%]
-                                    md:min-w-75
-                                    md:h-46
-
-                                    lg:flex-col
-                                    lg:min-w-90
-
-                                    xl:min-w-46
-                                    xl:gap-5">
+                    <div class="service__box">
                         <div class="service__image">
-                            <img src="Assets/Online Support.png" alt="" class="w-[40px] h-[40px] object-cover md:w-[72px] md:h-[72px] shrink-0 max-w-none">
+                            <img src="Assets/Online Support.png" alt="">
                         </div>
-                        <div class="service__info flex flex-col gap-1 2xl:gap-2">
-                            <div class="service__heading headings
-                                      text-black
-                                        text-20px
-                                        leading-[25.6px]
-                                        font-normal
-                                        md:leading-8">Online support</div>
-                            <div class="service__content
-                                      text-black
-                                        text-14px
-                                        leading-6
-                                        font-normal
-                                        md:text-16px">Online Support24 hours a day<br> 7 days a week</div>
+                        <div class="service__info">
+                            <div class="service__heading headings">Online support</div>
+                            <div class="service__content">Online Support24 hours a day<br> 7 days a week</div>
                         </div>
                     </div>
-                          <div class="service__box
-                                    w-full
-                                    h-[77.5px]
-                                    flex flex-row justify-start
-                                    gap-4
-
-                                    md:w-[21.8%]
-                                    md:min-w-75
-                                    md:h-46
-
-                                    lg:flex-col
-                                    lg:min-w-90
-
-                                    xl:min-w-46
-                                    xl:gap-5">
+                    <div class="service__box">
                         <div class="service__image">
-                            <img src="Assets/30 Days Return.png" alt="" class="w-[40px] h-[40px] object-cover md:w-[72px] md:h-[72px] shrink-0 max-w-none">
+                            <img src="Assets/30 Days Return.png" alt="">
                         </div>
-                        <div class="service__info flex flex-col gap-1 2xl:gap-2">
-                            <div class="service__heading headings
-                                      text-black
-                                        text-20px
-                                        leading-[25.6px]
-                                        font-normal
-                                        md:leading-8">30 Days return</div>
-                            <div class="service__content
-                                      text-black
-                                        text-14px
-                                        leading-6
-                                        font-normal
-                                        md:text-16px">Exchange or return items free of charge within 30 days.</div>
+                        <div class="service__info">
+                            <div class="service__heading headings">30 Days return</div>
+                            <div class="service__content">Exchange or return items free of charge within 30 days.</div>
                         </div>
                     </div>
-                          <div class="service__box
-                                    w-full
-                                    h-[77.5px]
-                                    flex flex-row justify-start
-                                    gap-4
-
-                                    md:w-[21.8%]
-                                    md:min-w-75
-                                    md:h-46
-
-                                    lg:flex-col
-                                    lg:min-w-90
-
-                                    xl:min-w-46
-                                    xl:gap-5">
+                    <div class="service__box">
                         <div class="service__image">
-                            <img src="Assets/Payment.png" alt="" class="w-[40px] h-[40px] object-cover md:w-[72px] md:h-[72px] shrink-0 max-w-none">
+                            <img src="Assets/Payment.png" alt="">
                         </div>
-                        <div class="service__info flex flex-col gap-1 2xl:gap-2">
-                            <div class="service__heading headings
-                                      text-black
-                                        text-20px
-                                        leading-[25.6px]
-                                        font-normal
-                                        md:leading-8">Flexible payment</div>
-                            <div class="service__content
-                                      text-black
-                                        text-14px
-                                        leading-6
-                                        font-normal
-                                        md:text-16px">Pay conveniently using multiple credit cards for added flexibility.</div>
+                        <div class="service__info">
+                            <div class="service__heading headings">Flexible payment</div>
+                            <div class="service__content">Pay conveniently using multiple credit cards for added flexibility.</div>
                         </div>
                     </div>
                 </div>
@@ -1177,40 +1069,30 @@
                                 lg:justify-center
                                 lg:items-center
                                 lg:h-full">
-                        <div class="cshop__content-container--1 w-full relative flex-center lg:w-[30%]">
-                            <div class="cshop__image-stage cshop__image-stage--top
-                                        relative w-full
-                                        max-w-97.5
-                                        mx-auto
-                                        origin-center
-                                        aspect-cstop
-
-                                        lg:max-w-130
-                                        lg:scale-[1.15]
-                                        2xl:scale-[1.3]
-                                        min-[1700px]:scale-[1.45]">
-                                <img class="cshop__img--1 absolute max-w-none w-[30%] top-[30%] left-0 z-3 lg:w-[31%] lg:top-[19%] lg:left-[9%]" src="Assets/Layered Image table.png" alt="">
-                                <img class="cshop__img--2 absolute max-w-none w-[30%] top-[-9%] left-[27%] lg:w-[52.5%] lg:top-[-67%] lg:left-[20%]" src="Assets/Layer Image Chair.png" alt="">
-                                <img class="cshop__img--3 absolute max-w-none w-[30%] bottom-[1%] left-[70%] lg:w-[37%] lg:bottom-[-58%] lg:left-[45%]" src="Assets/Layer Image Accessories.png" alt="">
+                        <div class="cshop__content-container--1 w-full relative flex-center lg:w-c30p">
+                            <div class="cshop__image-stage cshop__image-stage--top aspect-cstop">
+                                <img class="cshop__img--top1" src="Assets/Layered Image table.png" alt="">
+                                <img class="cshop__img--top2" src="Assets/Layer Image Chair.png" alt="">
+                                <img class="cshop__img--top3" src="Assets/Layer Image Accessories.png" alt="">
                             </div>
                         </div>
                         <div class="cshop__content-container--2
                                     w-full relative
                                     flex flex-col items-center
                                     text-center gap-1.5
-                                    lg:w-[40%]
+                                    lg:w-c40p
                                     lg:justify-between">
                             <div class="cshop__headlabel
                                         font-medium
                                         text-16px
                                         uppercase
                                         text-black
-                                        lg:w-[30.3%]">RENOVATE YOUR HOME AT</div>
+                                        lg:w-c30c3p">RENOVATE YOUR HOME AT</div>
                             <h2 class="headings
                                         text-32px
                                         leading-14
                                         font-normal
-                                        w-[82%]
+                                        w-c82p
                                         max-w-92.5
                                         mt-1.5
                                         text-black
@@ -1227,36 +1109,10 @@
                                         no-underline">@ORANGY</a>
                             </div>
                         </div>
-                        <div class="cshop__content-container--3 w-full relative flex-center lg:w-[30%]">
-                            <div class="cshop__image-stage cshop__image-stage--bottom
-                                        relative w-full
-                                        max-w-97.5
-                                        mx-auto
-                                        origin-center
-                                        aspect-csbot
-
-                                        lg:max-w-130
-                                        lg:scale-[1.15]
-                                        2xl:scale-[1.3]
-                                        min-[1700px]:scale-[1.45]">
-                                <img class="cshop__img--1 absolute max-w-none
-                                            w-[30%]
-                                            top-[19%]
-                                            right-[63%]
-
-                                            lg:w-[55%]
-                                            lg:top-[-133%]
-                                            lg:right-[10%]"
-                                            src="Assets/Layer Image Sitting.png" alt="">
-                                <img class="cshop__img--2 absolute max-w-none
-                                            w-[30%]
-                                            bottom-[-14%]
-                                            right-[8%]
-
-                                            lg:w-[42%]
-                                            lg:bottom-[-118%]
-                                            lg:right-[40%]"
-                                            src="Assets/Layer Image Decor.png" alt="">
+                        <div class="cshop__content-container--3 w-full relative flex-center lg:w-c30p">
+                            <div class="cshop__image-stage cshop__image-stage--bottom aspect-csbot">
+                                <img class="cshop__img--bot1" src="Assets/Layer Image Sitting.png" alt="">
+                                <img class="cshop__img--bot2" src="Assets/Layer Image Decor.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -1266,25 +1122,25 @@
 
         <section class="footer bg-black text-white flex-center flex-col text-center">
             <div class="global-container">
-                <div class="footer__container flex flex-col items-center mt-7.5 mb-2.5 min-[492px]:mt-12.5">
-                    <div class="footer__email w-full text-center min-[492px]:w-116.25">
+                <div class="footer__container flex flex-col items-center mt-7.5 mb-2.5 w492:mt-12.5">
+                    <div class="footer__email w-full text-center w492:w-116.25">
                         <div class="footer__header mb-5.5">
                             <div class="footer__title headings
                                         font-normal
                                         text-24px
-                                        leading-[33.6px]
+                                        leading-c33c6
                                         text-left text-white
 
-                                        min-[492px]:text-32px
-                                        min-[492px]:leading-10.5
-                                        min-[492px]:text-center">Subscribe to get 10% OFF</div>
+                                        w492:text-32px
+                                        w492:leading-10.5
+                                        w492:text-center">Subscribe to get 10% OFF</div>
                             <div class="footer__content
                                         font-normal
                                         text-16px
                                         leading-6
                                         text-left
                                         mt-2.75 mb-5
-                                        min-[492px]:text-center">Subscribe for store updates and discounts.</div>
+                                        w492:text-center">Subscribe for store updates and discounts.</div>
                         </div>
                         <form class="footer__form" id="newsletter-form" method="post" action="https://script.google.com/macros/s/AKfycbwlnruolAEFek8x1wUYLxocHdIuwHWrHYXSfzSXZSygslzejM-ppDe76EuK8jkKWyB4/exec">
                             <div class="footer__input flex justify-between items-center w-full relative">
@@ -1293,49 +1149,49 @@
                                                 absolute
                                                 right-5
                                                 top-4.75
-                                                w-[6.25px]
-                                                h-[12.5px]
+                                                w-c6c25
+                                                h-c125
                                                 bg-no-repeat
                                                 bg-contain
                                                 bg-center
                                                 border-none
                                                 cursor-pointer
-                                                bg-[url('../Assets/send-button.svg')]"
+                                                bg-image-sendbtn"
                                                 type="submit" aria-label="Send"></button>
                             </div>
 
                             <div 
-                                class="g-recaptcha mt-2.5 flex items-center justify-start min-[492px]:justify-center"
+                                class="g-recaptcha mt-2.5 flex items-center justify-start w492:justify-center"
                                 data-sitekey="6Lfw7lgsAAAAAAYvhwMzxBtxXsSTTw5qlvhyoxPY"
                                 id="recaptcha-newsletter">
                             </div>
-                            <div id="recaptcha-error-message" class="footer__form--error text-red-500 text-12px mt-1.25 hidden min-[492px]:text-center">
+                            <div id="recaptcha-error-message" class="footer__form--error text-red-500 text-12px mt-1.25 hidden w492:text-center">
                                 Please complete the CAPTCHA.
                             </div>
                         </form>
-                        <div class="footer__media flex gap-4 mt-4 justify-start min-[492px]:justify-center">
-                            <a class="w-[24px] h-[24px]" href="https://facebook.com/ugmonk">
-                                <img src="Assets/fb.png" alt="" class="object-contain w-[16.99px] h-[16.89px]">
+                        <div class="footer__media flex gap-4 mt-4 justify-start w492:justify-center">
+                            <a class="w-6 h-6" href="https://facebook.com/ugmonk">
+                                <img src="Assets/fb.png" alt="" class="object-contain w-c16c99 h-c16c89">
                             </a>
-                            <a class="w-[24px] h-[24px]" href="https://twitter.com/ugmonk">
-                                <img src="Assets/x.png" alt="" class="object-contain w-[20.31px] h-[20.21px]">
+                            <a class="w-6 h-6" href="https://twitter.com/ugmonk">
+                                <img src="Assets/x.png" alt="" class="object-contain w-c20c31 h-c20c21">
                             </a>
-                            <a class="w-[24px] h-[24px]" href="https://instagram.com/ugmonk">
-                                <img src="Assets/instagram.png" alt="" class="object-contain w-[20.45px] h-[20.45px]">
+                            <a class="w-6 h-6" href="https://instagram.com/ugmonk">
+                                <img src="Assets/instagram.png" alt="" class="object-contain w-c20c45 h-c20c45">
                             </a>
-                            <a class="w-[24px] h-[24px]" href="https://twitter.com/ugmonk">
-                                <img src="Assets/tiktok.png" alt="" class="object-contain w-[14.55px] h-[16px]">
+                            <a class="w-6 h-6" href="https://twitter.com/ugmonk">
+                                <img src="Assets/tiktok.png" alt="" class="object-contain w-c14c55 h-4">
                             </a>
-                            <a class="w-[24px] h-[24px]" href="https://twitter.com/ugmonk">
-                                <img src="Assets/yt.png" alt="" class="object-contain w-[20px] h-[14px]">
+                            <a class="w-6 h-6" href="https://twitter.com/ugmonk">
+                                <img src="Assets/yt.png" alt="" class="object-contain w-5 h-3.5">
                             </a>
-                            <a class="w-[24px] h-[24px]" href="https://twitter.com/ugmonk">
-                                <img src="Assets/vimeo.png" alt="" class="object-contain w-[16px] h-[13.85px]">
+                            <a class="w-6 h-6" href="https://twitter.com/ugmonk">
+                                <img src="Assets/vimeo.png" alt="" class="object-contain w-4 h-c13c85">
                             </a>
                         </div>
-                        <div class="footer__copyright flex items-center mt-5 justify-start min-[492px]:justify-center">
+                        <div class="footer__copyright flex items-center mt-5 justify-start w492:justify-center">
                             <span class="font-normal text-16px leading-6 text-white/80">© 2024</span>&nbsp;
-                            <span class="footer__underline font-normal text-16px leading-6 text-white/80 min-[492px]:underline">ORANGY</span>
+                            <span class="footer__underline font-normal text-16px leading-6 text-white/80 w492:underline">ORANGY</span>
                         </div>
                     </div>
                 </div>
@@ -1343,12 +1199,12 @@
         </section>
     </div>
     <input type="checkbox" id="discount-toggle" hidden checked>
-    <div id="popup-discount" class="popup popup__discount hidden fixed inset-0 bg-black/65 justify-center items-center z-10000">
-        <label for="discount-toggle" class="popup__overlay fixed inset-0 cursor-pointer"></label>
-        <div class="popup__content flex flex-col bg-white w-full max-w-75 relative text-center md:flex-row md:text-left md:max-w-220 md:mx-5">
-            <div class="popup__image w-full h-45 bg-cover bg-position-[center_79%] bg-[url('../Assets/Popup-image.jpg.png')] md:max-w-105 md:h-99"></div>
-            <label for="discount-toggle" class="popup__close absolute top-3 right-2 w-8 h-8 bg-no-repeat bg-contain bg-center cursor-pointer bg-[url('../Assets/Button-Close.svg')] md:right-3 md:w-12 md:h-12"></label>
-            <div class="popup__text p-[24.5px_27.6px] md:h-99 md:max-w-115 md:min-w-97 md:w-[55%] md:p-[9.2%] text-center">
+    <div id="popup-discount" class="popup popup__discount">
+        <label for="discount-toggle" class="popup__overlay"></label>
+        <div class="popup__content md:max-w-220">
+            <div class="popup__image w-full h-45 bg-cover bg-pos-discount bg-image-popup md:max-w-105 md:h-99"></div>
+            <label for="discount-toggle" class="popup__close"></label>
+            <div class="popup__text p-popup-discount md:h-99 md:max-w-115 md:min-w-97 md:w-c55p md:p-c9c2p text-center">
                 <div class="popup__sale-container headings my-0.75 mb-3.5">
                     <div class="popup__sale-content text-24px leading-10.5 font-normal md:text-32px md:leading-14 text-center">Big Sale</div>
                     <p class="popup__sale-50 text-32px leading-10.5 md:text-36px md:leading-14">Up to 50% Off</p>
@@ -1362,12 +1218,12 @@
     </div>
 
     <input type="checkbox" id="success-toggle" hidden>
-    <div id="popup-success" class="popup fixed inset-0 bg-black/65 hidden justify-center items-center z-10000">
+    <div id="popup-success" class="popup">
 
-        <label for="success-toggle" class="popup__overlay fixed inset-0 cursor-pointer"></label>
-        <div class="popup__content flex flex-col bg-white w-full max-w-75 relative text-center md:flex-row md:text-left md:max-w-220 md:mx-5">
-            <label for="success-toggle" class="popup__close absolute top-3 right-2 w-8 h-8 bg-no-repeat bg-contain bg-center cursor-pointer bg-[url('../Assets/Button-Close.svg')] md:right-3 md:w-12 md:h-12"></label>
-            <div class="popup__sale-message headings py-10 mx-auto text-24px leading-10.5 md:text-32px md:leading-14 text-center">
+        <label for="success-toggle" class="popup__overlay"></label>
+        <div class="popup__content md:max-w-220">
+            <label for="success-toggle" class="popup__close"></label>
+            <div class="popup__sale-message headings">
                 <p>Thank you!</p>
                 <p>Data has been sent successfully.</p>
             </div>
@@ -1375,11 +1231,11 @@
     </div>
 
     <input type="checkbox" id="error-toggle" hidden>
-    <div id="popup-error" class="popup fixed inset-0 bg-black/65 hidden justify-center items-center z-10000">
-        <label for="error-toggle" class="popup__overlay fixed inset-0 cursor-pointer"></label>
-        <div class="popup__content error md:max-w-195.5 flex flex-col bg-white w-full max-w-75 relative text-center md:flex-row md:text-left md:mx-5">
-            <label for="error-toggle" class="popup__close absolute top-3 right-2 w-8 h-8 bg-no-repeat bg-contain bg-center cursor-pointer bg-[url('../Assets/Button-Close.svg')] md:right-3 md:w-12 md:h-12"></label>
-            <div class="popup__sale-message headings py-10 mx-auto text-24px leading-10.5 md:text-32px md:leading-14 text-center">
+    <div id="popup-error" class="popup">
+        <label for="error-toggle" class="popup__overlay"></label>
+        <div class="popup__content error md:max-w-195.5">
+            <label for="error-toggle" class="popup__close"></label>
+            <div class="popup__sale-message headings">
                 <p>Oops! An error occurred.</p>
                 <p>Please check your information and try again.</p>
             </div>
