@@ -54,12 +54,13 @@
     </script>
 </head>
 <body>
-    <input type="checkbox" id="cookie-toggle" hidden checked>
+    <input type="checkbox" id="cookie-toggle" class="peer/cookie hidden">
     <div
     id="cookie-consent"
     class="fixed inset-x-0 bottom-0 z-9999
             bg-white/80 backdrop-blur-sm
-            px-5 py-2.5 text-black">
+            px-5 py-2.5 text-black
+            peer-checked/cookie:hidden">
         <div class="w-full flex flex-col flex-wrap
                     items-center justify-between
                     gap-8 lg:flex-row">
@@ -1198,8 +1199,8 @@
             </div>
         </section>
     </div>
-    <input type="checkbox" id="discount-toggle" hidden checked>
-    <div id="popup-discount" class="popup popup__discount">
+    <input type="checkbox" id="discount-toggle" class="peer/discount hidden" checked>
+    <div id="popup-discount" class="popup popup__discount peer-checked/discount:flex">
         <label for="discount-toggle" class="popup__overlay"></label>
         <div class="popup__content md:max-w-220">
             <div class="popup__image w-full h-45 bg-cover bg-pos-discount bg-image-popup md:max-w-105 md:h-99"></div>
@@ -1217,9 +1218,8 @@
         </div>
     </div>
 
-    <input type="checkbox" id="success-toggle" hidden>
-    <div id="popup-success" class="popup">
-
+    <input type="checkbox" id="success-toggle" class="peer/psuccess hidden">
+    <div id="popup-success" class="popup peer-checked/psuccess:flex">
         <label for="success-toggle" class="popup__overlay"></label>
         <div class="popup__content md:max-w-220">
             <label for="success-toggle" class="popup__close"></label>
@@ -1230,8 +1230,8 @@
         </div>
     </div>
 
-    <input type="checkbox" id="error-toggle" hidden>
-    <div id="popup-error" class="popup">
+    <input type="checkbox" id="error-toggle" class="peer/perror hidden">
+    <div id="popup-error" class="popup peer-checked/perror:flex">
         <label for="error-toggle" class="popup__overlay"></label>
         <div class="popup__content error md:max-w-195.5">
             <label for="error-toggle" class="popup__close"></label>

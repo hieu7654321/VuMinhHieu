@@ -497,10 +497,6 @@
   }
 }
 
-#cookie-toggle:not(:checked) ~ #cookie-consent {
-  display: none;
-}
-
 #slide-1:checked ~ .header__slider .header__slide--phone {
   opacity: 1;
   pointer-events: auto;
@@ -578,18 +574,6 @@ input[type=radio]:checked + .faqs__item .faqs__answer {
 
 input[type=radio]:checked + .faqs__item .faqs__mark::after {
   transform: translateX(-50%) rotate(90deg);
-}
-
-#discount-toggle:checked ~ #popup-discount {
-  display: flex;
-}
-
-#success-toggle:checked ~ #popup-success {
-  display: flex;
-}
-
-#error-toggle:checked ~ #popup-error {
-  display: flex;
 }
 
 @media (min-width: 768px) {
